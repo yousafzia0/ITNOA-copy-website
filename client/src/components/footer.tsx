@@ -3,8 +3,16 @@ import { Shield, Phone, Mail, Clock, Linkedin, Github, MessageCircle } from "luc
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
-      <div className="geometric-pattern absolute inset-0 opacity-5"></div>
+    <footer className="bg-[#01411c] text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 2px, transparent 2px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -13,21 +21,21 @@ export default function Footer() {
               <img 
                 src="/logo-transparent.svg" 
                 alt="itnoa logo" 
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain"
               />
             </div>
-            <p className="text-slate-300 mb-6 max-w-md">
+            <p className="text-green-100 mb-6 max-w-md">
               Leading cybersecurity consultancy delivering innovative solutions 
               in information security, data protection, and risk management.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#01411c] transition-colors duration-300">
+              <a href="#" className="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#01411c] transition-colors duration-300">
+              <a href="#" className="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#01411c] transition-colors duration-300">
+              <a href="#" className="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
                 <MessageCircle className="h-5 w-5" />
               </a>
             </div>
@@ -38,22 +46,22 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-slate-300 hover:text-[#21965f] transition-colors duration-300">
+                <Link href="/" className="text-green-200 hover:text-white transition-colors duration-300">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-[#21965f] transition-colors duration-300">
+                <Link href="/services" className="text-green-200 hover:text-white transition-colors duration-300">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-slate-300 hover:text-[#21965f] transition-colors duration-300">
+                <Link href="/industries" className="text-green-200 hover:text-white transition-colors duration-300">
                   Industries
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-300 hover:text-[#21965f] transition-colors duration-300">
+                <Link href="/contact" className="text-green-200 hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
@@ -64,16 +72,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
             <ul className="space-y-3">
-              <li className="flex items-center text-slate-300">
-                <Phone className="h-4 w-4 mr-3 text-[#01411c]" />
+              <li className="flex items-center text-green-100">
+                <Phone className="h-4 w-4 mr-3 text-[#21965f]" />
                 <span>+1-800-456-478-23</span>
               </li>
-              <li className="flex items-center text-slate-300">
-                <Mail className="h-4 w-4 mr-3 text-[#01411c]" />
+              <li className="flex items-center text-green-100">
+                <Mail className="h-4 w-4 mr-3 text-[#21965f]" />
                 <span>info@itnoa.com</span>
               </li>
-              <li className="flex items-start text-slate-300">
-                <Clock className="h-4 w-4 mr-3 text-[#01411c] mt-1" />
+              <li className="flex items-start text-green-100">
+                <Clock className="h-4 w-4 mr-3 text-[#21965f] mt-1" />
                 <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
               </li>
             </ul>
@@ -81,19 +89,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-slate-800 pt-8">
+        <div className="border-t border-green-800/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm">
+            <p className="text-green-200 text-sm">
               © 2024 ITNOA Consulting Services. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-slate-400 hover:text-[#21965f] text-sm transition-colors duration-300">
+              <a href="#" className="text-green-200 hover:text-white text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="text-slate-400 hover:text-[#21965f] text-sm transition-colors duration-300">
+              <a href="#" className="text-green-200 hover:text-white text-sm transition-colors duration-300">
                 Terms of Service
               </a>
-              <a href="#" className="text-slate-400 hover:text-[#21965f] text-sm transition-colors duration-300">
+              <a href="#" className="text-green-200 hover:text-white text-sm transition-colors duration-300">
                 Cookie Policy
               </a>
             </div>
