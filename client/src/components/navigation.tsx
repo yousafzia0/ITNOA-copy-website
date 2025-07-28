@@ -27,11 +27,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
-            <img 
-              src="/logo-transparent.svg" 
-              alt="itnoa logo" 
-              className="h-10 sm:h-12 object-contain hover:drop-shadow-md transition duration-300"
-            />
+            <span className="text-2xl sm:text-3xl font-bold text-[#01411c] glow-text">
+              ITNOA
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

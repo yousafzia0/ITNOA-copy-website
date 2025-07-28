@@ -18,11 +18,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/logo-transparent.svg" 
-                alt="itnoa logo" 
-                className="h-12 w-auto object-contain"
-              />
+              <span className="text-3xl font-bold text-white glow-text-footer">
+                ITNOA
+              </span>
             </div>
             <p className="text-green-100 mb-6 max-w-md">
               Leading cybersecurity consultancy delivering innovative solutions 
