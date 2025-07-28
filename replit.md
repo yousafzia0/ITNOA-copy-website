@@ -144,3 +144,5 @@ The application is structured as a full-stack TypeScript application with a clea
   - Industry icons: Various animations matching their purpose
 - All animations are professional, subtle, and enhance user experience without being distracting
 - Animations trigger on hover and use smooth CSS transitions with proper timing
+- Modified animation triggers to activate on card/box hover instead of individual icon hover for better user experience
+- Updated all service cards, contact info cards, industry cards, and social media icons to use group hover animations

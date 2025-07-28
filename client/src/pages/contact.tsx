@@ -115,8 +115,8 @@ export default function Contact() {
               
               <div className="space-y-6 mb-12">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <div key={index} className="group flex items-start p-4 rounded-lg hover:bg-slate-50 transition-all duration-300">
+                    <div className="w-12 h-12 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4 mt-1 group-hover:bg-[#01411c]/20 transition-colors duration-300">
                       {info.icon}
                     </div>
                     <div>
@@ -132,14 +132,14 @@ export default function Contact() {
               <div>
                 <h3 className="font-semibold text-slate-900 text-lg mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
-                    <Linkedin className="h-6 w-6" />
+                  <a href="#" className="group w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
+                    <Linkedin className="h-6 w-6 icon-bounce" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
-                    <Github className="h-6 w-6" />
+                  <a href="#" className="group w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
+                    <Github className="h-6 w-6 icon-flip" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
-                    <MessageCircle className="h-6 w-6" />
+                  <a href="#" className="group w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
+                    <MessageCircle className="h-6 w-6 icon-pulse" />
                   </a>
                 </div>
               </div>
