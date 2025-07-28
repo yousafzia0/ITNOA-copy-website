@@ -1,0 +1,116 @@
+Hi, I need help building a fully responsive, professional consultancy website using HTML + TailwindCSS (and JavaScript only if necessary).
+
+🔗 Reference Website
+Use this website as a reference for content (services and industries) and page structure, but design it with a light, modern aesthetic that feels trustworthy, tech-focused, and professional:
+
+👉 https://jeed.top/itnoa/
+
+🎨 Design Style & Direction
+Theme: Clean, light-themed, modern — a hybrid of cybersecurity consultancy and subtle Pakistani/Islamic inspiration
+
+Primary color: Dark green #01411c (Pakistan green)
+
+Fonts: Use Inter, Poppins, or optionally Cairo
+
+Layout: Responsive and mobile-first
+
+Backgrounds: Light colors (white, soft gray), with optional geometric/Islamic patterns in section backgrounds
+
+Effects: Use elegant animations and hover transitions to make it feel modern and interactive (scroll reveal, hover glows, card flip, etc.)
+
+Stack: Use TailwindCSS utility classes only — no Bootstrap or external frameworks
+
+📄 Pages to Include
+Please build the following pages:
+
+1. 🏠 Home
+Hero section: Bold heading, subtext, CTA button
+
+Teaser section with 3–4 service highlights
+
+Light background with green accents
+
+Optional animated section dividers or scroll-in effects
+
+2. 🛠 Services
+Extract all services from the reference site → https://jeed.top/itnoa/
+
+Display services in responsive cards or tiles
+
+Also include my client’s priority services:
+
+IT Audit
+
+Information Security (GRC) Consulting
+
+Business Continuity / Cyber Resilience
+
+Each service card should include a short description and animation/hover effect
+
+3. 🏭 Industries
+Pull all industry types from the reference site
+
+Display them in a grid or carousel
+
+Include a brief description for each industry and a relevant icon or placeholder image
+
+Make this section visually engaging with animations
+
+4. 🤝 Become a Client
+Call-to-action page with persuasive copy
+
+Clean contact form: Name, Email, Organization, Message
+
+CTA button
+
+Light, clean design with animations
+
+5. 📞 Contact
+Display updated contact information
+
+Contact form (validated)
+
+Optional embedded Google Map or location icon
+
+Secure layout with responsive design
+
+🦾 Footer
+Navigation links
+
+Contact info
+
+Social icons (LinkedIn, GitHub, Matrix)
+
+Optional: Light Islamic geometric background pattern (low-opacity)
+
+Match overall color scheme and use green accent
+
+⚙ Development Guidelines
+Use only HTML + TailwindCSS
+
+Mobile-first and fully responsive
+
+Modular structure (reusable components if possible)
+
+Functional forms and buttons
+
+Smooth animations for:
+
+Scroll-in effects
+
+Hover glows
+
+CTA interactions
+
+Prioritize: clarity, speed, accessibility, clean UX
+
+✅ Start Here
+Begin with the Home page, including:
+
+Responsive navigation bar
+
+Hero section
+
+3 key service previews
+
+Footer with contact and nav links
