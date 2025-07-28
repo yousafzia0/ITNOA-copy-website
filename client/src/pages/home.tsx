@@ -8,19 +8,19 @@ import Footer from "@/components/footer";
 export default function Home() {
   const serviceHighlights = [
     {
-      icon: <Search className="h-8 w-8 text-[#01411c]" />,
+      icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
       title: "IT Audit",
       description: "Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations.",
       href: "/services/it-audit"
     },
     {
-      icon: <Shield className="h-8 w-8 text-[#01411c]" />,
+      icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
       title: "Information Security (GRC)",
       description: "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
       href: "/services/grc-consulting"
     },
     {
-      icon: <RotateCcw className="h-8 w-8 text-[#01411c]" />,
+      icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
       title: "Business Continuity",
       description: "Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions.",
       href: "/services/cyber-resilience"
@@ -29,37 +29,37 @@ export default function Home() {
 
   const allServices = [
     {
-      icon: <Tag className="h-6 w-6 text-[#01411c]" />,
+      icon: <Tag className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "ISO 27001 Implementation",
       description: "Achieve robust information security management with ISO 27001 certification. Safeguard business data and build stakeholder trust.",
       href: "/services/iso-27001-implementation"
     },
     {
-      icon: <Settings className="h-6 w-6 text-[#01411c]" />,
+      icon: <Settings className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "NIST CSF Implementation",
       description: "Strengthen cybersecurity posture with NIST Cybersecurity Framework. Enhance risk management and improve security resilience.",
       href: "/services/nist-csf-implementation"
     },
     {
-      icon: <CreditCard className="h-6 w-6 text-[#01411c]" />,
+      icon: <CreditCard className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "PCI DSS Assessments",
       description: "Ensure payment data security and PCI DSS compliance. Protect sensitive cardholder information and mitigate financial risks.",
       href: "/services/pci-dss-assessments"
     },
     {
-      icon: <Bug className="h-6 w-6 text-[#01411c]" />,
+      icon: <Bug className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "Penetration Testing",
       description: "Identify system vulnerabilities with expert penetration testing. Ensure robust security and protect critical business data.",
       href: "/services/penetration-testing"
     },
     {
-      icon: <Cloud className="h-6 w-6 text-[#01411c]" />,
+      icon: <Cloud className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Cloud Security Assessments",
       description: "Comprehensive cloud security evaluations to identify vulnerabilities and ensure best practices in cloud infrastructure protection.",
       href: "/services/cloud-security-assessments"
     },
     {
-      icon: <CheckCircle className="h-6 w-6 text-[#01411c]" />,
+      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-glow" />,
       title: "SOC 2 Compliance",
       description: "Achieve SOC 2 compliance with expert guidance. Meet the highest standards for security, availability, and confidentiality.",
       href: "/services/soc-2"
@@ -67,14 +67,14 @@ export default function Home() {
   ];
 
   const industries = [
-    { icon: <University className="h-8 w-8 text-[#01411c]" />, name: "Financial Services", desc: "Comprehensive security solutions for banks, credit unions, and financial institutions." },
-    { icon: <Heart className="h-8 w-8 text-[#01411c]" />, name: "Healthcare", desc: "HIPAA compliance and security solutions for healthcare providers and medical facilities." },
-    { icon: <Landmark className="h-8 w-8 text-[#01411c]" />, name: "Government", desc: "Federal, state, and local government cybersecurity and compliance services." },
-    { icon: <Cpu className="h-8 w-8 text-[#01411c]" />, name: "Technology", desc: "Advanced security solutions for tech companies, startups, and software developers." },
-    { icon: <Factory className="h-8 w-8 text-[#01411c]" />, name: "Manufacturing", desc: "Industrial cybersecurity and operational technology protection solutions." },
-    { icon: <GraduationCap className="h-8 w-8 text-[#01411c]" />, name: "Education", desc: "Cybersecurity solutions for schools, universities, and educational institutions." },
-    { icon: <ShoppingCart className="h-8 w-8 text-[#01411c]" />, name: "Retail", desc: "PCI DSS compliance and customer data protection for retail businesses." },
-    { icon: <Zap className="h-8 w-8 text-[#01411c]" />, name: "Energy", desc: "Critical infrastructure protection for energy and utility companies." }
+    { icon: <University className="h-8 w-8 text-[#01411c] icon-bounce" />, name: "Financial Services", desc: "Comprehensive security solutions for banks, credit unions, and financial institutions." },
+    { icon: <Heart className="h-8 w-8 text-[#01411c] icon-pulse" />, name: "Healthcare", desc: "HIPAA compliance and security solutions for healthcare providers and medical facilities." },
+    { icon: <Landmark className="h-8 w-8 text-[#01411c] icon-glow" />, name: "Government", desc: "Federal, state, and local government cybersecurity and compliance services." },
+    { icon: <Cpu className="h-8 w-8 text-[#01411c] icon-settings" />, name: "Technology", desc: "Advanced security solutions for tech companies, startups, and software developers." },
+    { icon: <Factory className="h-8 w-8 text-[#01411c] icon-shake" />, name: "Manufacturing", desc: "Industrial cybersecurity and operational technology protection solutions." },
+    { icon: <GraduationCap className="h-8 w-8 text-[#01411c] icon-float" />, name: "Education", desc: "Cybersecurity solutions for schools, universities, and educational institutions." },
+    { icon: <ShoppingCart className="h-8 w-8 text-[#01411c] icon-scale" />, name: "Retail", desc: "PCI DSS compliance and customer data protection for retail businesses." },
+    { icon: <Zap className="h-8 w-8 text-[#01411c] icon-pulse" />, name: "Energy", desc: "Critical infrastructure protection for energy and utility companies." }
   ];
 
   const testimonials = [

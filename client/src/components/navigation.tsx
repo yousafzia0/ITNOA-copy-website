@@ -65,7 +65,7 @@ export default function Navigation() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 icon-pulse" />
                 </Button>
               </SheetTrigger>
               <SheetContent>

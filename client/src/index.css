@@ -99,6 +99,135 @@
     0 0 35px rgba(33, 150, 95, 0.3);
 }
 
+/* Professional Icon Animations */
+.icon-search {
+  transition: all 0.3s ease;
+}
+
+.icon-search:hover {
+  transform: scale(1.1);
+  animation: search-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes search-pulse {
+  0%, 100% { transform: scale(1.1); }
+  50% { transform: scale(1.2); }
+}
+
+.icon-shield {
+  transition: all 0.3s ease;
+}
+
+.icon-shield:hover {
+  transform: scale(1.1);
+  animation: shield-glow 2s ease-in-out infinite;
+}
+
+@keyframes shield-glow {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(1, 65, 28, 0.5)); }
+  50% { filter: drop-shadow(0 0 15px rgba(33, 150, 95, 0.8)); }
+}
+
+.icon-rotate {
+  transition: all 0.3s ease;
+}
+
+.icon-rotate:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+.icon-settings {
+  transition: all 0.3s ease;
+}
+
+.icon-settings:hover {
+  animation: settings-spin 2s linear infinite;
+}
+
+@keyframes settings-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.icon-pulse {
+  transition: all 0.3s ease;
+}
+
+.icon-pulse:hover {
+  transform: scale(1.1);
+  animation: gentle-pulse 1s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1.1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.icon-bounce {
+  transition: all 0.3s ease;
+}
+
+.icon-bounce:hover {
+  animation: gentle-bounce 1s ease-in-out infinite;
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0) scale(1.1); }
+  50% { transform: translateY(-3px) scale(1.1); }
+}
+
+.icon-shake {
+  transition: all 0.3s ease;
+}
+
+.icon-shake:hover {
+  animation: gentle-shake 0.8s ease-in-out infinite;
+}
+
+@keyframes gentle-shake {
+  0%, 100% { transform: translateX(0) scale(1.1); }
+  25% { transform: translateX(-2px) scale(1.1); }
+  75% { transform: translateX(2px) scale(1.1); }
+}
+
+.icon-float {
+  transition: all 0.3s ease;
+}
+
+.icon-float:hover {
+  animation: gentle-float 2s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0) scale(1.1); }
+  50% { transform: translateY(-5px) scale(1.1); }
+}
+
+.icon-glow {
+  transition: all 0.3s ease;
+}
+
+.icon-glow:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(33, 150, 95, 0.6));
+}
+
+.icon-scale {
+  transition: all 0.3s ease;
+}
+
+.icon-scale:hover {
+  transform: scale(1.2);
+}
+
+.icon-flip {
+  transition: all 0.3s ease;
+}
+
+.icon-flip:hover {
+  transform: scaleX(-1) scale(1.1);
+}
+
 .hero-gradient {
   background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(214, 32%, 91%) 50%, hsl(210, 40%, 96%) 100%);
 }

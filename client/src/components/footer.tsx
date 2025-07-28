@@ -28,13 +28,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-5 w-5 icon-bounce" />
               </a>
               <a href="#" className="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
-                <Github className="h-5 w-5" />
+                <Github className="h-5 w-5 icon-flip" />
               </a>
               <a href="#" className="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5 icon-pulse" />
               </a>
             </div>
           </div>
@@ -71,15 +71,15 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
             <ul className="space-y-3">
               <li className="flex items-center text-green-100">
-                <Phone className="h-4 w-4 mr-3 text-[#21965f]" />
+                <Phone className="h-4 w-4 mr-3 text-[#21965f] icon-shake" />
                 <span>+1-800-456-478-23</span>
               </li>
               <li className="flex items-center text-green-100">
-                <Mail className="h-4 w-4 mr-3 text-[#21965f]" />
+                <Mail className="h-4 w-4 mr-3 text-[#21965f] icon-bounce" />
                 <span>info@itnoa.com</span>
               </li>
               <li className="flex items-start text-green-100">
-                <Clock className="h-4 w-4 mr-3 text-[#21965f] mt-1" />
+                <Clock className="h-4 w-4 mr-3 text-[#21965f] mt-1 icon-pulse" />
                 <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
               </li>
             </ul>

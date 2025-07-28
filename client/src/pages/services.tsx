@@ -8,73 +8,73 @@ import Footer from "@/components/footer";
 export default function Services() {
   const services = [
     {
-      icon: <Search className="h-8 w-8 text-[#01411c]" />,
+      icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
       title: "IT Audit",
       description: "Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations.",
       href: "/services/it-audit"
     },
     {
-      icon: <Shield className="h-8 w-8 text-[#01411c]" />,
+      icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
       title: "Information Security (GRC) Consulting",
       description: "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
       href: "/services/grc-consulting"
     },
     {
-      icon: <RotateCcw className="h-8 w-8 text-[#01411c]" />,
+      icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
       title: "Business Continuity / Cyber Resilience",
       description: "Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions.",
       href: "/services/cyber-resilience"
     },
     {
-      icon: <Bug className="h-8 w-8 text-[#01411c]" />,
+      icon: <Bug className="h-8 w-8 text-[#01411c] icon-pulse" />,
       title: "Penetration Testing",
       description: "Identify system vulnerabilities with expert penetration testing services. Ensure robust security and protect critical business data.",
       href: "/services/penetration-testing"
     },
     {
-      icon: <Tag className="h-8 w-8 text-[#01411c]" />,
+      icon: <Tag className="h-8 w-8 text-[#01411c] icon-bounce" />,
       title: "ISO 27001 Implementation",
       description: "Achieve robust information security management with ISO 27001 certification. Safeguard business data and build stakeholder trust.",
       href: "/services/iso-27001-implementation"
     },
     {
-      icon: <Settings className="h-8 w-8 text-[#01411c]" />,
+      icon: <Settings className="h-8 w-8 text-[#01411c] icon-settings" />,
       title: "NIST CSF Implementation",
       description: "Strengthen cybersecurity posture with NIST Cybersecurity Framework implementation. Enhance risk management and improve security resilience.",
       href: "/services/nist-csf-implementation"
     },
     {
-      icon: <CreditCard className="h-8 w-8 text-[#01411c]" />,
+      icon: <CreditCard className="h-8 w-8 text-[#01411c] icon-shake" />,
       title: "PCI DSS Assessments",
       description: "Ensure payment data security and PCI DSS compliance. Protect sensitive cardholder information and mitigate financial risks.",
       href: "/services/pci-dss-assessments"
     },
     {
-      icon: <RotateCcw className="h-8 w-8 text-[#01411c]" />,
+      icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-float" />,
       title: "Business Continuity Planning",
       description: "Comprehensive Business Continuity Plans (BCP) to protect your organization from unexpected disruptions and ensure smooth operations.",
       href: "/services/business-continuity-planning"
     },
     {
-      icon: <Cloud className="h-8 w-8 text-[#01411c]" />,
+      icon: <Cloud className="h-8 w-8 text-[#01411c] icon-float" />,
       title: "Cloud Security Assessments",
       description: "Identify and address vulnerabilities in your cloud infrastructure, ensuring alignment with security best practices and data protection.",
       href: "/services/cloud-security-assessments"
     },
     {
-      icon: <Shield className="h-8 w-8 text-[#01411c]" />,
+      icon: <Shield className="h-8 w-8 text-[#01411c] icon-glow" />,
       title: "NIST 800-171 Security Assessment",
       description: "NIST 800-171 Security Assessments to assist organizations in meeting government requirements for protecting Controlled Unclassified Information (CUI).",
       href: "/services/nist-171-security-assessment"
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-[#01411c]" />,
+      icon: <CheckCircle className="h-8 w-8 text-[#01411c] icon-glow" />,
       title: "Cyber Essentials",
       description: "Achieve Cyber Essentials certification with our expert support. Safeguard your business from cyber threats and demonstrate security commitment.",
       href: "/services/cyber-essentials"
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-[#01411c]" />,
+      icon: <CheckCircle className="h-8 w-8 text-[#01411c] icon-scale" />,
       title: "SOC 2",
       description: "Achieve SOC 2 compliance with our expert services. Ensure your organization meets the highest standards for security, availability, and confidentiality.",
       href: "/services/soc-2"

@@ -58,25 +58,25 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <Phone className="h-6 w-6 text-[#01411c]" />,
+      icon: <Phone className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "Phone",
       details: "+1-800-456-478-23",
       subtitle: "Available 24/7 for emergencies"
     },
     {
-      icon: <Mail className="h-6 w-6 text-[#01411c]" />,
+      icon: <Mail className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "Email", 
       details: "info@itnoa.com",
       subtitle: "We respond within 4 hours"
     },
     {
-      icon: <Clock className="h-6 w-6 text-[#01411c]" />,
+      icon: <Clock className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "Business Hours",
       details: "Monday - Friday: 9:00 AM - 6:00 PM EST",
       subtitle: "Saturday: 10:00 AM - 2:00 PM EST"
     },
     {
-      icon: <MapPin className="h-6 w-6 text-[#01411c]" />,
+      icon: <MapPin className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Location",
       details: "Serving clients nationwide",
       subtitle: "Remote and on-site consultations available"
