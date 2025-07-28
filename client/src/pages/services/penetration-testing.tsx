@@ -29,7 +29,7 @@ export default function PenetrationTesting() {
       description="Expert-led penetration testing services to identify system vulnerabilities, validate security controls, and provide actionable remediation guidance to strengthen your security posture."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<Bug className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<Bug className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

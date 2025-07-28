@@ -27,7 +27,7 @@ export default function ITAudit() {
       description="Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations and expert guidance."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<Search className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<Search className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

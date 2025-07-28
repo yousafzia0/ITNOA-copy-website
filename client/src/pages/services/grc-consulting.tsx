@@ -28,7 +28,7 @@ export default function GRCConsulting() {
       description="Comprehensive Governance, Risk, and Compliance consulting to establish robust security frameworks, meet regulatory requirements, and drive business value through effective risk management."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<Shield className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<Shield className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

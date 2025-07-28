@@ -28,7 +28,7 @@ export default function CyberResilience() {
       description="Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions, minimize downtime, and protect your organization's critical assets."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<RotateCcw className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<RotateCcw className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

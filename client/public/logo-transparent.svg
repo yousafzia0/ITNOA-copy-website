@@ -1,0 +1,52 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text { 
+        font-family: 'Inter', 'Arial', sans-serif; 
+        font-weight: 800; 
+        fill: #01411c; 
+      }
+      .logo-o-green { 
+        fill: #21965f; 
+      }
+      .logo-shield { 
+        fill: white; 
+      }
+      .logo-crown { 
+        fill: #01411c; 
+      }
+    </style>
+  </defs>
+  
+  <!-- Letter 'i' -->
+  <path d="M10 25 L35 25 L35 95 L10 95 Z" class="logo-text"/>
+  <circle cx="22.5" cy="10" r="10" class="logo-text"/>
+  
+  <!-- Letter 't' -->
+  <path d="M50 15 L75 15 L75 35 L95 35 L95 55 L75 55 L75 80 C75 85 77 87 82 87 L95 87 L95 105 L78 105 C60 105 50 95 50 77 Z" class="logo-text"/>
+  <rect x="35" y="35" width="80" height="20" class="logo-text"/>
+  
+  <!-- Letter 'n' -->
+  <path d="M130 35 L155 35 L155 50 C160 40 170 35 182 35 C200 35 210 50 210 68 L210 105 L185 105 L185 75 C185 65 182 60 175 60 C168 60 160 65 160 75 L160 105 L135 105 Z" class="logo-text"/>
+  <rect x="130" y="35" width="25" height="70" class="logo-text"/>
+  
+  <!-- Letter 'o' with special design -->
+  <g transform="translate(240, 15)">
+    <!-- Crown on top -->
+    <g transform="translate(15, -5)">
+      <polygon points="0,0 8,15 16,0 24,15 32,0 24,18 16,12 8,18 0,12" class="logo-crown"/>
+    </g>
+    
+    <!-- Main 'o' circle in green -->
+    <circle cx="30" cy="50" r="35" class="logo-o-green"/>
+    
+    <!-- Shield inside -->
+    <path d="M30 25 L50 35 L50 60 C50 70 40 78 30 82 C20 78 10 70 10 60 L10 35 Z" class="logo-shield"/>
+    
+    <!-- Inner shield detail -->
+    <path d="M30 32 L42 40 L42 58 C42 65 36 70 30 73 C24 70 18 65 18 58 L18 40 Z" class="logo-o-green"/>
+  </g>
+  
+  <!-- Letter 'a' -->
+  <path d="M320 35 L345 35 L345 50 C350 40 360 35 372 35 C390 35 400 50 400 68 L400 105 L375 105 L375 95 C370 102 360 107 348 107 C330 107 320 95 320 80 C320 65 330 55 348 55 L375 55 L375 50 C375 45 372 40 365 40 C358 40 350 45 350 50 L325 50 C325 40 335 35 365 35 Z M375 70 L348 70 C343 70 340 73 340 77 C340 82 343 85 348 85 C358 85 375 80 375 70 Z" class="logo-text"/>
+</svg>

@@ -29,7 +29,7 @@ export default function NISTCSFImplementation() {
       description="Strategic NIST Cybersecurity Framework implementation to strengthen your organization's cybersecurity posture, enhance risk management capabilities, and establish a flexible, risk-based security program."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<Settings className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<Settings className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

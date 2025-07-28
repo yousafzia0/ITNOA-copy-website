@@ -58,25 +58,25 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <Phone className="h-6 w-6 text-[hsl(var(--pakistan-green))]" />,
+      icon: <Phone className="h-6 w-6 text-[#01411c]" />,
       title: "Phone",
       details: "+1-800-456-478-23",
       subtitle: "Available 24/7 for emergencies"
     },
     {
-      icon: <Mail className="h-6 w-6 text-[hsl(var(--pakistan-green))]" />,
+      icon: <Mail className="h-6 w-6 text-[#01411c]" />,
       title: "Email", 
       details: "info@itnoa.com",
       subtitle: "We respond within 4 hours"
     },
     {
-      icon: <Clock className="h-6 w-6 text-[hsl(var(--pakistan-green))]" />,
+      icon: <Clock className="h-6 w-6 text-[#01411c]" />,
       title: "Business Hours",
       details: "Monday - Friday: 9:00 AM - 6:00 PM EST",
       subtitle: "Saturday: 10:00 AM - 2:00 PM EST"
     },
     {
-      icon: <MapPin className="h-6 w-6 text-[hsl(var(--pakistan-green))]" />,
+      icon: <MapPin className="h-6 w-6 text-[#01411c]" />,
       title: "Location",
       details: "Serving clients nationwide",
       subtitle: "Remote and on-site consultations available"
@@ -93,7 +93,7 @@ export default function Contact() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Get In <span className="text-[hsl(var(--pakistan-green))]">Touch</span>
+              Get In <span className="text-[#01411c]">Touch</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ready to discuss your cybersecurity needs? Contact our experts today 
@@ -116,7 +116,7 @@ export default function Contact() {
               <div className="space-y-6 mb-12">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-[hsl(var(--pakistan-green))]/10 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <div className="w-12 h-12 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4 mt-1">
                       {info.icon}
                     </div>
                     <div>
@@ -132,20 +132,20 @@ export default function Contact() {
               <div>
                 <h3 className="font-semibold text-slate-900 text-lg mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-12 h-12 bg-[hsl(var(--pakistan-green))] rounded-lg flex items-center justify-center text-white hover:bg-[hsl(var(--pakistan-light))] transition-colors duration-300">
+                  <a href="#" className="w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
                     <Linkedin className="h-6 w-6" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-[hsl(var(--pakistan-green))] rounded-lg flex items-center justify-center text-white hover:bg-[hsl(var(--pakistan-light))] transition-colors duration-300">
+                  <a href="#" className="w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-[hsl(var(--pakistan-green))] rounded-lg flex items-center justify-center text-white hover:bg-[hsl(var(--pakistan-light))] transition-colors duration-300">
+                  <a href="#" className="w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
                     <MessageCircle className="h-6 w-6" />
                   </a>
                 </div>
               </div>
 
               {/* Emergency Contact */}
-              <Card className="mt-12 border-[hsl(var(--pakistan-green))]/20 bg-[hsl(var(--pakistan-green))]/5">
+              <Card className="mt-12 border-[#01411c]/20 bg-[#01411c]/5">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-slate-900 text-lg mb-2">Emergency Response</h3>
                   <p className="text-slate-600 mb-4">
@@ -238,7 +238,7 @@ export default function Contact() {
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-light))] text-white py-4 text-lg"
+                      className="w-full bg-[#01411c] hover:bg-[#012d13] text-white py-4 text-lg"
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>

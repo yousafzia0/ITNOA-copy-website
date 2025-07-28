@@ -59,17 +59,17 @@ export default function BecomeClient() {
 
   const benefits = [
     {
-      icon: <Shield className="h-8 w-8 text-[hsl(var(--pakistan-green))]" />,
+      icon: <Shield className="h-8 w-8 text-[#01411c]" />,
       title: "Expert Guidance",
       description: "Work with certified cybersecurity professionals with decades of experience across multiple industries."
     },
     {
-      icon: <Users className="h-8 w-8 text-[hsl(var(--pakistan-green))]" />,
+      icon: <Users className="h-8 w-8 text-[#01411c]" />,
       title: "Personalized Solutions",
       description: "Receive customized cybersecurity strategies tailored to your specific business needs and risk profile."
     },
     {
-      icon: <Award className="h-8 w-8 text-[hsl(var(--pakistan-green))]" />,
+      icon: <Award className="h-8 w-8 text-[#01411c]" />,
       title: "Proven Results",
       description: "Join over 500 organizations that trust us to protect their critical assets and maintain compliance."
     }
@@ -108,7 +108,7 @@ export default function BecomeClient() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Become Our <span className="text-[hsl(var(--pakistan-green))]">Client</span>
+              Become Our <span className="text-[#01411c]">Client</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               Take the first step towards comprehensive cybersecurity protection. 
@@ -131,7 +131,7 @@ export default function BecomeClient() {
               <div className="space-y-6 mb-12">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-16 h-16 bg-[hsl(var(--pakistan-green))]/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="w-16 h-16 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       {benefit.icon}
                     </div>
                     <div>
@@ -147,7 +147,7 @@ export default function BecomeClient() {
               <div className="space-y-6">
                 {process.map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-10 h-10 bg-[hsl(var(--pakistan-green))] rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#01411c] rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
                       {item.step}
                     </div>
                     <div>
@@ -161,7 +161,7 @@ export default function BecomeClient() {
 
             {/* Right Column - Form */}
             <div>
-              <Card className="shadow-2xl border-[hsl(var(--pakistan-green))]/20">
+              <Card className="shadow-2xl border-[#01411c]/20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-slate-900">Get Your Free Consultation</CardTitle>
                   <p className="text-slate-600">
@@ -245,7 +245,7 @@ export default function BecomeClient() {
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-light))] text-white py-4 text-lg"
+                      className="w-full bg-[#01411c] hover:bg-[#012d13] text-white py-4 text-lg"
                     >
                       {isSubmitting ? "Submitting..." : "Submit Request"}
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -255,11 +255,11 @@ export default function BecomeClient() {
                   <div className="mt-8 pt-6 border-t border-slate-200">
                     <div className="flex items-center justify-center space-x-6 text-sm text-slate-600">
                       <div className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-[hsl(var(--pakistan-green))] mr-2" />
+                        <CheckCircle className="h-4 w-4 text-[#01411c] mr-2" />
                         Free consultation
                       </div>
                       <div className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-[hsl(var(--pakistan-green))] mr-2" />
+                        <CheckCircle className="h-4 w-4 text-[#01411c] mr-2" />
                         No commitment required
                       </div>
                     </div>
@@ -283,12 +283,12 @@ export default function BecomeClient() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-light))] text-white px-8 py-4">
+              <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
                 Contact Us Directly
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline" className="border-[hsl(var(--pakistan-green))] text-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-green))] hover:text-white px-8 py-4">
+              <Button size="lg" variant="outline" className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-8 py-4">
                 Explore Our Services
               </Button>
             </Link>

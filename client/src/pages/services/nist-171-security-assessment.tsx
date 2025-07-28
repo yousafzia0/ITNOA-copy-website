@@ -30,7 +30,7 @@ export default function NIST171SecurityAssessment() {
       description="Comprehensive NIST 800-171 security assessments to help organizations meet government requirements for protecting Controlled Unclassified Information (CUI) and maintain federal contract eligibility."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<Shield className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<Shield className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

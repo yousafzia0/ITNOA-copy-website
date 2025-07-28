@@ -33,7 +33,7 @@ export default function ServiceDetailTemplate({
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-[hsl(var(--pakistan-green))]/10 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4">
                   {icon}
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900">{title}</h1>
@@ -62,19 +62,19 @@ export default function ServiceDetailTemplate({
               <div className="space-y-4">
                 {whatWeDo.map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-[hsl(var(--pakistan-green))] mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 text-[#01411c] mr-3 mt-1 flex-shrink-0" />
                     <p className="text-slate-600 text-lg">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
             
-            <Card className="border-[hsl(var(--pakistan-green))]/20">
+            <Card className="border-[#01411c]/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">Why It Matters</h3>
                 <p className="text-slate-600 text-lg leading-relaxed mb-8">{whyItMatters}</p>
                 <Link href="/become-client">
-                  <Button className="w-full bg-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-light))] text-white py-4 text-lg">
+                  <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white py-4 text-lg">
                     Get Started Today
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -86,7 +86,7 @@ export default function ServiceDetailTemplate({
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[hsl(var(--pakistan-green))] text-white relative overflow-hidden">
+      <section className="py-20 bg-[#01411c] text-white relative overflow-hidden">
         <div className="geometric-pattern absolute inset-0 opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -98,12 +98,12 @@ export default function ServiceDetailTemplate({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/become-client">
-              <Button size="lg" variant="secondary" className="bg-white text-[hsl(var(--pakistan-green))] hover:bg-slate-100">
+              <Button size="lg" variant="secondary" className="bg-white text-[#01411c] hover:bg-slate-100">
                 Become a Client
               </Button>
             </Link>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[hsl(var(--pakistan-green))]">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#01411c]">
                 Contact Us
               </Button>
             </Link>

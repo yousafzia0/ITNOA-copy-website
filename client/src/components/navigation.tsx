@@ -26,13 +26,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-[hsl(var(--pakistan-green))] rounded-lg flex items-center justify-center">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-[hsl(var(--pakistan-green))]">ITNOA</span>
-            </div>
+          <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
+            <img 
+              src="/logo-transparent.svg" 
+              alt="itnoa logo" 
+              className="h-10 sm:h-12 object-contain hover:drop-shadow-md transition duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,8 +43,8 @@ export default function Navigation() {
                   href={item.href}
                   className={`font-medium transition-colors duration-300 pb-1 ${
                     isActive(item.href)
-                      ? "text-[hsl(var(--pakistan-green))] border-b-2 border-[hsl(var(--pakistan-green))]"
-                      : "text-slate-600 hover:text-[hsl(var(--pakistan-green))]"
+                      ? "text-[#01411c] border-b-2 border-[#01411c]"
+                      : "text-slate-600 hover:text-[#01411c]"
                   }`}
                 >
                   {item.label}
@@ -57,7 +56,7 @@ export default function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/become-client">
-              <Button className="bg-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-light))] text-white px-6 py-2">
+              <Button className="bg-[#01411c] hover:bg-[#012d13] text-white px-6 py-2">
                 Become a Client
               </Button>
             </Link>
@@ -80,15 +79,15 @@ export default function Navigation() {
                       onClick={() => setIsOpen(false)}
                       className={`block px-3 py-2 font-medium ${
                         isActive(item.href)
-                          ? "text-[hsl(var(--pakistan-green))]"
-                          : "text-slate-600 hover:text-[hsl(var(--pakistan-green))]"
+                          ? "text-[#01411c]"
+                          : "text-slate-600 hover:text-[#01411c]"
                       }`}
                     >
                       {item.label}
                     </Link>
                   ))}
                   <Link href="/become-client" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full bg-[hsl(var(--pakistan-green))] hover:bg-[hsl(var(--pakistan-light))] text-white mt-4">
+                    <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white mt-4">
                       Become a Client
                     </Button>
                   </Link>

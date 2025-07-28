@@ -23,9 +23,9 @@
   --destructive-foreground: hsl(210, 40%, 98%);
   --ring: hsl(144, 97%, 13%);
   --radius: 0.5rem;
-  --pakistan-green: hsl(144, 97%, 13%);
-  --pakistan-light: hsl(144, 61%, 20%);
-  --pakistan-accent: hsl(158, 64%, 52%);
+  --pakistan-green: #01411c;
+  --pakistan-light: #012d13;
+  --pakistan-accent: #21965f;
 }
 
 .dark {
@@ -48,9 +48,9 @@
   --destructive: hsl(0, 63%, 31%);
   --destructive-foreground: hsl(210, 40%, 98%);
   --ring: hsl(144, 97%, 13%);
-  --pakistan-green: hsl(144, 97%, 13%);
-  --pakistan-light: hsl(144, 61%, 20%);
-  --pakistan-accent: hsl(158, 64%, 52%);
+  --pakistan-green: #01411c;
+  --pakistan-light: #012d13;
+  --pakistan-accent: #21965f;
 }
 
 @layer base {
@@ -70,8 +70,8 @@
 
 .geometric-pattern {
   background-image: 
-    radial-gradient(circle at 25% 25%, hsl(144, 97%, 13%, 0.08) 2px, transparent 2px),
-    radial-gradient(circle at 75% 75%, hsl(144, 97%, 13%, 0.08) 2px, transparent 2px);
+    radial-gradient(circle at 25% 25%, rgba(1, 65, 28, 0.08) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(1, 65, 28, 0.08) 2px, transparent 2px);
   background-size: 50px 50px;
 }
 

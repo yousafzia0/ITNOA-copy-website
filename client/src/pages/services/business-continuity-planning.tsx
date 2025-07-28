@@ -29,7 +29,7 @@ export default function BusinessContinuityPlanning() {
       description="Comprehensive business continuity planning services to protect your organization from unexpected disruptions, ensure operational resilience, and minimize business impact during critical incidents."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<RotateCcw className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<RotateCcw className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

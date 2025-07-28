@@ -30,7 +30,7 @@ export default function PCIDSSAssessments() {
       description="Comprehensive PCI DSS compliance assessments to ensure payment data security, meet regulatory requirements, protect sensitive cardholder information, and mitigate financial and reputational risks."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<CreditCard className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<CreditCard className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

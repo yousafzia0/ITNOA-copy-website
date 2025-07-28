@@ -30,7 +30,7 @@ export default function SOC2() {
       description="Comprehensive SOC 2 compliance services to help your organization achieve the highest standards for security, availability, processing integrity, confidentiality, and privacy in service delivery."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<CheckCircle className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<CheckCircle className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );

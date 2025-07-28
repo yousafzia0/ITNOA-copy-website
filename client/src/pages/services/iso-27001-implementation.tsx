@@ -28,7 +28,7 @@ export default function ISO27001Implementation() {
       description="Comprehensive ISO 27001 implementation services to achieve robust information security management, demonstrate compliance commitment, and build stakeholder trust through internationally recognized certification."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
-      icon={<Tag className="h-10 w-10 text-[hsl(var(--pakistan-green))]" />}
+      icon={<Tag className="h-10 w-10 text-[#01411c]" />}
       heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
     />
   );
