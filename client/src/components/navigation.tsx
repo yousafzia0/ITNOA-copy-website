@@ -64,8 +64,12 @@ export default function Navigation() {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm">
-                  <Menu className="h-6 w-6 icon-pulse" />
+                <Button 
+                  variant="ghost" 
+                  size="lg" 
+                  className="p-3 hover:bg-[#01411c]/10 rounded-lg"
+                >
+                  <Menu className="h-8 w-8 text-[#01411c] icon-pulse" />
                 </Button>
               </SheetTrigger>
               <SheetContent>
