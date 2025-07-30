@@ -124,7 +124,7 @@ export default function Home() {
                 </Link>
                 <Link href="/contact">
                   <Button size="lg" variant="outline" className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-8 py-4">
-                    Get Free Quote
+                    Talk To A Cybersecurity Expert
                   </Button>
                 </Link>
               </div>

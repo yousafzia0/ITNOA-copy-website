@@ -98,12 +98,12 @@ export default function ServiceDetailTemplate({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/become-client">
-              <Button size="lg" variant="secondary" className="bg-white text-[#01411c] hover:bg-slate-100">
+              <Button size="lg" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
                 Become a Client
               </Button>
             </Link>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#01411c]">
+              <Button size="lg" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
                 Contact Us
               </Button>
             </Link>
