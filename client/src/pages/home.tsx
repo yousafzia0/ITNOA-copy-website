@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Search, Shield, RotateCcw, Tag, Settings, CreditCard, Bug, Cloud, CheckCircle, University, Heart, Landmark, Cpu, Factory, GraduationCap, ShoppingCart, Zap, Star } from "lucide-react";
+import { Search, Shield, RotateCcw, University, Heart, Landmark, Cpu, Factory, GraduationCap, ShoppingCart, Zap, Star } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
@@ -27,44 +27,7 @@ export default function Home() {
     }
   ];
 
-  const allServices = [
-    {
-      icon: <Tag className="h-6 w-6 text-[#01411c] icon-bounce" />,
-      title: "ISO 27001 Implementation",
-      description: "Achieve robust information security management with ISO 27001 certification. Safeguard business data and build stakeholder trust.",
-      href: "/services/iso-27001-implementation"
-    },
-    {
-      icon: <Settings className="h-6 w-6 text-[#01411c] icon-settings" />,
-      title: "NIST CSF Implementation",
-      description: "Strengthen cybersecurity posture with NIST Cybersecurity Framework. Enhance risk management and improve security resilience.",
-      href: "/services/nist-csf-implementation"
-    },
-    {
-      icon: <CreditCard className="h-6 w-6 text-[#01411c] icon-shake" />,
-      title: "PCI DSS Assessments",
-      description: "Ensure payment data security and PCI DSS compliance. Protect sensitive cardholder information and mitigate financial risks.",
-      href: "/services/pci-dss-assessments"
-    },
-    {
-      icon: <Bug className="h-6 w-6 text-[#01411c] icon-pulse" />,
-      title: "Penetration Testing",
-      description: "Identify system vulnerabilities with expert penetration testing. Ensure robust security and protect critical business data.",
-      href: "/services/penetration-testing"
-    },
-    {
-      icon: <Cloud className="h-6 w-6 text-[#01411c] icon-float" />,
-      title: "Cloud Security Assessments",
-      description: "Comprehensive cloud security evaluations to identify vulnerabilities and ensure best practices in cloud infrastructure protection.",
-      href: "/services/cloud-security-assessments"
-    },
-    {
-      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-glow" />,
-      title: "SOC 2 Compliance",
-      description: "Achieve SOC 2 compliance with expert guidance. Meet the highest standards for security, availability, and confidentiality.",
-      href: "/services/soc-2"
-    }
-  ];
+
 
   const industries = [
     { icon: <University className="h-8 w-8 text-[#01411c] icon-bounce" />, name: "Financial Services", desc: "Comprehensive security solutions for banks, credit unions, and financial institutions." },
@@ -174,49 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* All Services Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Our Comprehensive Services
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From compliance assessments to penetration testing, we deliver 
-              specialized IT security solutions that protect and empower your business.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.map((service, index) => (
-              <Card key={index} className="group bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900">{service.title}</h3>
-                  </div>
-                  <p className="text-slate-600 text-sm mb-4">{service.description}</p>
-                  <Link href={service.href}>
-                    <Button variant="ghost" className="text-[#01411c] hover:text-[#012d13] p-0 h-auto text-sm font-semibold">
-                      Explore More →
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/services">
-              <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
-                View All Services
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Industries Section */}
       <section className="py-20 bg-white">
