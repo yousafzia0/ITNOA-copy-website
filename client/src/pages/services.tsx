@@ -27,7 +27,7 @@ export default function Services() {
     },
     {
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
-      title: "Information Security (GRC) Consulting",
+      title: "Information Security Consulting (ISC)",
       description:
         "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
       href: "/services/grc-consulting",
@@ -171,7 +171,8 @@ export default function Services() {
             <Link href="/become-client">
               <Button
                 size="lg"
-                className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
+                variant="secondary"
+                className="bg-white text-[#01411c] hover:bg-slate-100"
               >
                 Become a Client
               </Button>
@@ -179,7 +180,8 @@ export default function Services() {
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-[#01411c]"
               >
                 Contact Us
               </Button>

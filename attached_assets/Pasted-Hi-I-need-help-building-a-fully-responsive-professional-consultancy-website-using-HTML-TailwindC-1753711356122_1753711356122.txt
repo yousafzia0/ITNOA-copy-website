@@ -41,7 +41,7 @@ Also include my client’s priority services:
 
 IT Audit
 
-Information Security (GRC) Consulting
+Information Security Consulting (ISC) 
 
 Business Continuity / Cyber Resilience
 

@@ -15,7 +15,7 @@ export default function Home() {
     },
     {
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
-      title: "Information Security (GRC)",
+      title: "Information Security (ISC)",
       description: "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
       href: "/services/grc-consulting"
     },
