@@ -172,7 +172,7 @@ export default function Services() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="bg-white text-[#01411c] hover:bg-slate-100"
+                className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
               >
                 Become a Client
               </Button>
@@ -181,7 +181,7 @@ export default function Services() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#01411c]"
+                className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
               >
                 Contact Us
               </Button>
