@@ -55,7 +55,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Link href="/become-client">
               <Button className="bg-[#01411c] hover:bg-[#012d13] text-white px-6 py-2">
-                Become a Client
+                How Can We Help
               </Button>
             </Link>
           </div>
