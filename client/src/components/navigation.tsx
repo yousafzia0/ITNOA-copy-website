@@ -64,9 +64,9 @@ export default function Navigation() {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="lg" 
+                <Button
+                  variant="ghost"
+                  size="lg"
                   className="p-3 hover:bg-[#01411c]/10 rounded-lg"
                 >
                   <Menu className="h-8 w-8 text-[#01411c] icon-pulse" />
@@ -90,7 +90,7 @@ export default function Navigation() {
                   ))}
                   <Link href="/become-client" onClick={() => setIsOpen(false)}>
                     <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white mt-4">
-                      Become a Client
+                      How Can We Help
                     </Button>
                   </Link>
                 </div>

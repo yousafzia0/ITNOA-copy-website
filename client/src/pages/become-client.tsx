@@ -5,7 +5,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { CheckCircle, Shield, Users, Award, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/navigation";
@@ -17,13 +23,13 @@ export default function BecomeClient() {
     email: "",
     organization: "",
     industry: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,19 +38,20 @@ export default function BecomeClient() {
 
     try {
       // TODO: Implement actual form submission logic
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       toast({
         title: "Request Submitted Successfully!",
-        description: "We'll contact you within 24 hours to discuss your cybersecurity needs.",
+        description:
+          "We'll contact you within 24 hours to discuss your cybersecurity needs.",
       });
-      
+
       setFormData({
         name: "",
         email: "",
         organization: "",
         industry: "",
-        message: ""
+        message: "",
       });
     } catch (error) {
       toast({
@@ -61,47 +68,54 @@ export default function BecomeClient() {
     {
       icon: <Shield className="h-8 w-8 text-[#01411c]" />,
       title: "Expert Guidance",
-      description: "Work with certified cybersecurity professionals with decades of experience across multiple industries."
+      description:
+        "Work with certified cybersecurity professionals with decades of experience across multiple industries.",
     },
     {
       icon: <Users className="h-8 w-8 text-[#01411c]" />,
       title: "Personalized Solutions",
-      description: "Receive customized cybersecurity strategies tailored to your specific business needs and risk profile."
+      description:
+        "Receive customized cybersecurity strategies tailored to your specific business needs and risk profile.",
     },
     {
       icon: <Award className="h-8 w-8 text-[#01411c]" />,
       title: "Proven Results",
-      description: "Join over 500 organizations that trust us to protect their critical assets and maintain compliance."
-    }
+      description:
+        "Join over 500 organizations that trust us to protect their critical assets and maintain compliance.",
+    },
   ];
 
   const process = [
     {
       step: "1",
       title: "Initial Consultation",
-      description: "Free 30-minute consultation to understand your cybersecurity needs and current posture."
+      description:
+        "Free 30-minute consultation to understand your cybersecurity needs and current posture.",
     },
     {
       step: "2",
       title: "Risk Assessment",
-      description: "Comprehensive evaluation of your current security stance and identification of vulnerabilities."
+      description:
+        "Comprehensive evaluation of your current security stance and identification of vulnerabilities.",
     },
     {
       step: "3",
       title: "Custom Strategy",
-      description: "Development of a tailored cybersecurity roadmap aligned with your business objectives."
+      description:
+        "Development of a tailored cybersecurity roadmap aligned with your business objectives.",
     },
     {
       step: "4",
       title: "Implementation",
-      description: "Expert guidance through implementation with ongoing support and monitoring."
-    }
+      description:
+        "Expert guidance through implementation with ongoing support and monitoring.",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="hero-gradient relative overflow-hidden py-20">
         <div className="geometric-pattern absolute inset-0"></div>
@@ -111,8 +125,12 @@ export default function BecomeClient() {
               Become Our <span className="text-[#01411c]">Client</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Take the first step towards comprehensive cybersecurity protection. 
-              Our experts are ready to help you build a robust security strategy tailored to your business.
+              We go beyond point-in-time assessments. At ITNOA, we deliver
+              complete cybersecurity solutions. Our commitment doesn’t end with
+              the assessment—we remain actively engaged to support remediation.
+              We test each control not only for design but for operational
+              effectiveness throughout the year, ensuring continuous compliance
+              and security readiness.
             </p>
           </div>
         </div>
@@ -127,7 +145,7 @@ export default function BecomeClient() {
               <h2 className="text-3xl font-bold text-slate-900 mb-8">
                 Why Partner With ITNOA?
               </h2>
-              
+
               <div className="space-y-6 mb-12">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
@@ -135,15 +153,19 @@ export default function BecomeClient() {
                       {benefit.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">{benefit.title}</h3>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">
+                        {benefit.title}
+                      </h3>
                       <p className="text-slate-600">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <h3 className="text-2xl font-bold text-slate-900 mb-8">Our Process</h3>
-              
+              <h3 className="text-2xl font-bold text-slate-900 mb-8">
+                Our Process
+              </h3>
+
               <div className="space-y-6">
                 {process.map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -151,7 +173,9 @@ export default function BecomeClient() {
                       {item.step}
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-slate-900 mb-1">{item.title}</h4>
+                      <h4 className="text-lg font-bold text-slate-900 mb-1">
+                        {item.title}
+                      </h4>
                       <p className="text-slate-600">{item.description}</p>
                     </div>
                   </div>
@@ -163,9 +187,12 @@ export default function BecomeClient() {
             <div>
               <Card className="shadow-2xl border-[#01411c]/20">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-slate-900">Get Your Free Consultation</CardTitle>
+                  <CardTitle className="text-2xl text-slate-900">
+                    Get Your Free Consultation
+                  </CardTitle>
                   <p className="text-slate-600">
-                    Fill out the form below and we'll contact you within 24 hours to discuss your cybersecurity needs.
+                    Fill out the form below and we'll contact you within 24
+                    hours to discuss your cybersecurity needs.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -176,7 +203,9 @@ export default function BecomeClient() {
                         id="name"
                         type="text"
                         value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("name", e.target.value)
+                        }
                         placeholder="Your full name"
                         required
                         className="mt-2"
@@ -189,7 +218,9 @@ export default function BecomeClient() {
                         id="email"
                         type="email"
                         value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                         placeholder="your.email@company.com"
                         required
                         className="mt-2"
@@ -202,7 +233,9 @@ export default function BecomeClient() {
                         id="organization"
                         type="text"
                         value={formData.organization}
-                        onChange={(e) => handleInputChange("organization", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("organization", e.target.value)
+                        }
                         placeholder="Your company name"
                         required
                         className="mt-2"
@@ -211,30 +244,45 @@ export default function BecomeClient() {
 
                     <div>
                       <Label htmlFor="industry">Industry</Label>
-                      <Select value={formData.industry} onValueChange={(value) => handleInputChange("industry", value)}>
+                      <Select
+                        value={formData.industry}
+                        onValueChange={(value) =>
+                          handleInputChange("industry", value)
+                        }
+                      >
                         <SelectTrigger className="mt-2">
                           <SelectValue placeholder="Select your industry" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="financial">Financial Services</SelectItem>
+                          <SelectItem value="financial">
+                            Financial Services
+                          </SelectItem>
                           <SelectItem value="healthcare">Healthcare</SelectItem>
                           <SelectItem value="government">Government</SelectItem>
                           <SelectItem value="technology">Technology</SelectItem>
-                          <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                          <SelectItem value="manufacturing">
+                            Manufacturing
+                          </SelectItem>
                           <SelectItem value="education">Education</SelectItem>
                           <SelectItem value="retail">Retail</SelectItem>
-                          <SelectItem value="energy">Energy & Utilities</SelectItem>
+                          <SelectItem value="energy">
+                            Energy & Utilities
+                          </SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Tell us about your cybersecurity needs *</Label>
+                      <Label htmlFor="message">
+                        Tell us about your cybersecurity needs *
+                      </Label>
                       <Textarea
                         id="message"
                         value={formData.message}
-                        onChange={(e) => handleInputChange("message", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("message", e.target.value)
+                        }
                         placeholder="Describe your current challenges, compliance requirements, or specific services you're interested in..."
                         required
                         rows={5}
@@ -242,8 +290,8 @@ export default function BecomeClient() {
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-[#01411c] hover:bg-[#012d13] text-white py-4 text-lg"
                     >
@@ -278,17 +326,24 @@ export default function BecomeClient() {
             Need Immediate Assistance?
           </h2>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            If you have urgent cybersecurity concerns or need immediate support, 
+            If you have urgent cybersecurity concerns or need immediate support,
             don't hesitate to contact us directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
+              <Button
+                size="lg"
+                className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4"
+              >
                 Contact Us Directly
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline" className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-8 py-4">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-8 py-4"
+              >
                 Explore Our Services
               </Button>
             </Link>
