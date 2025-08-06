@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Search, Shield, RotateCcw, University, Heart, Landmark, Cpu, Factory, GraduationCap, ShoppingCart, Zap, Star } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import Chatbot from "@/components/chatbot";
 
 export default function Home() {
   const serviceHighlights = [
@@ -263,6 +264,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <Chatbot />
     </div>
   );
 }
