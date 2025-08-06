@@ -34,6 +34,9 @@ import FERPAFISMAudit from "@/pages/services/ferpa-fisma";
 // SOX Auditing Services
 import SOXCyberSecurityRequirements from "@/pages/services/sox-cyber-security-requirements";
 import SOXITGeneralControls from "@/pages/services/sox-it-general-controls";
+// Business Continuity Services
+import BusinessImpactAnalysisISO22301 from "@/pages/services/business-impact-analysis-iso-22301";
+import BusinessContinuitySystemReviewISO22301 from "@/pages/services/business-continuity-system-review-iso-22301";
 
 function Router() {
   return (
@@ -68,6 +71,9 @@ function Router() {
       {/* SOX Auditing Services */}
       <Route path="/services/sox-cyber-security-requirements" component={SOXCyberSecurityRequirements} />
       <Route path="/services/sox-it-general-controls" component={SOXITGeneralControls} />
+      {/* Business Continuity Services */}
+      <Route path="/services/business-impact-analysis-iso-22301" component={BusinessImpactAnalysisISO22301} />
+      <Route path="/services/business-continuity-system-review-iso-22301" component={BusinessContinuitySystemReviewISO22301} />
       <Route component={NotFound} />
     </Switch>
   );
