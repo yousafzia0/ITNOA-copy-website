@@ -1,84 +1,44 @@
-import { Search, Database, Server, Shield, Network, FileText, Building, Heart, GraduationCap } from "lucide-react";
+import { FileText, Shield, Settings } from "lucide-react";
 import Navigation from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-export default function ITAudit() {
+export default function SOXAuditing() {
   const whatWeDo = [
-    "Comprehensive security posture assessments across all IT infrastructure components",
-    "Vulnerability identification and risk analysis using industry-leading tools and methodologies",
-    "Compliance gap analysis against relevant standards (ISO 27001, NIST, SOX, etc.)",
-    "Network architecture review and security control evaluation",
-    "Access control and identity management assessment",
-    "Data protection and privacy compliance verification",
-    "Business process security evaluation and workflow analysis",
-    "Detailed reporting with prioritized remediation recommendations"
+    "Sarbanes-Oxley Act Section 302 and 404 compliance assessment",
+    "IT general controls (ITGC) effectiveness evaluation",
+    "Financial reporting systems security and integrity review",
+    "Access controls and segregation of duties assessment",
+    "Change management and version control procedures evaluation",
+    "Data backup and recovery procedures testing",
+    "Application security controls for financial systems",
+    "Documentation and evidence collection for SOX compliance"
   ];
 
   const whyItMatters = `
-    In today's threat landscape, regular IT audits are essential for maintaining robust cybersecurity defenses. 
-    Our comprehensive audits help organizations identify vulnerabilities before attackers do, ensure compliance 
-    with regulatory requirements, and establish a solid foundation for ongoing security improvements. With cyber 
-    threats evolving constantly, proactive auditing is your first line of defense against potential breaches 
-    and regulatory penalties.
+    SOX compliance is mandatory for publicly traded companies and critical for maintaining investor confidence 
+    and regulatory compliance. Weaknesses in IT general controls can lead to material weaknesses in internal 
+    controls over financial reporting, resulting in audit qualifications, regulatory penalties, and loss of 
+    stakeholder trust. With increasing reliance on automated financial processes and systems, robust IT 
+    controls are essential for ensuring the accuracy and reliability of financial reporting. Our SOX auditing 
+    services help organizations establish and maintain effective IT general controls that support reliable 
+    financial reporting and meet regulatory requirements.
   `;
 
   const comprehensiveServices = [
     {
-      icon: <Database className="h-6 w-6 text-[#01411c] icon-bounce" />,
-      title: "SAP Audit",
-      description: "Comprehensive SAP system security assessments to ensure data integrity, access controls, and compliance with industry standards.",
-      href: "/services/sap-audit"
+      icon: <Shield className="h-6 w-6 text-[#01411c] icon-bounce" />,
+      title: "Cyber Security Requirements",
+      description: "Comprehensive cybersecurity requirements assessment for SOX compliance, including threat management and security control implementation.",
+      href: "/services/sox-cyber-security-requirements"
     },
     {
-      icon: <Server className="h-6 w-6 text-[#01411c] icon-settings" />,
-      title: "Peoplesoft Audit",
-      description: "Thorough Peoplesoft application security reviews focusing on configuration, access management, and data protection protocols.",
-      href: "/services/peoplesoft-audit"
-    },
-    {
-      icon: <Shield className="h-6 w-6 text-[#01411c] icon-shake" />,
-      title: "Database Security Audit",
-      description: "In-depth database security assessments covering encryption, access controls, vulnerability scanning, and compliance verification.",
-      href: "/services/database-security-audit"
-    },
-    {
-      icon: <Server className="h-6 w-6 text-[#01411c] icon-pulse" />,
-      title: "Linux Windows Operating System Audit",
-      description: "Comprehensive OS security evaluations examining system hardening, patch management, and security configurations.",
-      href: "/services/os-audit"
-    },
-    {
-      icon: <Network className="h-6 w-6 text-[#01411c] icon-float" />,
-      title: "Network Security",
-      description: "Advanced network security assessments including firewall configurations, intrusion detection, and network segmentation analysis.",
-      href: "/services/network-security"
-    },
-    {
-      icon: <FileText className="h-6 w-6 text-[#01411c] icon-glow" />,
-      title: "SOX Auditing",
-      description: "Sarbanes-Oxley compliance audits focusing on IT general controls, financial reporting systems, and regulatory requirements.",
-      href: "/services/sox-auditing"
-    },
-    {
-      icon: <Building className="h-6 w-6 text-[#01411c] icon-bounce" />,
-      title: "FFIEC Audits",
-      description: "Federal Financial Institutions Examination Council compliance assessments for financial sector cybersecurity requirements.",
-      href: "/services/ffiec-audits"
-    },
-    {
-      icon: <Heart className="h-6 w-6 text-[#01411c] icon-settings" />,
-      title: "HIPAA Security Audits",
-      description: "Healthcare-focused security audits ensuring patient data protection and HIPAA compliance across all systems.",
-      href: "/services/hipaa-security-audits"
-    },
-    {
-      icon: <GraduationCap className="h-6 w-6 text-[#01411c] icon-shake" />,
-      title: "FERPA/FISMA",
-      description: "Educational and federal security compliance assessments covering data privacy and information system security requirements.",
-      href: "/services/ferpa-fisma"
+      icon: <Settings className="h-6 w-6 text-[#01411c] icon-settings" />,
+      title: "IT General Controls",
+      description: "In-depth evaluation of IT general controls including access management, change controls, and system operations for financial reporting systems.",
+      href: "/services/sox-it-general-controls"
     }
   ];
 
@@ -94,15 +54,15 @@ export default function ITAudit() {
             <div className="animate-fade-in-up">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-[#01411c]/10 rounded-xl flex items-center justify-center mr-4">
-                  <Search className="h-10 w-10 text-[#01411c]" />
+                  <FileText className="h-10 w-10 text-[#01411c]" />
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900">
-                  IT <span className="text-[#01411c]">Audit</span>
+                  SOX <span className="text-[#01411c]">Auditing</span>
                 </h1>
               </div>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture 
-                with actionable recommendations and expert guidance.
+                Sarbanes-Oxley compliance audits focusing on IT general controls, financial reporting systems, 
+                and regulatory requirements to ensure accurate financial reporting and regulatory compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/become-client">
@@ -119,8 +79,8 @@ export default function ITAudit() {
             </div>
             <div className="animate-slide-in-right">
               <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
-                alt="IT Audit Services"
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
+                alt="SOX Auditing Services"
                 className="rounded-2xl shadow-2xl w-full h-auto" 
               />
             </div>
@@ -168,15 +128,15 @@ export default function ITAudit() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Our IT Audit Services
+              Our SOX Auditing Services
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From enterprise applications to network security, we deliver 
-              specialized IT audit solutions that protect and strengthen your digital infrastructure.
+              Comprehensive SOX compliance services focusing on cybersecurity requirements 
+              and IT general controls for reliable financial reporting.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {comprehensiveServices.map((service, index) => (
               <Card key={index} className="group bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">

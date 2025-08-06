@@ -10,7 +10,9 @@ export default function BusinessContinuityPlanning() {
     "Emergency response and crisis management protocol design",
     "Communication plans for internal teams, customers, and external stakeholders",
     "Plan testing through tabletop exercises and full-scale simulations",
-    "Training programs for business continuity team members and key personnel"
+    "Training programs for business continuity team members and key personnel",
+    "Business Impact Analysis Per ISO 22301 standard implementation and assessment",
+    "Business Continuity System Review (ISO22301) compliance evaluation and gap analysis"
   ];
 
   const whyItMatters = `

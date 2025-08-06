@@ -21,6 +21,19 @@ import CloudSecurityAssessments from "@/pages/services/cloud-security-assessment
 import NIST171SecurityAssessment from "@/pages/services/nist-171-security-assessment";
 import CyberEssentials from "@/pages/services/cyber-essentials";
 import SOC2 from "@/pages/services/soc-2";
+// IT Audit Services
+import SAPAudit from "@/pages/services/sap-audit";
+import PeoplesoftAudit from "@/pages/services/peoplesoft-audit";
+import DatabaseSecurityAudit from "@/pages/services/database-security-audit";
+import OSAudit from "@/pages/services/os-audit";
+import NetworkSecurity from "@/pages/services/network-security";
+import SOXAuditing from "@/pages/services/sox-auditing";
+import FFIECAudits from "@/pages/services/ffiec-audits";
+import HIPAASecurityAudits from "@/pages/services/hipaa-security-audits";
+import FERPAFISMAudit from "@/pages/services/ferpa-fisma";
+// SOX Auditing Services
+import SOXCyberSecurityRequirements from "@/pages/services/sox-cyber-security-requirements";
+import SOXITGeneralControls from "@/pages/services/sox-it-general-controls";
 
 function Router() {
   return (
@@ -42,6 +55,19 @@ function Router() {
       <Route path="/services/nist-171-security-assessment" component={NIST171SecurityAssessment} />
       <Route path="/services/cyber-essentials" component={CyberEssentials} />
       <Route path="/services/soc-2" component={SOC2} />
+      {/* IT Audit Services */}
+      <Route path="/services/sap-audit" component={SAPAudit} />
+      <Route path="/services/peoplesoft-audit" component={PeoplesoftAudit} />
+      <Route path="/services/database-security-audit" component={DatabaseSecurityAudit} />
+      <Route path="/services/os-audit" component={OSAudit} />
+      <Route path="/services/network-security" component={NetworkSecurity} />
+      <Route path="/services/sox-auditing" component={SOXAuditing} />
+      <Route path="/services/ffiec-audits" component={FFIECAudits} />
+      <Route path="/services/hipaa-security-audits" component={HIPAASecurityAudits} />
+      <Route path="/services/ferpa-fisma" component={FERPAFISMAudit} />
+      {/* SOX Auditing Services */}
+      <Route path="/services/sox-cyber-security-requirements" component={SOXCyberSecurityRequirements} />
+      <Route path="/services/sox-it-general-controls" component={SOXITGeneralControls} />
       <Route component={NotFound} />
     </Switch>
   );
