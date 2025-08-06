@@ -71,7 +71,7 @@ export default function GRCConsulting() {
                   <Shield className="h-10 w-10 text-[#01411c]" />
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900">
-                  Information Security <span className="text-[#01411c]">(GRC)</span> Consulting
+                  Information Security <span className="text-[#01411c]">(ISC)</span> Consulting
                 </h1>
               </div>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
