@@ -23,8 +23,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-green-100 mb-6 max-w-md">
-              Leading cybersecurity consultancy delivering innovative solutions 
-              in information security, data protection, and risk management.
+              ITNOA Consulting Services delivers innovative, high-quality IT solutions customized to the unique needs of businesses across industries. Built on trust, excellence, and efficiency, we specialize in information and cyber security to help organizations stay secure and competitive.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="group w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
@@ -72,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="group flex items-center text-green-100 p-2 rounded hover:bg-green-800/30 transition-colors duration-300">
                 <Phone className="h-4 w-4 mr-3 text-[#21965f] icon-shake" />
-                <span>+1-800-456-478-23</span>
+                <span>+1 (734) 276-6162</span>
               </li>
               <li className="group flex items-center text-green-100 p-2 rounded hover:bg-green-800/30 transition-colors duration-300">
                 <Mail className="h-4 w-4 mr-3 text-[#21965f] icon-bounce" />
