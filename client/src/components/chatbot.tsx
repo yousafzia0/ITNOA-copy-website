@@ -109,7 +109,10 @@ export default function Chatbot() {
             <Button
               variant="link" 
               className="text-[#01411c] hover:text-[#012d13] p-0 h-auto text-sm font-semibold inline underline"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                window.scrollTo({ top: 0, behavior: 'instant' });
+              }}
             >
               {text}
             </Button>

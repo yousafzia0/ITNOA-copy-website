@@ -29,7 +29,7 @@ export default function ITAudit() {
     {
       icon: <Database className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "SAP Audit",
-      description: "Comprehensive SAP system security assessments to ensure data integrity, access controls, and compliance with industry standards.",
+      description: "Comprehensive SAP IT Audit  assessments to ensure data integrity, access controls, and compliance with industry standards.",
       href: "/services/sap-audit"
     },
     {
