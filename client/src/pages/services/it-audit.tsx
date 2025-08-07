@@ -17,12 +17,10 @@ export default function ITAudit() {
   ];
 
   const whyItMatters = [
-    "Adds value by identifying key issues, creates awareness so IT staff can understand control design and control effectiveness.",
-    "Our comprehensive audits help organizations identify vulnerabilities before attackers do, ensure compliance with regulatory requirements.",
-    "Establish a solid foundation for ongoing security improvements and continuous monitoring.",
-    "With cyber threats evolving constantly, proactive auditing is your first line of defense against potential breaches.",
-    "Helps avoid regulatory penalties and maintains compliance with industry standards.",
-    "Provides actionable recommendations to strengthen your overall security posture."
+    "Adds value by identifying key issues, creates awareness so IT staff can understand  control design and control effectiveness.",
+    "We use the CMMI model  (Capability Maturity Model  Integration) to assess control strength objectively.",
+    "We identify control frequencies, process owners, control owners, and risk owners to ensure an entrenched understanding of controls and that auditees understand and are better prepared for the taxonomy used.",
+    "Recommendations and Management Action Plans are provided in the report to ensure the effectiveness of controls is  maintained going forward . We provide control narratives per each assessment."
   ];
 
   const comprehensiveServices = [
