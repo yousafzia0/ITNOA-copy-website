@@ -49,7 +49,7 @@ export default function Home() {
       initials: "MG"
     },
     {
-      name: "Samanta Fox",
+      name: "Kusick",
       role: "CISO",
       content: "The team helped us navigate data protection complexities. Their comprehensive consulting approach made all the difference in maintaining secure operations.",
       initials: "SF"
