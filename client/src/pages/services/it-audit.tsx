@@ -7,18 +7,17 @@ import { ArrowRight } from "lucide-react";
 
 export default function ITAudit() {
   const whatWeDo = [
-    "Comprehensive security posture assessments across all IT infrastructure components",
-    "Vulnerability identification and risk analysis using industry-leading tools and methodologies",
-    "Compliance gap analysis against relevant standards (ISO 27001, NIST, SOX, etc.)",
-    "Network architecture review and security control evaluation",
-    "Access control and identity management assessment",
-    "Data protection and privacy compliance verification",
-    "Business process security evaluation and workflow analysis",
-    "Detailed reporting with prioritized remediation recommendations"
+    "Our audits are meticulously and methodically created using  ISACA, IIA, and  AICPA guidelines.",
+    "We make sure the scope and planning are specific, well-documented, and approved before the start of the audit.",
+    "Schedule a formal kickoff meeting to ensure the auditee knows the audit plan and requirements.",
+    "We provide updates weekly.",
+    "The testing is done so that workpaper reviews are possible in real time.",
+    "Audit reports are available at the end of the fieldwork.",
+    "Our audits are performed using agile  to ensure  On time completion per hours budgeted."
   ];
 
   const whyItMatters = `
-    In today's threat landscape, regular IT audits are essential for maintaining robust cybersecurity defenses. 
+     Adds value by identifying key issues, creates awareness so IT staff can understand  control design and control effectiveness.
     Our comprehensive audits help organizations identify vulnerabilities before attackers do, ensure compliance 
     with regulatory requirements, and establish a solid foundation for ongoing security improvements. With cyber 
     threats evolving constantly, proactive auditing is your first line of defense against potential breaches 
