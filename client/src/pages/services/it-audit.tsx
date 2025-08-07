@@ -16,13 +16,14 @@ export default function ITAudit() {
     "Our audits are performed using agile  to ensure  On time completion per hours budgeted."
   ];
 
-  const whyItMatters = `
-     Adds value by identifying key issues, creates awareness so IT staff can understand  control design and control effectiveness.
-    Our comprehensive audits help organizations identify vulnerabilities before attackers do, ensure compliance 
-    with regulatory requirements, and establish a solid foundation for ongoing security improvements. With cyber 
-    threats evolving constantly, proactive auditing is your first line of defense against potential breaches 
-    and regulatory penalties.
-  `;
+  const whyItMatters = [
+    "Adds value by identifying key issues, creates awareness so IT staff can understand control design and control effectiveness.",
+    "Our comprehensive audits help organizations identify vulnerabilities before attackers do, ensure compliance with regulatory requirements.",
+    "Establish a solid foundation for ongoing security improvements and continuous monitoring.",
+    "With cyber threats evolving constantly, proactive auditing is your first line of defense against potential breaches.",
+    "Helps avoid regulatory penalties and maintains compliance with industry standards.",
+    "Provides actionable recommendations to strengthen your overall security posture."
+  ];
 
   const comprehensiveServices = [
     {
@@ -148,9 +149,14 @@ export default function ITAudit() {
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8">
                 Why It Matters
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                {whyItMatters}
-              </p>
+              <div className="space-y-4 mb-8">
+                {whyItMatters.map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-2 h-2 bg-[#01411c] rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <p className="text-slate-600 text-lg">{item}</p>
+                  </div>
+                ))}
+              </div>
               <Link href="/become-client">
                 <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white py-4 text-lg">
                   Get Started Today
