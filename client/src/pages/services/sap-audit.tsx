@@ -26,7 +26,7 @@ export default function SAPAudit() {
   return (
     <ServiceDetailTemplate
       title="SAP Audit"
-      description="Comprehensive SAP system security assessments to ensure data integrity, access controls, and compliance with industry standards for your enterprise resource planning environment."
+      description="Comprehensive SAP IT Audits assessments to ensure data integrity, access controls, and compliance with industry standards for your enterprise resource planning environment."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<Database className="h-10 w-10 text-[#01411c]" />}
