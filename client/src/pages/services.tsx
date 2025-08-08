@@ -230,12 +230,12 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" variant="secondary" className="bg-white text-[#01411c] hover:bg-slate-100 px-8 py-3">
+              <Button size="lg" variant="secondary" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
                 Contact Us
               </Button>
             </Link>
             <Link href="/become-client">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#01411c] px-8 py-3">
+              <Button size="lg" variant="outline" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
                 Become a Client
               </Button>
             </Link>
