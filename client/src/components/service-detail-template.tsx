@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import { AnimatedSecurityNetwork, AnimatedServerMonitoring, AnimatedCloudSecurity } from "@/components/animated-graphics";
+import Chatbot from "@/components/chatbot";
 
 interface ServiceDetailProps {
   title: string;
@@ -11,7 +13,6 @@ interface ServiceDetailProps {
   whatWeDo: string[];
   whyItMatters: string | string[];
   icon: React.ReactNode;
-  heroImage?: string;
 }
 
 export default function ServiceDetailTemplate({
@@ -19,8 +20,7 @@ export default function ServiceDetailTemplate({
   description,
   whatWeDo,
   whyItMatters,
-  icon,
-  heroImage
+  icon
 }: ServiceDetailProps) {
   return (
     <div className="min-h-screen bg-white">
@@ -40,15 +40,15 @@ export default function ServiceDetailTemplate({
               </div>
               <p className="text-xl text-slate-600 leading-relaxed">{description}</p>
             </div>
-            {heroImage && (
-              <div className="animate-slide-in-right">
-                <img 
-                  src={heroImage} 
-                  alt={`${title} service`}
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                />
-              </div>
-            )}
+            <div className="animate-slide-in-right">
+              {title.toLowerCase().includes('cloud') ? (
+                <AnimatedCloudSecurity />
+              ) : title.toLowerCase().includes('server') || title.toLowerCase().includes('monitoring') || title.toLowerCase().includes('audit') ? (
+                <AnimatedServerMonitoring />
+              ) : (
+                <AnimatedSecurityNetwork />
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -123,6 +123,7 @@ export default function ServiceDetailTemplate({
       </section>
 
       <Footer />
+      <Chatbot />
     </div>
   );
 }
