@@ -9,7 +9,7 @@ interface ServiceDetailProps {
   title: string;
   description: string;
   whatWeDo: string[];
-  whyItMatters: string;
+  whyItMatters: string | string[];
   icon: React.ReactNode;
   heroImage?: string;
 }
@@ -72,7 +72,18 @@ export default function ServiceDetailTemplate({
             <Card className="border-[#01411c]/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">Why It Matters</h3>
-                <p className="text-slate-600 text-lg leading-relaxed mb-8">{whyItMatters}</p>
+                {Array.isArray(whyItMatters) ? (
+                  <div className="space-y-4 mb-8">
+                    {whyItMatters.map((item, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="w-2 h-2 bg-[#01411c] rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                        <p className="text-slate-600 text-lg">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-slate-600 text-lg leading-relaxed mb-8">{whyItMatters}</p>
+                )}
                 <Link href="/become-client">
                   <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white py-4 text-lg">
                     Get Started Today

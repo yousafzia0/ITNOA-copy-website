@@ -13,15 +13,14 @@ export default function SAPAudit() {
     "Compliance verification against SOX, GDPR, and industry standards – Perform audits to confirm SAP environment alignment with regulatory and industry security requirements."
   ];
 
-  const whyItMatters = `
-    SAP systems are the backbone of many enterprise operations, containing critical business data and processes. 
-    Security vulnerabilities in SAP environments can lead to unauthorized access to sensitive financial data, 
-    intellectual property theft, and compliance violations. With increasing regulatory requirements and sophisticated 
-    cyber threats targeting ERP systems, regular SAP security audits are essential to maintain data integrity, 
-    ensure proper access controls, and protect against financial and reputational damage. Our specialized SAP 
-    audit services help organizations identify vulnerabilities unique to SAP environments and implement robust 
-    security measures tailored to their business needs.
-  `;
+  const whyItMatters = [
+    "SAP systems are the backbone of many enterprise operations, containing critical business data and processes that require robust protection.",
+    "Security vulnerabilities in SAP environments can lead to unauthorized access to sensitive financial data, intellectual property theft, and compliance violations.", 
+    "With increasing regulatory requirements and sophisticated cyber threats targeting ERP systems, regular SAP security audits are essential for maintaining data integrity.",
+    "Proper access controls and security measures protect against financial and reputational damage from potential breaches.",
+    "Our specialized SAP audit services help organizations identify vulnerabilities unique to SAP environments.",
+    "We provide actionable recommendations to implement robust security measures tailored to your specific business needs and risk profile."
+  ];
 
   return (
     <ServiceDetailTemplate
