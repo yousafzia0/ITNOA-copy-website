@@ -274,3 +274,192 @@ export const AnimatedPenetrationTesting = () => (
     </svg>
   </div>
 );
+
+// GRC Consulting - Governance, Risk & Compliance Dashboard
+export const AnimatedGRCDashboard = () => (
+  <div className="w-full h-auto">
+    <svg viewBox="0 0 600 400" className="w-full h-auto rounded-2xl shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-50">
+      <defs>
+        <linearGradient id="grcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3b82f6" />
+          <stop offset="100%" stopColor="#01411c" />
+        </linearGradient>
+        <filter id="grcGlow">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.2"/>
+        </filter>
+      </defs>
+      
+      <rect width="600" height="400" fill="#f8fafc" />
+      
+      {/* Main GRC Dashboard */}
+      <rect x="40" y="40" width="520" height="320" fill="white" rx="12" stroke="#e2e8f0" strokeWidth="2" filter="url(#grcGlow)" />
+      
+      {/* Dashboard Header */}
+      <rect x="50" y="50" width="500" height="40" fill="url(#grcGradient)" rx="6" />
+      <text x="300" y="75" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">GRC Management Dashboard</text>
+      
+      {/* Governance Section */}
+      <g transform="translate(70, 110)">
+        <rect x="0" y="0" width="140" height="90" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="6" />
+        <text x="70" y="20" textAnchor="middle" fill="#374151" fontSize="12" fontWeight="bold">Governance</text>
+        
+        <circle cx="35" cy="45" r="12" fill="#10b981">
+          <animate attributeName="opacity" values="0.6; 1; 0.6" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <text x="70" y="50" fill="#374151" fontSize="10">Policy Reviews: 92%</text>
+        
+        <rect x="20" y="60" width="100" height="8" fill="#e5e7eb" rx="4" />
+        <rect x="20" y="60" width="78" height="8" fill="#10b981" rx="4">
+          <animate attributeName="width" values="78; 85; 78" dur="4s" repeatCount="indefinite" />
+        </rect>
+        <text x="70" y="80" textAnchor="middle" fill="#374151" fontSize="9">Framework Maturity</text>
+      </g>
+      
+      {/* Risk Management Section */}
+      <g transform="translate(230, 110)">
+        <rect x="0" y="0" width="140" height="90" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="6" />
+        <text x="70" y="20" textAnchor="middle" fill="#374151" fontSize="12" fontWeight="bold">Risk Management</text>
+        
+        <circle cx="30" cy="40" r="8" fill="#ef4444">
+          <animate attributeName="r" values="8; 10; 8" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <text x="45" y="35" fill="#374151" fontSize="8">High: 3</text>
+        
+        <circle cx="30" cy="55" r="8" fill="#f59e0b">
+          <animate attributeName="r" values="8; 10; 8" dur="2.5s" repeatCount="indefinite" />
+        </circle>
+        <text x="45" y="50" fill="#374151" fontSize="8">Med: 12</text>
+        
+        <circle cx="30" cy="70" r="8" fill="#10b981">
+          <animate attributeName="r" values="8; 10; 8" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <text x="45" y="65" fill="#374151" fontSize="8">Low: 25</text>
+      </g>
+      
+      {/* Compliance Section */}
+      <g transform="translate(390, 110)">
+        <rect x="0" y="0" width="140" height="90" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="6" />
+        <text x="70" y="20" textAnchor="middle" fill="#374151" fontSize="12" fontWeight="bold">Compliance</text>
+        
+        <circle cx="70" cy="50" r="20" fill="none" stroke="#e5e7eb" strokeWidth="4" />
+        <circle cx="70" cy="50" r="20" fill="none" stroke="#10b981" strokeWidth="4" 
+                strokeDasharray="95" strokeDashoffset="0">
+          <animate attributeName="stroke-dashoffset" values="95; 15; 95" dur="6s" repeatCount="indefinite" />
+        </circle>
+        <text x="70" y="55" textAnchor="middle" fill="#374151" fontSize="10" fontWeight="bold">87%</text>
+        <text x="70" y="80" textAnchor="middle" fill="#374151" fontSize="9">Overall Score</text>
+      </g>
+      
+      {/* Real-time Monitoring */}
+      <g transform="translate(70, 220)">
+        <rect x="0" y="0" width="460" height="100" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="6" />
+        <text x="230" y="20" textAnchor="middle" fill="#374151" fontSize="12" fontWeight="bold">Real-time Compliance Monitoring</text>
+        
+        <g fill="#64748b" fontSize="9">
+          <text x="10" y="40" opacity="1">
+            <animate attributeName="opacity" values="0; 1; 1; 0" dur="5s" repeatCount="indefinite" begin="0s" />
+            [14:25:12] Policy update: Information Security Framework v2.1 approved
+          </text>
+          <text x="10" y="55" opacity="0">
+            <animate attributeName="opacity" values="0; 1; 1; 0" dur="5s" repeatCount="indefinite" begin="1.5s" />
+            [14:25:35] Risk assessment: Third-party vendor evaluation completed
+          </text>
+          <text x="10" y="70" opacity="0">
+            <animate attributeName="opacity" values="0; 1; 1; 0" dur="5s" repeatCount="indefinite" begin="3s" />
+            [14:25:48] Compliance check: SOX controls verification passed
+          </text>
+        </g>
+      </g>
+    </svg>
+  </div>
+);
+
+// SOX Auditing - Financial Controls Monitor
+export const AnimatedSOXAuditing = () => (
+  <div className="w-full h-auto">
+    <svg viewBox="0 0 600 400" className="w-full h-auto rounded-2xl shadow-2xl bg-gradient-to-br from-purple-50 to-violet-50">
+      <defs>
+        <linearGradient id="soxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8b5cf6" />
+          <stop offset="100%" stopColor="#01411c" />
+        </linearGradient>
+        <filter id="soxGlow">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.15"/>
+        </filter>
+      </defs>
+      
+      <rect width="600" height="400" fill="#faf5ff" />
+      
+      {/* Main SOX Control Dashboard */}
+      <rect x="30" y="30" width="540" height="340" fill="white" rx="12" stroke="#e5e7eb" strokeWidth="2" filter="url(#soxGlow)" />
+      
+      {/* Dashboard Header */}
+      <rect x="40" y="40" width="520" height="35" fill="url(#soxGradient)" rx="6" />
+      <text x="300" y="62" textAnchor="middle" fill="white" fontSize="15" fontWeight="bold">SOX Compliance Control Center</text>
+      
+      {/* IT General Controls */}
+      <g transform="translate(50, 90)">
+        <rect x="0" y="0" width="240" height="120" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="8" />
+        <text x="120" y="20" textAnchor="middle" fill="#374151" fontSize="13" fontWeight="bold">IT General Controls</text>
+        
+        <g transform="translate(15, 35)">
+          <rect x="0" y="0" width="80" height="30" fill="#10b981" rx="4" opacity="0.9">
+            <animate attributeName="opacity" values="0.9; 1; 0.9" dur="3s" repeatCount="indefinite" />
+          </rect>
+          <text x="40" y="12" textAnchor="middle" fill="white" fontSize="8">Access Control</text>
+          <text x="40" y="22" textAnchor="middle" fill="white" fontSize="8">✓ Compliant</text>
+        </g>
+        
+        <g transform="translate(105, 35)">
+          <rect x="0" y="0" width="80" height="30" fill="#f59e0b" rx="4" opacity="0.9">
+            <animate attributeName="opacity" values="0.9; 1; 0.9" dur="2.5s" repeatCount="indefinite" />
+          </rect>
+          <text x="40" y="12" textAnchor="middle" fill="white" fontSize="8">Change Mgmt</text>
+          <text x="40" y="22" textAnchor="middle" fill="white" fontSize="8">⚠ Review</text>
+        </g>
+      </g>
+      
+      {/* Financial Controls */}
+      <g transform="translate(310, 90)">
+        <rect x="0" y="0" width="240" height="120" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="8" />
+        <text x="120" y="20" textAnchor="middle" fill="#374151" fontSize="13" fontWeight="bold">Financial Controls</text>
+        
+        <circle cx="50" cy="50" r="8" fill="#10b981">
+          <animate attributeName="opacity" values="0.6; 1; 0.6" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <text x="65" y="45" fill="#374151" fontSize="9">Revenue Recognition</text>
+        <text x="65" y="55" fill="#10b981" fontSize="8">95% Effective</text>
+      </g>
+      
+      {/* Audit Trail */}
+      <g transform="translate(50, 230)">
+        <rect x="0" y="0" width="500" height="100" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1" rx="8" />
+        <text x="250" y="20" textAnchor="middle" fill="#374151" fontSize="13" fontWeight="bold">SOX Control Testing</text>
+        
+        <g fill="#64748b" fontSize="9">
+          <text x="15" y="40" opacity="1">
+            <animate attributeName="opacity" values="0; 1; 1; 0" dur="6s" repeatCount="indefinite" begin="0s" />
+            [09:15:22] SOX Control 3.1.1: User access review completed - 247 accounts validated
+          </text>
+          <text x="15" y="55" opacity="0">
+            <animate attributeName="opacity" values="0; 1; 1; 0" dur="6s" repeatCount="indefinite" begin="2s" />
+            [09:15:45] SOX Control 2.2.3: Change management process tested - 12 changes approved
+          </text>
+          <text x="15" y="70" opacity="0">
+            <animate attributeName="opacity" values="0; 1; 1; 0" dur="6s" repeatCount="indefinite" begin="4s" />
+            [09:16:08] SOX Control 1.4.2: Financial close procedures validated successfully
+          </text>
+        </g>
+      </g>
+      
+      {/* Compliance Status */}
+      <g transform="translate(460, 340)">
+        <rect x="0" y="0" width="80" height="25" fill="#10b981" rx="4" opacity="0.9">
+          <animate attributeName="opacity" values="0.9; 1; 0.9" dur="2s" repeatCount="indefinite" />
+        </rect>
+        <text x="40" y="12" textAnchor="middle" fill="white" fontSize="10">94% SOX</text>
+        <text x="40" y="22" textAnchor="middle" fill="white" fontSize="8">Compliant</text>
+      </g>
+    </svg>
+  </div>
+);

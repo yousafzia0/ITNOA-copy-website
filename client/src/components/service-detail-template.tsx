@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { AnimatedBusinessIntelligence, AnimatedCyberSecurityDashboard, AnimatedSecurityNetwork, AnimatedServerMonitoring, AnimatedCloudSecurity } from "@/components/animated-graphics";
-import { AnimatedITAuditMonitor, AnimatedNetworkSecurity, AnimatedPenetrationTesting } from "@/components/service-animations";
+import { AnimatedITAuditMonitor, AnimatedNetworkSecurity, AnimatedPenetrationTesting, AnimatedGRCDashboard, AnimatedSOXAuditing } from "@/components/service-animations";
 import Chatbot from "@/components/chatbot";
 
 interface ServiceDetailProps {
@@ -42,7 +42,11 @@ export default function ServiceDetailTemplate({
               <p className="text-xl text-slate-600 leading-relaxed">{description}</p>
             </div>
             <div className="animate-slide-in-right">
-              {title.toLowerCase().includes('audit') || title.toLowerCase().includes('sox') || title.toLowerCase().includes('compliance') ? (
+              {title.toLowerCase().includes('sox') && title.toLowerCase().includes('auditing') ? (
+                <AnimatedSOXAuditing />
+              ) : title.toLowerCase().includes('grc') || title.toLowerCase().includes('governance') || (title.toLowerCase().includes('information') && title.toLowerCase().includes('security') && title.toLowerCase().includes('consulting')) ? (
+                <AnimatedGRCDashboard />
+              ) : title.toLowerCase().includes('audit') || title.toLowerCase().includes('compliance') ? (
                 <AnimatedITAuditMonitor />
               ) : title.toLowerCase().includes('penetration') || title.toLowerCase().includes('pentest') || title.toLowerCase().includes('vulnerability') ? (
                 <AnimatedPenetrationTesting />

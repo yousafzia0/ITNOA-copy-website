@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { AnimatedSOXAuditing } from "@/components/service-animations";
 
 export default function SOXAuditing() {
   const whatWeDo = [
@@ -78,11 +79,7 @@ export default function SOXAuditing() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
-                alt="SOX Auditing Services"
-                className="rounded-2xl shadow-2xl w-full h-auto" 
-              />
+              <AnimatedSOXAuditing />
             </div>
           </div>
         </div>
