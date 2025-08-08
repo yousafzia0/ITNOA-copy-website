@@ -15,11 +15,10 @@ export default function SAPAudit() {
 
   const whyItMatters = [
     "Protects critical business data from unauthorized access and breaches.",
-    "Security vulnerabilities in SAP environments can lead to unauthorized access to sensitive financial data, intellectual property theft, and compliance violations.", 
-    "With increasing regulatory requirements and sophisticated cyber threats targeting ERP systems, regular SAP security audits are essential for maintaining data integrity.",
-    "Proper access controls and security measures protect against financial and reputational damage from potential breaches.",
-    "Our specialized SAP audit services help organizations identify vulnerabilities unique to SAP environments.",
-    "We provide actionable recommendations to implement robust security measures tailored to your specific business needs and risk profile."
+    "Ensures compliance with SOX, GDPR, and other regulatory requirements.", 
+    "Prevents fraud and operational disruptions through strong access controls.",
+    "Reduces risk by maintaining proper segregation of duties (SoD).",
+    "Safeguards system changes and integrations from security weaknesses."
   ];
 
   return (

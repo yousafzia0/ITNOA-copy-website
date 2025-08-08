@@ -3,30 +3,30 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function DatabaseSecurityAudit() {
   const whatWeDo = [
-    "Database access control and privilege escalation vulnerability assessment",
-    "Data encryption at rest and in transit security evaluation",
-    "Database configuration hardening and security parameter review",
-    "SQL injection and database-specific vulnerability testing",
-    "Database backup security and recovery procedure assessment",
-    "User authentication and authorization mechanism analysis",
-    "Database auditing and logging configuration review",
-    "Compliance verification against PCI DSS, HIPAA, and industry standards"
+    "Configuration Hardening – Evaluate and implement STIG-recommended settings to minimize attack surfaces.",
+    "Access Control Review—Verify that privileged and non-privileged database accounts follow least-privilege principles and have appropriate authentication and password policies.",
+    "Auditing & Logging – Enable and review database audit logs to track access, changes, and administrative actions per STIG controls.",
+    "Patch & Vulnerability Management – Assess patch levels and remediate known vulnerabilities to align with STIG compliance.",
+    "Encryption & Data Protection – Validate use of encryption for data-at-rest and data-in-transit per STIG guidelines.",
+    "Change Management Controls – Confirm that schema changes, stored procedures, and critical configuration updates follow approved ITGC processes.",
+    "Backup & Recovery Security – Assess backup encryption, retention policies, and disaster recovery readiness.",
+    "Compliance Mapping – Map STIG requirements to your regulatory obligations (e.g., SOX, HIPAA, PCI DSS) for a unified control approach.",
+    "Database Platforms Reviewed – We assess a wide range of database environments including Microsoft SQL Server (MSSQL), MySQL, PostgreSQL, Oracle Database, SAP Sybase ASE, as well as cloud-hosted databases such as Amazon RDS (MSSQL, MySQL, PostgreSQL, Aurora) Mongo DB and Azure SQL Database."
   ];
 
-  const whyItMatters = `
-    Databases contain an organization's most valuable and sensitive information, making them prime targets 
-    for cybercriminals and insider threats. Database security breaches can result in massive data theft, 
-    regulatory penalties, and severe reputational damage. With data protection regulations becoming 
-    increasingly stringent and attack techniques growing more sophisticated, comprehensive database 
-    security audits are essential for protecting sensitive information. Our specialized database security 
-    assessments help organizations identify vulnerabilities, implement robust security controls, and 
-    maintain compliance with regulatory requirements while ensuring optimal database performance.
-  `;
+  const whyItMatters = [
+    "Protects Critical Data—Ensures that sensitive financial, healthcare, and operational information stored in databases is secure from unauthorized access or breaches.",
+    "Supports SOX Compliance – Strengthens internal controls over financial reporting by enforcing least-privilege access, logging, and change management requirements.", 
+    "Safeguards Financial Statement Accuracy – Prevents unauthorized changes to financial data that could result in misstated revenues, expenses, or assets.",
+    "Meets Regulatory Requirements – Aligns with HIPAA, PCI DSS, and other industry mandates for data security in banking, healthcare, and other regulated industries.",
+    "Mitigates Cloud-Specific Risks – Addresses security gaps unique to AWS, Azure, and other cloud-hosted database environments.",
+    "Enhances Audit Readiness – Provides documented evidence of compliance and control effectiveness for internal and external audits."
+  ];
 
   return (
     <ServiceDetailTemplate
       title="Database Security Audit"
-      description="In-depth database security assessments covering encryption, access controls, vulnerability scanning, and compliance verification for all database platforms."
+      description="We perform in-depth database security assessments aligned with the Defense Information Systems Agency (DISA) Security Technical Implementation Guides (STIGs) to ensure your databases meet rigorous, standards-based security requirements."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<Shield className="h-10 w-10 text-[#01411c]" />}
