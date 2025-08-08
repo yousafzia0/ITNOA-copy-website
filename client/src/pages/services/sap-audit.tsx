@@ -14,7 +14,7 @@ export default function SAPAudit() {
   ];
 
   const whyItMatters = [
-    "SAP systems are the backbone of many enterprise operations, containing critical business data and processes that require robust protection.",
+    "Protects critical business data from unauthorized access and breaches.",
     "Security vulnerabilities in SAP environments can lead to unauthorized access to sensitive financial data, intellectual property theft, and compliance violations.", 
     "With increasing regulatory requirements and sophisticated cyber threats targeting ERP systems, regular SAP security audits are essential for maintaining data integrity.",
     "Proper access controls and security measures protect against financial and reputational damage from potential breaches.",
