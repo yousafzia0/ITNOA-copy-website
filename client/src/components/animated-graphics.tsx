@@ -1,218 +1,273 @@
-// Animated SVG Graphics Components for Professional Cybersecurity Theme
+// Professional Animated Graphics for Cybersecurity Website
 
-// Animated Person Working on Laptop (Hero Section)
-export const AnimatedPersonLaptop = () => (
+// Executive Digital Security Dashboard (Hero Section)
+export const AnimatedCyberSecurityDashboard = () => (
   <div className="w-full h-auto">
-    <svg viewBox="0 0 800 600" className="w-full h-auto rounded-2xl shadow-2xl">
-      {/* Background gradient */}
+    <svg viewBox="0 0 800 600" className="w-full h-auto rounded-2xl shadow-2xl bg-gradient-to-br from-slate-50 to-slate-100">
       <defs>
-        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="dashboardBg" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#f8fafc" />
           <stop offset="100%" stopColor="#e2e8f0" />
         </linearGradient>
-        <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#01411c" />
           <stop offset="100%" stopColor="#065f46" />
         </linearGradient>
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+        <filter id="professionalGlow">
+          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
           <feMerge> 
             <feMergeNode in="coloredBlur"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
+        <radialGradient id="threatGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#ef4444" opacity="0.8" />
+          <stop offset="100%" stopColor="#dc2626" opacity="0.4" />
+        </radialGradient>
       </defs>
       
       {/* Background */}
-      <rect width="800" height="600" fill="url(#bgGradient)" />
+      <rect width="800" height="600" fill="url(#dashboardBg)" />
       
-      {/* Desk */}
-      <rect x="50" y="450" width="700" height="20" fill="#8b5cf6" rx="10" />
+      {/* Main Dashboard Screen */}
+      <rect x="100" y="80" width="600" height="400" fill="#1e293b" rx="12" stroke="#334155" strokeWidth="2" />
+      <rect x="110" y="90" width="580" height="380" fill="#0f172a" rx="8" />
       
-      {/* Laptop Base */}
-      <rect x="300" y="350" width="200" height="120" fill="#374151" rx="8" />
+      {/* Dashboard Header */}
+      <rect x="120" y="100" width="560" height="40" fill="#01411c" rx="4" />
+      <text x="400" y="125" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">Security Operations Center</text>
       
-      {/* Laptop Screen */}
-      <rect x="320" y="250" width="160" height="110" fill="#1f2937" rx="5" />
-      <rect x="330" y="260" width="140" height="90" fill="url(#screenGradient)" rx="3" />
-      
-      {/* Screen Content - Animated Code Lines */}
-      <g className="animate-pulse">
-        <rect x="340" y="275" width="120" height="3" fill="#10b981" opacity="0.8">
-          <animate attributeName="width" values="120;80;120" dur="3s" repeatCount="indefinite" />
-        </rect>
-        <rect x="340" y="285" width="100" height="3" fill="#34d399" opacity="0.6">
-          <animate attributeName="width" values="100;120;100" dur="4s" repeatCount="indefinite" />
-        </rect>
-        <rect x="340" y="295" width="90" height="3" fill="#6ee7b7" opacity="0.7">
-          <animate attributeName="width" values="90;110;90" dur="2.5s" repeatCount="indefinite" />
-        </rect>
-        <rect x="340" y="305" width="110" height="3" fill="#a7f3d0" opacity="0.5">
-          <animate attributeName="width" values="110;70;110" dur="3.5s" repeatCount="indefinite" />
-        </rect>
+      {/* Threat Detection Panel */}
+      <g>
+        <rect x="130" y="160" width="180" height="120" fill="#1e293b" stroke="#475569" strokeWidth="1" rx="6" />
+        <text x="220" y="180" textAnchor="middle" fill="#94a3b8" fontSize="12" fontWeight="bold">Threat Detection</text>
+        
+        {/* Animated Threat Indicators */}
+        <circle cx="160" cy="200" r="8" fill="#10b981">
+          <animate attributeName="opacity" values="0.3; 1; 0.3" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <text x="180" y="205" fill="#10b981" fontSize="10">Secured: 247</text>
+        
+        <circle cx="160" cy="220" r="8" fill="#f59e0b">
+          <animate attributeName="opacity" values="0.5; 1; 0.5" dur="1.5s" repeatCount="indefinite" />
+        </circle>
+        <text x="180" y="225" fill="#f59e0b" fontSize="10">Monitoring: 15</text>
+        
+        <circle cx="160" cy="240" r="8" fill="#ef4444">
+          <animate attributeName="opacity" values="0.7; 1; 0.7" dur="1s" repeatCount="indefinite" />
+        </circle>
+        <text x="180" y="245" fill="#ef4444" fontSize="10">Threats: 3</text>
       </g>
       
-      {/* Person Silhouette */}
-      <g transform="translate(150, 180)">
-        {/* Head */}
-        <circle cx="50" cy="50" r="30" fill="#475569" />
+      {/* Network Activity Graph */}
+      <g>
+        <rect x="330" y="160" width="200" height="120" fill="#1e293b" stroke="#475569" strokeWidth="1" rx="6" />
+        <text x="430" y="180" textAnchor="middle" fill="#94a3b8" fontSize="12" fontWeight="bold">Network Activity</text>
         
-        {/* Body */}
-        <rect x="30" y="80" width="40" height="60" fill="#64748b" rx="5" />
-        
-        {/* Arms */}
-        <rect x="10" y="90" width="20" height="40" fill="#64748b" rx="3">
-          <animateTransform 
-            attributeName="transform" 
-            type="rotate" 
-            values="0 20 110; 5 20 110; 0 20 110" 
-            dur="4s" 
-            repeatCount="indefinite" 
-          />
-        </rect>
-        <rect x="70" y="90" width="20" height="40" fill="#64748b" rx="3">
-          <animateTransform 
-            attributeName="transform" 
-            type="rotate" 
-            values="0 80 110; -5 80 110; 0 80 110" 
+        {/* Animated Network Lines */}
+        <polyline 
+          fill="none" 
+          stroke="#01411c" 
+          strokeWidth="2" 
+          points="340,250 360,230 380,240 400,220 420,235 440,225 460,240 480,220 500,230 520,245"
+        >
+          <animate 
+            attributeName="points" 
+            values="340,250 360,230 380,240 400,220 420,235 440,225 460,240 480,220 500,230 520,245;
+                    340,245 360,225 380,235 400,215 420,230 440,220 460,235 480,215 500,225 520,240;
+                    340,250 360,230 380,240 400,220 420,235 440,225 460,240 480,220 500,230 520,245" 
             dur="3s" 
             repeatCount="indefinite" 
           />
-        </rect>
-        
-        {/* Hands */}
-        <circle cx="20" cy="135" r="5" fill="#475569">
-          <animate attributeName="cy" values="135; 130; 135" dur="4s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="80" cy="135" r="5" fill="#475569">
-          <animate attributeName="cy" values="135; 132; 135" dur="3s" repeatCount="indefinite" />
-        </circle>
+        </polyline>
       </g>
       
-      {/* Floating Security Icons */}
-      <g opacity="0.3">
-        <circle cx="100" cy="100" r="15" fill="#01411c">
-          <animate attributeName="cy" values="100; 90; 100" dur="3s" repeatCount="indefinite" />
-          <animate attributeName="opacity" values="0.3; 0.6; 0.3" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <text x="100" y="105" textAnchor="middle" fill="white" fontSize="12">🔒</text>
+      {/* System Status */}
+      <g>
+        <rect x="550" y="160" width="140" height="120" fill="#1e293b" stroke="#475569" strokeWidth="1" rx="6" />
+        <text x="620" y="180" textAnchor="middle" fill="#94a3b8" fontSize="12" fontWeight="bold">System Status</text>
         
-        <circle cx="650" cy="150" r="20" fill="#065f46">
-          <animate attributeName="cy" values="150; 140; 150" dur="4s" repeatCount="indefinite" />
-          <animate attributeName="opacity" values="0.3; 0.7; 0.3" dur="4s" repeatCount="indefinite" />
-        </circle>
-        <text x="650" y="157" textAnchor="middle" fill="white" fontSize="16">🛡️</text>
+        {/* Status Indicators */}
+        <rect x="560" y="190" width="120" height="8" fill="#374151" rx="4" />
+        <rect x="560" y="190" width="90" height="8" fill="#10b981" rx="4">
+          <animate attributeName="width" values="90; 100; 90" dur="4s" repeatCount="indefinite" />
+        </rect>
+        <text x="620" y="210" textAnchor="middle" fill="#94a3b8" fontSize="9">CPU: 78%</text>
         
-        <circle cx="700" cy="250" r="12" fill="#047857">
-          <animate attributeName="cy" values="250; 245; 250" dur="2.5s" repeatCount="indefinite" />
-          <animate attributeName="opacity" values="0.3; 0.5; 0.3" dur="2.5s" repeatCount="indefinite" />
+        <rect x="560" y="220" width="120" height="8" fill="#374151" rx="4" />
+        <rect x="560" y="220" width="70" height="8" fill="#06b6d4" rx="4">
+          <animate attributeName="width" values="70; 85; 70" dur="3s" repeatCount="indefinite" />
+        </rect>
+        <text x="620" y="240" textAnchor="middle" fill="#94a3b8" fontSize="9">Memory: 62%</text>
+        
+        <rect x="560" y="250" width="120" height="8" fill="#374151" rx="4" />
+        <rect x="560" y="250" width="50" height="8" fill="#8b5cf6" rx="4">
+          <animate attributeName="width" values="50; 65; 50" dur="5s" repeatCount="indefinite" />
+        </rect>
+        <text x="620" y="270" textAnchor="middle" fill="#94a3b8" fontSize="9">Network: 45%</text>
+      </g>
+      
+      {/* Security Analytics */}
+      <g>
+        <rect x="130" y="300" width="400" height="150" fill="#1e293b" stroke="#475569" strokeWidth="1" rx="6" />
+        <text x="330" y="320" textAnchor="middle" fill="#94a3b8" fontSize="12" fontWeight="bold">Real-time Security Analytics</text>
+        
+        {/* Animated Bar Chart */}
+        <rect x="150" y="380" width="25" height="50" fill="#10b981" opacity="0.8">
+          <animate attributeName="height" values="50; 70; 50" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="y" values="380; 360; 380" dur="3s" repeatCount="indefinite" />
+        </rect>
+        <rect x="185" y="370" width="25" height="60" fill="#06b6d4" opacity="0.8">
+          <animate attributeName="height" values="60; 80; 60" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="y" values="370; 350; 370" dur="4s" repeatCount="indefinite" />
+        </rect>
+        <rect x="220" y="360" width="25" height="70" fill="#8b5cf6" opacity="0.8">
+          <animate attributeName="height" values="70; 90; 70" dur="2.5s" repeatCount="indefinite" />
+          <animate attributeName="y" values="360; 340; 360" dur="2.5s" repeatCount="indefinite" />
+        </rect>
+        <rect x="255" y="375" width="25" height="55" fill="#f59e0b" opacity="0.8">
+          <animate attributeName="height" values="55; 75; 55" dur="3.5s" repeatCount="indefinite" />
+          <animate attributeName="y" values="375; 355; 375" dur="3.5s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      
+      {/* Floating Security Elements */}
+      <g opacity="0.4">
+        <circle cx="650" cy="120" r="12" fill="#01411c">
+          <animate attributeName="cy" values="120; 110; 120" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.4; 0.8; 0.4" dur="4s" repeatCount="indefinite" />
         </circle>
-        <text x="700" y="255" textAnchor="middle" fill="white" fontSize="10">🔐</text>
+        
+        <circle cx="80" cy="300" r="8" fill="#065f46">
+          <animate attributeName="cy" values="300; 290; 300" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.4; 0.7; 0.4" dur="3s" repeatCount="indefinite" />
+        </circle>
+        
+        <circle cx="720" cy="400" r="10" fill="#047857">
+          <animate attributeName="cy" values="400; 390; 400" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.4; 0.6; 0.4" dur="5s" repeatCount="indefinite" />
+        </circle>
       </g>
     </svg>
   </div>
 );
 
-// Animated Analytics Graph
-export const AnimatedAnalyticsGraph = () => (
+// Professional Business Intelligence Dashboard
+export const AnimatedBusinessIntelligence = () => (
   <div className="w-full h-auto">
-    <svg viewBox="0 0 400 300" className="w-full h-auto rounded-2xl shadow-2xl">
+    <svg viewBox="0 0 500 400" className="w-full h-auto rounded-2xl shadow-2xl bg-gradient-to-br from-slate-50 to-slate-100">
       <defs>
-        <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <linearGradient id="biGradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#01411c" />
           <stop offset="100%" stopColor="#065f46" />
         </linearGradient>
-        <linearGradient id="chartBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="biBackground" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#f8fafc" />
           <stop offset="100%" stopColor="#e2e8f0" />
         </linearGradient>
+        <filter id="biShadow">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.1"/>
+        </filter>
       </defs>
       
       {/* Background */}
-      <rect width="400" height="300" fill="url(#chartBg)" />
+      <rect width="500" height="400" fill="url(#biBackground)" />
       
-      {/* Chart Area */}
-      <rect x="50" y="50" width="300" height="200" fill="white" stroke="#e5e7eb" strokeWidth="1" rx="8" />
+      {/* Main Dashboard Panel */}
+      <rect x="30" y="40" width="440" height="320" fill="white" stroke="#e2e8f0" strokeWidth="1" rx="12" filter="url(#biShadow)" />
       
-      {/* Grid Lines */}
-      <g stroke="#f3f4f6" strokeWidth="1">
-        <line x1="50" y1="90" x2="350" y2="90" />
-        <line x1="50" y1="130" x2="350" y2="130" />
-        <line x1="50" y1="170" x2="350" y2="170" />
-        <line x1="50" y1="210" x2="350" y2="210" />
+      {/* Header */}
+      <rect x="40" y="50" width="420" height="40" fill="#01411c" rx="8" />
+      <text x="250" y="75" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Business Continuity Analytics</text>
+      
+      {/* KPI Cards */}
+      <g>
+        <rect x="50" y="110" width="90" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+        <text x="95" y="130" textAnchor="middle" fill="#64748b" fontSize="10">Recovery Time</text>
+        <text x="95" y="150" textAnchor="middle" fill="#01411c" fontSize="20" fontWeight="bold">
+          <animate attributeName="opacity" values="1; 0.7; 1" dur="3s" repeatCount="indefinite" />2.3h
+        </text>
         
-        <line x1="100" y1="50" x2="100" y2="250" />
-        <line x1="150" y1="50" x2="150" y2="250" />
-        <line x1="200" y1="50" x2="200" y2="250" />
-        <line x1="250" y1="50" x2="250" y2="250" />
-        <line x1="300" y1="50" x2="300" y2="250" />
+        <rect x="150" y="110" width="90" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+        <text x="195" y="130" textAnchor="middle" fill="#64748b" fontSize="10">Uptime</text>
+        <text x="195" y="150" textAnchor="middle" fill="#10b981" fontSize="20" fontWeight="bold">
+          <animate attributeName="opacity" values="1; 0.7; 1" dur="2s" repeatCount="indefinite" />99.9%
+        </text>
+        
+        <rect x="250" y="110" width="90" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+        <text x="295" y="130" textAnchor="middle" fill="#64748b" fontSize="10">Risk Score</text>
+        <text x="295" y="150" textAnchor="middle" fill="#f59e0b" fontSize="20" fontWeight="bold">
+          <animate attributeName="opacity" values="1; 0.7; 1" dur="4s" repeatCount="indefinite" />Low
+        </text>
+        
+        <rect x="350" y="110" width="90" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+        <text x="395" y="130" textAnchor="middle" fill="#64748b" fontSize="10">Incidents</text>
+        <text x="395" y="150" textAnchor="middle" fill="#ef4444" fontSize="20" fontWeight="bold">
+          <animate attributeName="opacity" values="1; 0.7; 1" dur="2.5s" repeatCount="indefinite" />0
+        </text>
       </g>
       
-      {/* Animated Bars */}
-      <g fill="url(#chartGradient)">
-        <rect x="80" y="180" width="20" height="70" rx="2">
-          <animate attributeName="height" values="70; 90; 70" dur="4s" repeatCount="indefinite" />
-          <animate attributeName="y" values="180; 160; 180" dur="4s" repeatCount="indefinite" />
+      {/* Performance Chart */}
+      <g>
+        <rect x="50" y="190" width="190" height="140" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+        <text x="145" y="210" textAnchor="middle" fill="#374151" fontSize="12" fontWeight="bold">System Performance</text>
+        
+        {/* Animated Performance Bars */}
+        <rect x="70" y="280" width="20" height="40" fill="url(#biGradient)">
+          <animate attributeName="height" values="40; 60; 40" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="y" values="280; 260; 280" dur="3s" repeatCount="indefinite" />
         </rect>
-        <rect x="130" y="140" width="20" height="110" rx="2">
-          <animate attributeName="height" values="110; 130; 110" dur="3s" repeatCount="indefinite" />
-          <animate attributeName="y" values="140; 120; 140" dur="3s" repeatCount="indefinite" />
+        <rect x="100" y="270" width="20" height="50" fill="url(#biGradient)">
+          <animate attributeName="height" values="50; 70; 50" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="y" values="270; 250; 270" dur="4s" repeatCount="indefinite" />
         </rect>
-        <rect x="180" y="100" width="20" height="150" rx="2">
-          <animate attributeName="height" values="150; 170; 150" dur="3.5s" repeatCount="indefinite" />
-          <animate attributeName="y" values="100; 80; 100" dur="3.5s" repeatCount="indefinite" />
+        <rect x="130" y="260" width="20" height="60" fill="url(#biGradient)">
+          <animate attributeName="height" values="60; 80; 60" dur="2.5s" repeatCount="indefinite" />
+          <animate attributeName="y" values="260; 240; 260" dur="2.5s" repeatCount="indefinite" />
         </rect>
-        <rect x="230" y="120" width="20" height="130" rx="2">
-          <animate attributeName="height" values="130; 150; 130" dur="2.8s" repeatCount="indefinite" />
-          <animate attributeName="y" values="120; 100; 120" dur="2.8s" repeatCount="indefinite" />
+        <rect x="160" y="275" width="20" height="45" fill="url(#biGradient)">
+          <animate attributeName="height" values="45; 65; 45" dur="3.5s" repeatCount="indefinite" />
+          <animate attributeName="y" values="275; 255; 275" dur="3.5s" repeatCount="indefinite" />
         </rect>
-        <rect x="280" y="90" width="20" height="160" rx="2">
-          <animate attributeName="height" values="160; 180; 160" dur="4.2s" repeatCount="indefinite" />
-          <animate attributeName="y" values="90; 70; 90" dur="4.2s" repeatCount="indefinite" />
+        <rect x="190" y="265" width="20" height="55" fill="url(#biGradient)">
+          <animate attributeName="height" values="55; 75; 55" dur="4.2s" repeatCount="indefinite" />
+          <animate attributeName="y" values="265; 245; 265" dur="4.2s" repeatCount="indefinite" />
         </rect>
       </g>
       
-      {/* Animated Line Chart */}
-      <polyline 
-        fill="none" 
-        stroke="#dc2626" 
-        strokeWidth="3" 
-        points="75,200 125,160 175,120 225,140 275,100 325,110"
-      >
-        <animate 
-          attributeName="points" 
-          values="75,200 125,160 175,120 225,140 275,100 325,110;
-                  75,190 125,150 175,110 225,130 275,90 325,100;
-                  75,200 125,160 175,120 225,140 275,100 325,110" 
-          dur="5s" 
-          repeatCount="indefinite" 
-        />
-      </polyline>
-      
-      {/* Animated Data Points */}
-      <g fill="#dc2626">
-        <circle cx="75" cy="200" r="4">
-          <animate attributeName="cy" values="200; 190; 200" dur="5s" repeatCount="indefinite" />
+      {/* Trend Analysis */}
+      <g>
+        <rect x="260" y="190" width="190" height="140" fill="#f8fafc" stroke="#e2e8f0" rx="6" />
+        <text x="355" y="210" textAnchor="middle" fill="#374151" fontSize="12" fontWeight="bold">Security Trends</text>
+        
+        {/* Animated Trend Line */}
+        <polyline 
+          fill="none" 
+          stroke="#01411c" 
+          strokeWidth="3" 
+          points="280,300 300,280 320,290 340,270 360,275 380,260 400,265 420,250"
+        >
+          <animate 
+            attributeName="points" 
+            values="280,300 300,280 320,290 340,270 360,275 380,260 400,265 420,250;
+                    280,295 300,275 320,285 340,265 360,270 380,255 400,260 420,245;
+                    280,300 300,280 320,290 340,270 360,275 380,260 400,265 420,250" 
+            dur="6s" 
+            repeatCount="indefinite" 
+          />
+        </polyline>
+        
+        {/* Data Points */}
+        <circle cx="280" cy="300" r="3" fill="#01411c">
+          <animate attributeName="cy" values="300; 295; 300" dur="6s" repeatCount="indefinite" />
         </circle>
-        <circle cx="125" cy="160" r="4">
-          <animate attributeName="cy" values="160; 150; 160" dur="5s" repeatCount="indefinite" />
+        <circle cx="340" cy="270" r="3" fill="#01411c">
+          <animate attributeName="cy" values="270; 265; 270" dur="6s" repeatCount="indefinite" />
         </circle>
-        <circle cx="175" cy="120" r="4">
-          <animate attributeName="cy" values="120; 110; 120" dur="5s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="225" cy="140" r="4">
-          <animate attributeName="cy" values="140; 130; 140" dur="5s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="275" cy="100" r="4">
-          <animate attributeName="cy" values="100; 90; 100" dur="5s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="325" cy="110" r="4">
-          <animate attributeName="cy" values="110; 100; 110" dur="5s" repeatCount="indefinite" />
+        <circle cx="400" cy="265" r="3" fill="#01411c">
+          <animate attributeName="cy" values="265; 260; 265" dur="6s" repeatCount="indefinite" />
         </circle>
       </g>
-      
-      {/* Title */}
-      <text x="200" y="30" textAnchor="middle" fill="#374151" fontSize="16" fontWeight="bold">Security Analytics</text>
     </svg>
   </div>
 );

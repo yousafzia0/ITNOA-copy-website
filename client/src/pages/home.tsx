@@ -5,7 +5,7 @@ import { Search, Shield, RotateCcw, University, Heart, Landmark, Cpu, Factory, G
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Chatbot from "@/components/chatbot";
-import { AnimatedPersonLaptop, AnimatedAnalyticsGraph } from "@/components/animated-graphics";
+import { AnimatedCyberSecurityDashboard, AnimatedBusinessIntelligence } from "@/components/animated-graphics";
 
 export default function Home() {
   const serviceHighlights = [
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <AnimatedPersonLaptop />
+              <AnimatedCyberSecurityDashboard />
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@ export default function Home() {
               </Link>
             </div>
             <div>
-              <AnimatedAnalyticsGraph />
+              <AnimatedBusinessIntelligence />
             </div>
           </div>
         </div>

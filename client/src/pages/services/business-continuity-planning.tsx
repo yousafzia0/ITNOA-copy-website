@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import { AnimatedAnalyticsGraph } from "@/components/animated-graphics";
+import { AnimatedBusinessIntelligence } from "@/components/animated-graphics";
 
 export default function BusinessContinuityPlanning() {
   const whatWeDo = [
@@ -79,7 +79,7 @@ export default function BusinessContinuityPlanning() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <AnimatedAnalyticsGraph />
+              <AnimatedBusinessIntelligence />
             </div>
           </div>
         </div>

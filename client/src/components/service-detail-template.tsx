@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import { AnimatedSecurityNetwork, AnimatedServerMonitoring, AnimatedCloudSecurity } from "@/components/animated-graphics";
+import { AnimatedBusinessIntelligence, AnimatedCyberSecurityDashboard, AnimatedSecurityNetwork, AnimatedServerMonitoring, AnimatedCloudSecurity } from "@/components/animated-graphics";
+import { AnimatedITAuditMonitor, AnimatedNetworkSecurity, AnimatedPenetrationTesting } from "@/components/service-animations";
 import Chatbot from "@/components/chatbot";
 
 interface ServiceDetailProps {
@@ -41,12 +42,20 @@ export default function ServiceDetailTemplate({
               <p className="text-xl text-slate-600 leading-relaxed">{description}</p>
             </div>
             <div className="animate-slide-in-right">
-              {title.toLowerCase().includes('cloud') ? (
+              {title.toLowerCase().includes('audit') || title.toLowerCase().includes('sox') || title.toLowerCase().includes('compliance') ? (
+                <AnimatedITAuditMonitor />
+              ) : title.toLowerCase().includes('penetration') || title.toLowerCase().includes('pentest') || title.toLowerCase().includes('vulnerability') ? (
+                <AnimatedPenetrationTesting />
+              ) : title.toLowerCase().includes('network') || title.toLowerCase().includes('infrastructure') || title.toLowerCase().includes('firewall') ? (
+                <AnimatedNetworkSecurity />
+              ) : title.toLowerCase().includes('cloud') || title.toLowerCase().includes('aws') || title.toLowerCase().includes('azure') ? (
                 <AnimatedCloudSecurity />
-              ) : title.toLowerCase().includes('server') || title.toLowerCase().includes('monitoring') || title.toLowerCase().includes('audit') ? (
+              ) : title.toLowerCase().includes('server') || title.toLowerCase().includes('system') || title.toLowerCase().includes('monitoring') ? (
                 <AnimatedServerMonitoring />
+              ) : title.toLowerCase().includes('business') || title.toLowerCase().includes('continuity') || title.toLowerCase().includes('recovery') ? (
+                <AnimatedBusinessIntelligence />
               ) : (
-                <AnimatedSecurityNetwork />
+                <AnimatedCyberSecurityDashboard />
               )}
             </div>
           </div>

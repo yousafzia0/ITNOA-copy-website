@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import { AnimatedServerMonitoring } from "@/components/animated-graphics";
+import { AnimatedITAuditMonitor } from "@/components/service-animations";
 
 export default function ITAudit() {
   const whatWeDo = [
@@ -117,7 +117,7 @@ export default function ITAudit() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <AnimatedServerMonitoring />
+              <AnimatedITAuditMonitor />
             </div>
           </div>
         </div>
