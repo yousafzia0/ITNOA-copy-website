@@ -373,3 +373,49 @@
 .animate-slide-in-right {
   animation: slideInRight 0.7s ease-out;
 }
+
+/* Service card stagger animations */
+@keyframes expandCollapse {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.service-expand {
+  animation: expandCollapse 0.5s ease-out;
+}
+
+/* Enhanced icon animations for service categories */
+.service-category-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-category-icon:hover {
+  transform: scale(1.15) rotate(10deg);
+  filter: drop-shadow(0 4px 8px rgba(1, 65, 28, 0.3));
+}
+
+/* Service card hover effects */
+.service-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon pulse for service items */
+.service-item-icon {
+  transition: all 0.2s ease;
+}
+
+.service-item-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
