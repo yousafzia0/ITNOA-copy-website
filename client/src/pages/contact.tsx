@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, Clock, MapPin, Linkedin, Github, MessageCircle } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, Linkedin, Github, MessageCircle, Youtube } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -60,7 +60,7 @@ export default function Contact() {
     {
       icon: <Phone className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "Phone",
-      details: "+1-800-456-478-23",
+      details: "248 795 0202",
       subtitle: "Available 24/7 for emergencies"
     },
     {
@@ -139,7 +139,7 @@ export default function Contact() {
                     <Github className="h-6 w-6 icon-flip" />
                   </a>
                   <a href="#" className="group w-12 h-12 bg-[#01411c] rounded-lg flex items-center justify-center text-white hover:bg-[#012d13] transition-colors duration-300">
-                    <MessageCircle className="h-6 w-6 icon-pulse" />
+                    <Youtube className="h-6 w-6 icon-pulse" />
                   </a>
                 </div>
               </div>

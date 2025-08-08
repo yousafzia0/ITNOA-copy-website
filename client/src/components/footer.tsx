@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shield, Phone, Mail, Clock, Linkedin, Github, MessageCircle } from "lucide-react";
+import { Shield, Phone, Mail, Clock, Linkedin, Github, MessageCircle, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -33,7 +33,7 @@ export default function Footer() {
                 <Github className="h-5 w-5 icon-flip" />
               </a>
               <a href="#" className="group w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center hover:bg-[#21965f] transition-colors duration-300">
-                <MessageCircle className="h-5 w-5 icon-pulse" />
+                <Youtube className="h-5 w-5 icon-pulse" />
               </a>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="group flex items-center text-green-100 p-2 rounded hover:bg-green-800/30 transition-colors duration-300">
                 <Phone className="h-4 w-4 mr-3 text-[#21965f] icon-shake" />
-                <span>+1 (734) 276-6162</span>
+                <span>248 795 0202</span>
               </li>
               <li className="group flex items-center text-green-100 p-2 rounded hover:bg-green-800/30 transition-colors duration-300">
                 <Mail className="h-4 w-4 mr-3 text-[#21965f] icon-bounce" />

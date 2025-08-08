@@ -1,189 +1,208 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Search,
-  Shield,
-  RotateCcw,
-  Tag,
-  Settings,
-  CreditCard,
-  Bug,
-  Cloud,
-  CheckCircle,
-  ArrowRight,
-} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown, ChevronUp, Search, Shield, RotateCcw, ArrowRight } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import Chatbot from "@/components/chatbot";
 
 export default function Services() {
-  const services = [
+  const [openSections, setOpenSections] = useState<string[]>([]);
+
+  const toggleSection = (sectionId: string) => {
+    setOpenSections(prev => 
+      prev.includes(sectionId) 
+        ? prev.filter(id => id !== sectionId)
+        : [...prev, sectionId]
+    );
+  };
+
+  const serviceCategories = [
     {
-      icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
+      id: "it-audit",
       title: "IT Audit",
-      description:
-        "Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations.",
-      href: "/services/it-audit",
+      icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
+      description: "Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations.",
+      mainPage: "/services/it-audit",
+      services: [
+        { name: "SAP Audit", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews" },
+        { name: "Peoplesoft Audit", path: "/services/peoplesoft-audit", description: "Oracle Peoplesoft security evaluations and risk assessments" },
+        { name: "Database Security Audit", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, and PostgreSQL security audits" },
+        { name: "Operating System Audit", path: "/services/os-audit", description: "Linux and Windows OS security configuration reviews" },
+        { name: "Network Security", path: "/services/network-security", description: "Network infrastructure and firewall security assessments" },
+        { name: "SOX Auditing", path: "/services/sox-auditing", description: "Sarbanes-Oxley compliance auditing and controls testing" },
+        { name: "FFIEC Audits", path: "/services/ffiec-audits", description: "Federal Financial Institution Examination Council compliance" },
+        { name: "HIPAA Security Audits", path: "/services/hipaa-security-audits", description: "Healthcare data protection and HIPAA compliance assessments" },
+        { name: "FERPA/FISMA", path: "/services/ferpa-fisma", description: "Educational and federal information security compliance" }
+      ]
     },
     {
+      id: "information-security",
+      title: "Information Security (ISC) Consulting",
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
-      title: "Information Security Consulting (ISC)",
-      description:
-        "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
-      href: "/services/grc-consulting",
+      description: "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
+      mainPage: "/services/grc-consulting",
+      services: [
+        { name: "ISO 27001 Implementation", path: "/services/iso-27001-implementation", description: "Information Security Management System implementation" },
+        { name: "NIST CSF Implementation", path: "/services/nist-csf-implementation", description: "NIST Cybersecurity Framework adoption and implementation" },
+        { name: "PCI DSS Assessments", path: "/services/pci-dss-assessments", description: "Payment Card Industry Data Security Standard compliance" },
+        { name: "SOC 2 Compliance", path: "/services/soc-2", description: "Service Organization Control 2 audits and compliance" },
+        { name: "Cloud Security Assessments", path: "/services/cloud-security-assessments", description: "AWS, Azure, and Google Cloud security evaluations" },
+        { name: "Penetration Testing", path: "/services/penetration-testing", description: "Comprehensive security testing and vulnerability assessments" },
+        { name: "NIST 171 Security Assessment", path: "/services/nist-171-security-assessment", description: "NIST SP 800-171 compliance for controlled unclassified information" },
+        { name: "Cyber Essentials", path: "/services/cyber-essentials", description: "UK government cybersecurity certification scheme" }
+      ]
     },
     {
-      icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
+      id: "business-continuity",
       title: "Business Continuity / Cyber Resilience",
-      description:
-        "Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions.",
-      href: "/services/cyber-resilience",
-    },
-    {
-      icon: <Bug className="h-8 w-8 text-[#01411c] icon-pulse" />,
-      title: "Penetration Testing",
-      description:
-        "Identify system vulnerabilities with expert penetration testing services. Ensure robust security and protect critical business data.",
-      href: "/services/penetration-testing",
-    },
-    {
-      icon: <Tag className="h-8 w-8 text-[#01411c] icon-bounce" />,
-      title: "ISO 27001 Implementation",
-      description:
-        "Achieve robust information security management with ISO 27001 certification. Safeguard business data and build stakeholder trust.",
-      href: "/services/iso-27001-implementation",
-    },
-    {
-      icon: <Settings className="h-8 w-8 text-[#01411c] icon-settings" />,
-      title: "NIST CSF Implementation",
-      description:
-        "Strengthen cybersecurity posture with NIST Cybersecurity Framework implementation. Enhance risk management and improve security resilience.",
-      href: "/services/nist-csf-implementation",
-    },
-    {
-      icon: <CreditCard className="h-8 w-8 text-[#01411c] icon-shake" />,
-      title: "PCI DSS Assessments",
-      description:
-        "Ensure payment data security and PCI DSS compliance. Protect sensitive cardholder information and mitigate financial risks.",
-      href: "/services/pci-dss-assessments",
-    },
-    {
-      icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-float" />,
-      title: "Business Continuity Planning",
-      description:
-        "Comprehensive Business Continuity Plans (BCP) to protect your organization from unexpected disruptions and ensure smooth operations.",
-      href: "/services/business-continuity-planning",
-    },
-    {
-      icon: <Cloud className="h-8 w-8 text-[#01411c] icon-float" />,
-      title: "Cloud Security Assessments",
-      description:
-        "Identify and address vulnerabilities in your cloud infrastructure, ensuring alignment with security best practices and data protection.",
-      href: "/services/cloud-security-assessments",
-    },
-    {
-      icon: <Shield className="h-8 w-8 text-[#01411c] icon-glow" />,
-      title: "NIST 800-171 Security Assessment",
-      description:
-        "NIST 800-171 Security Assessments to assist organizations in meeting government requirements for protecting Controlled Unclassified Information (CUI).",
-      href: "/services/nist-171-security-assessment",
-    },
-    {
-      icon: <CheckCircle className="h-8 w-8 text-[#01411c] icon-glow" />,
-      title: "FedRamp",
-      description:
-        "Achieve Cyber Essentials certification with our expert support. Safeguard your business from cyber threats and demonstrate security commitment.",
-      href: "/services/cyber-essentials",
-    },
-    {
-      icon: <CheckCircle className="h-8 w-8 text-[#01411c] icon-scale" />,
-      title: "SOC 2",
-      description:
-        "Achieve SOC 2 compliance with our expert services. Ensure your organization meets the highest standards for security, availability, and confidentiality.",
-      href: "/services/soc-2",
-    },
+      icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
+      description: "Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions.",
+      mainPage: "/services/cyber-resilience",
+      services: [
+        { name: "Business Continuity Planning", path: "/services/business-continuity-planning", description: "Comprehensive business continuity strategy development" },
+        { name: "Business Impact Analysis (ISO 22301)", path: "/services/business-impact-analysis-iso-22301", description: "ISO 22301 compliant business impact analysis and risk assessment" },
+        { name: "Business Continuity System Review (ISO 22301)", path: "/services/business-continuity-system-review-iso-22301", description: "ISO 22301 business continuity management system evaluation" }
+      ]
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-50">
       <Navigation />
-
+      
       {/* Hero Section */}
-      <section className="hero-gradient relative overflow-hidden py-20">
-        <div className="geometric-pattern absolute inset-0"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in-up">
-            <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Our <span className="text-[#01411c]">Services</span>
+      <section className="bg-gradient-to-br from-[#01411c] to-[#012d13] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              Our Cybersecurity Services
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive cybersecurity solutions designed to protect your
-              business, ensure compliance, and build resilience against evolving
-              digital threats.
+            <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
+              Comprehensive cybersecurity solutions to protect your business and ensure compliance across all industries
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-white">
+      {/* Services Categories */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="group border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
-              >
-                <Link href={service.href}>
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-[#01411c]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#01411c]/20 transition-colors duration-300">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-4">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-600 mb-6">{service.description}</p>
-                    <div className="flex items-center text-[#01411c] font-semibold group-hover:text-[#012d13] transition-colors duration-300">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Link>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              Service Categories
+            </h2>
+            <p className="text-xl text-slate-600">
+              Click on any category to explore our specialized services
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {serviceCategories.map((category) => (
+              <Card key={category.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <Collapsible 
+                  open={openSections.includes(category.id)}
+                  onOpenChange={() => toggleSection(category.id)}
+                >
+                  <CollapsibleTrigger asChild>
+                    <CardHeader className="cursor-pointer hover:bg-slate-50 transition-colors p-6 lg:p-8">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          <div className="flex-shrink-0">
+                            {category.icon}
+                          </div>
+                          <div className="text-left">
+                            <CardTitle className="text-xl lg:text-2xl font-bold text-slate-900 mb-2">
+                              {category.title}
+                            </CardTitle>
+                            <CardDescription className="text-slate-600 text-base lg:text-lg">
+                              {category.description}
+                            </CardDescription>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                          <Link href={category.mainPage}>
+                            <Button 
+                              variant="outline" 
+                              className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white hidden sm:flex items-center space-x-2"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span>View Overview</span>
+                              <ArrowRight className="h-4 w-4" />
+                            </Button>
+                          </Link>
+                          {openSections.includes(category.id) ? (
+                            <ChevronUp className="h-6 w-6 text-[#01411c]" />
+                          ) : (
+                            <ChevronDown className="h-6 w-6 text-[#01411c]" />
+                          )}
+                        </div>
+                      </div>
+                    </CardHeader>
+                  </CollapsibleTrigger>
+
+                  <CollapsibleContent>
+                    <CardContent className="pt-0 pb-6 px-6 lg:px-8">
+                      <div className="border-t pt-6">
+                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                          {category.services.map((service) => (
+                            <Link key={service.path} href={service.path}>
+                              <Card className="h-full hover:shadow-md transition-all duration-200 border border-slate-200 hover:border-[#01411c]/30 group">
+                                <CardContent className="p-4">
+                                  <h4 className="font-semibold text-slate-900 mb-2 group-hover:text-[#01411c] transition-colors">
+                                    {service.name}
+                                  </h4>
+                                  <p className="text-sm text-slate-600 leading-relaxed">
+                                    {service.description}
+                                  </p>
+                                  <div className="flex items-center mt-3 text-[#01411c] group-hover:translate-x-1 transition-transform">
+                                    <span className="text-sm font-medium">Learn More</span>
+                                    <ArrowRight className="h-3 w-3 ml-1" />
+                                  </div>
+                                </CardContent>
+                              </Card>
+                            </Link>
+                          ))}
+                        </div>
+                        
+                        {/* Mobile View Overview Button */}
+                        <div className="mt-6 sm:hidden">
+                          <Link href={category.mainPage}>
+                            <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white">
+                              View {category.title} Overview
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </CollapsibleContent>
+                </Collapsible>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#01411c] text-white relative overflow-hidden">
-        <div className="geometric-pattern absolute inset-0 opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Call to Action */}
+      <section className="py-20 bg-[#01411c] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Secure Your Business?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact our cybersecurity experts today for a free consultation and
-            discover how we can help protect your organization from digital
-            threats.
+          <p className="text-xl text-white/90 mb-8">
+            Contact us today to discuss your cybersecurity needs and get a customized solution for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/become-client">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
-              >
-                Become a Client
+            <Link href="/contact">
+              <Button size="lg" variant="secondary" className="bg-white text-[#01411c] hover:bg-slate-100 px-8 py-3">
+                Contact Us
               </Button>
             </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
-              >
-                Contact Us
+            <Link href="/become-client">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#01411c] px-8 py-3">
+                Become a Client
               </Button>
             </Link>
           </div>
@@ -191,6 +210,7 @@ export default function Services() {
       </section>
 
       <Footer />
+      <Chatbot />
     </div>
   );
 }

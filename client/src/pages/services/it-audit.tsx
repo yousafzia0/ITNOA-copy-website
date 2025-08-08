@@ -7,13 +7,13 @@ import { ArrowRight } from "lucide-react";
 
 export default function ITAudit() {
   const whatWeDo = [
-    "Our audits are meticulously and methodically created using  ISACA, IIA, and  AICPA guidelines.",
-    "We make sure the scope and planning are specific, well-documented, and approved before the start of the audit.",
-    "Schedule a formal kickoff meeting to ensure the auditee knows the audit plan and requirements.",
-    "We provide updates weekly.",
-    "The testing is done so that workpaper reviews are possible in real time.",
-    "Audit reports are available at the end of the fieldwork.",
-    "Our audits are performed using agile  to ensure  On time completion per hours budgeted."
+    "Our audits are conducted with precision, following ISACA, IIA, and AICPA standards.",
+    "We ensure the scope and planning are clearly defined, thoroughly documented, and formally approved before fieldwork begins.",
+    "A formal kickoff meeting is scheduled so the auditee fully understands the audit objectives, plan, and requirements.",
+    "We provide weekly progress updates to maintain transparency and alignment.",
+    "Testing is performed in a way that enables real-time workpaper reviews, ensuring timely feedback and issue resolution.",
+    "Audit reports are delivered promptly at the conclusion of fieldwork.",
+    "Our audits follow an agile methodology, enabling on-time completion within the hours budgeted."
   ];
 
   const whyItMatters = [
