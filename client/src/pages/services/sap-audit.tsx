@@ -3,14 +3,14 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function SAPAudit() {
   const whatWeDo = [
-    "SAP authorization concept and role-based access control (RBAC) assessment",
-    "Critical SAP transaction and function module security analysis",
-    "SAP database security configuration and encryption review",
-    "User access management and segregation of duties (SoD) evaluation",
-    "SAP system configuration and parameter security assessment",
-    "Interface and integration security testing for SAP connections",
-    "SAP change management and transport security review",
-    "Compliance verification against SOX, GDPR, and industry standards"
+    "SAP authorization concept and role-based access control (RBAC) assessment – Evaluate the design, assignment, and enforcement of SAP roles to ensure least privilege and compliance.",
+    "Critical SAP transaction and function module security analysis – Identify and review high-risk transactions and function modules that could lead to fraud, misuse, or operational disruption.",
+    "SAP database security configuration and encryption review – Assess database-level access, password policies, and encryption mechanisms for compliance and best practice alignment.",
+    "User access management and segregation of duties (SoD) evaluation: Review user provisioning, de-provisioning, and SoD conflicts to reduce the risk of unauthorized activities.",
+    "SAP system configuration and parameter security assessment – Verify that system settings, parameters, and security controls are appropriately configured and enforced.",
+    "Interface and integration security testing for SAP connections—Assess the security of integrations with other applications, middleware, and external services.",
+    "SAP change management and transport security review – Evaluate processes controlling SAP changes and transports to ensure integrity, traceability, and compliance.",
+    "Compliance verification against SOX, GDPR, and industry standards – Perform audits to confirm SAP environment alignment with regulatory and industry security requirements."
   ];
 
   const whyItMatters = `
@@ -26,7 +26,8 @@ export default function SAPAudit() {
   return (
     <ServiceDetailTemplate
       title="SAP Audit"
-      description="Comprehensive SAP IT Audits assessments to ensure data integrity, access controls, and compliance with industry standards for your enterprise resource planning environment."
+      description="At ITNOA Consulting, we bring deep expertise in SAP security, governance, and compliance to ensure your systems are secure and audit-ready. Our consultants have extensive experience conducting comprehensive SAP assessments aligned with industry best practices and global standards such as ISACA, IIA, SOX, and GDPR. We combine a meticulous, risk-based approach with hands-on technical knowledge of SAP environments, ensuring that every aspect—from user access to database encryption—is reviewed precisely. Whether your organization is seeking to strengthen internal controls, meet regulatory requirements, or proactively identify vulnerabilities, we can deliver actionable insights and practical remediation strategies.
+"
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<Database className="h-10 w-10 text-[#01411c]" />}
