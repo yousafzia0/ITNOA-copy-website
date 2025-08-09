@@ -26,7 +26,7 @@ export default function CyberEssentials() {
 
   return (
     <ServiceDetailTemplate
-      title="FedRamp"
+      title="Cyber Essentials"
       description="Expert Cyber Essentials certification support to help your organization achieve recognized cybersecurity standards, demonstrate security commitment, and protect against common cyber threats."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
