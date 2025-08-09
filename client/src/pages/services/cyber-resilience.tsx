@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import { AnimatedSecurityNetwork } from "@/components/animated-graphics";
 
 export default function CyberResilience() {
   const whatWeDo = [
@@ -78,7 +77,11 @@ export default function CyberResilience() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <AnimatedSecurityNetwork />
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
+                alt="Business Continuity / Cyber Resilience"
+                className="rounded-2xl shadow-2xl w-full h-auto" 
+              />
             </div>
           </div>
         </div>

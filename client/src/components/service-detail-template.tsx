@@ -4,9 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import { AnimatedBusinessIntelligence, AnimatedCyberSecurityDashboard, AnimatedSecurityNetwork, AnimatedServerMonitoring, AnimatedCloudSecurity } from "@/components/animated-graphics";
-import { AnimatedITAuditMonitor, AnimatedNetworkSecurity, AnimatedPenetrationTesting, AnimatedGRCDashboard, AnimatedSOXAuditing } from "@/components/service-animations";
-import Chatbot from "@/components/chatbot";
 
 interface ServiceDetailProps {
   title: string;
@@ -14,6 +11,7 @@ interface ServiceDetailProps {
   whatWeDo: string[];
   whyItMatters: string | string[];
   icon: React.ReactNode;
+  heroImage?: string;
 }
 
 export default function ServiceDetailTemplate({
@@ -21,7 +19,8 @@ export default function ServiceDetailTemplate({
   description,
   whatWeDo,
   whyItMatters,
-  icon
+  icon,
+  heroImage
 }: ServiceDetailProps) {
   return (
     <div className="min-h-screen bg-white">
@@ -41,27 +40,15 @@ export default function ServiceDetailTemplate({
               </div>
               <p className="text-xl text-slate-600 leading-relaxed">{description}</p>
             </div>
-            <div className="animate-slide-in-right">
-              {title.toLowerCase().includes('sox') && title.toLowerCase().includes('auditing') ? (
-                <AnimatedSOXAuditing />
-              ) : title.toLowerCase().includes('grc') || title.toLowerCase().includes('governance') || (title.toLowerCase().includes('information') && title.toLowerCase().includes('security') && title.toLowerCase().includes('consulting')) ? (
-                <AnimatedGRCDashboard />
-              ) : title.toLowerCase().includes('audit') || title.toLowerCase().includes('compliance') ? (
-                <AnimatedITAuditMonitor />
-              ) : title.toLowerCase().includes('penetration') || title.toLowerCase().includes('pentest') || title.toLowerCase().includes('vulnerability') ? (
-                <AnimatedPenetrationTesting />
-              ) : title.toLowerCase().includes('network') || title.toLowerCase().includes('infrastructure') || title.toLowerCase().includes('firewall') ? (
-                <AnimatedNetworkSecurity />
-              ) : title.toLowerCase().includes('cloud') || title.toLowerCase().includes('aws') || title.toLowerCase().includes('azure') ? (
-                <AnimatedCloudSecurity />
-              ) : title.toLowerCase().includes('server') || title.toLowerCase().includes('system') || title.toLowerCase().includes('monitoring') ? (
-                <AnimatedServerMonitoring />
-              ) : title.toLowerCase().includes('business') || title.toLowerCase().includes('continuity') || title.toLowerCase().includes('recovery') ? (
-                <AnimatedBusinessIntelligence />
-              ) : (
-                <AnimatedCyberSecurityDashboard />
-              )}
-            </div>
+            {heroImage && (
+              <div className="animate-slide-in-right">
+                <img 
+                  src={heroImage} 
+                  alt={`${title} service`}
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -136,7 +123,6 @@ export default function ServiceDetailTemplate({
       </section>
 
       <Footer />
-      <Chatbot />
     </div>
   );
 }

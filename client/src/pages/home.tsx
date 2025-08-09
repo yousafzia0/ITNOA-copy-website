@@ -5,7 +5,6 @@ import { Search, Shield, RotateCcw, University, Heart, Landmark, Cpu, Factory, G
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Chatbot from "@/components/chatbot";
-import { AnimatedCyberSecurityDashboard, AnimatedBusinessIntelligence } from "@/components/animated-graphics";
 
 export default function Home() {
   const serviceHighlights = [
@@ -95,7 +94,11 @@ export default function Home() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <AnimatedCyberSecurityDashboard />
+              <img 
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800" 
+                alt="Cybersecurity professionals working in modern office environment"
+                className="rounded-2xl shadow-2xl w-full h-auto" 
+              />
             </div>
           </div>
         </div>
@@ -210,7 +213,11 @@ export default function Home() {
               </Link>
             </div>
             <div>
-              <AnimatedBusinessIntelligence />
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800" 
+                alt="Professional cybersecurity team collaborating in modern office"
+                className="rounded-2xl shadow-2xl w-full h-auto" 
+              />
             </div>
           </div>
         </div>
