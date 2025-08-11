@@ -133,12 +133,12 @@ export default function MeetingScheduler() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <button className="group flex items-center text-green-100 p-2 rounded hover:bg-green-800/30 transition-colors duration-300 w-full text-left">
-          <Calendar className="h-4 w-4 mr-3 text-[#21965f] icon-pulse" />
-          <span>Schedule A Meeting</span>
+        <button className="group flex items-center text-green-100 p-3 rounded-lg hover:bg-green-800/30 transition-all duration-300 w-full text-left transform hover:scale-105">
+          <Calendar className="h-5 w-5 mr-3 text-[#21965f] group-hover:text-white transition-all duration-300 animate-pulse" />
+          <span className="font-medium group-hover:text-white transition-colors duration-300">Schedule A Meeting</span>
         </button>
       </DialogTrigger>
-      <DialogContent className="w-full max-w-[95vw] sm:max-w-[600px] max-h-[90vh] overflow-y-auto mx-4">
+      <DialogContent className="w-[95vw] max-w-[500px] sm:max-w-[600px] max-h-[90vh] overflow-y-auto m-4 p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle className="flex items-center text-xl font-bold text-[#01411c]">
             <Calendar className="h-6 w-6 mr-2" />
@@ -293,20 +293,32 @@ export default function MeetingScheduler() {
             </div>
           </div>
 
-          <div className="flex justify-end space-x-3 pt-4">
+          <div className="flex flex-col sm:flex-row justify-end gap-3 pt-6 border-t border-slate-200 mt-6">
             <Button
               type="button"
               variant="outline"
               onClick={() => setIsOpen(false)}
+              disabled={isSubmitting}
+              className="w-full sm:w-auto order-2 sm:order-1 px-6"
             >
               Cancel
             </Button>
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#01411c] hover:bg-[#012d13] text-white"
+              className="bg-[#01411c] hover:bg-[#012d13] text-white w-full sm:w-auto order-1 sm:order-2 px-6 py-3"
             >
-              {isSubmitting ? "Scheduling..." : "Schedule Meeting"}
+              {isSubmitting ? (
+                <>
+                  <User className="h-4 w-4 mr-2 animate-spin" />
+                  Scheduling...
+                </>
+              ) : (
+                <>
+                  <Calendar className="h-4 w-4 mr-2" />
+                  Schedule Meeting
+                </>
+              )}
             </Button>
           </div>
         </form>

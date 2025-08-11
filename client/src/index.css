@@ -418,3 +418,32 @@
   transform: scale(1.2);
   filter: brightness(1.2);
 }
+
+/* Dialog mobile centering and animation improvements */
+@media (max-width: 768px) {
+  [data-radix-dialog-content] {
+    animation: mobileDialogSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    width: 95vw !important;
+    max-width: 500px !important;
+  }
+  
+  [data-radix-dialog-overlay] {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+  }
+}
+
+@keyframes mobileDialogSlide {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
