@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Shield, Phone, Mail, Clock, Linkedin, Github, MessageCircle, Youtube } from "lucide-react";
+import MeetingScheduler from "./meeting-scheduler";
 
 export default function Footer() {
   return (
@@ -77,9 +78,8 @@ export default function Footer() {
                 <Mail className="h-4 w-4 mr-3 text-[#21965f] icon-bounce" />
                 <span>info@itnoa.com</span>
               </li>
-              <li className="group flex items-start text-green-100 p-2 rounded hover:bg-green-800/30 transition-colors duration-300">
-                <Clock className="h-4 w-4 mr-3 text-[#21965f] mt-1 icon-pulse" />
-                <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
+              <li>
+                <MeetingScheduler />
               </li>
             </ul>
           </div>

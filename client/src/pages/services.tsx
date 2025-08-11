@@ -25,7 +25,10 @@ import {
   Bug,
   FileText,
   RefreshCw,
-  BarChart3
+  BarChart3,
+  User,
+  Users,
+  DollarSign
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -52,12 +55,14 @@ export default function Services() {
       services: [
         { name: "SAP Audit", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews", icon: <Settings className="h-5 w-5 text-[#01411c]" /> },
         { name: "Peoplesoft Audit", path: "/services/peoplesoft-audit", description: "Oracle Peoplesoft security evaluations and risk assessments", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
+        { name: "PeopleSoft HCM Security", path: "/services/peoplesoft-hcm-security", description: "Human Capital Management security assessments and payroll protection", icon: <User className="h-5 w-5 text-[#01411c]" /> },
+        { name: "PeopleSoft Financial Security", path: "/services/peoplesoft-financial-security", description: "Financial module security audits and SOX compliance", icon: <DollarSign className="h-5 w-5 text-[#01411c]" /> },
         { name: "Database Security Audit", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, and PostgreSQL security audits", icon: <Database className="h-5 w-5 text-[#01411c]" /> },
         { name: "Operating System Audit", path: "/services/os-audit", description: "Linux and Windows OS security configuration reviews", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
         { name: "Network Security", path: "/services/network-security", description: "Network infrastructure and firewall security assessments", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
         { name: "SOX Auditing", path: "/services/sox-auditing", description: "Sarbanes-Oxley compliance auditing and controls testing", icon: <FileCheck className="h-5 w-5 text-[#01411c]" /> },
         { name: "FFIEC Audits", path: "/services/ffiec-audits", description: "Federal Financial Institution Examination Council compliance", icon: <Building2 className="h-5 w-5 text-[#01411c]" /> },
-        { name: "HIPAA Security Audits", path: "/services/hipaa-security-audits", description: "Healthcare data protection and HIPAA compliance assessments", icon: <Heart className="h-5 w-5 text-[#01411c]" /> },
+        { name: "HIPAA IT Security Audits", path: "/services/hipaa-security-audits", description: "Healthcare data protection and HIPAA compliance assessments", icon: <Heart className="h-5 w-5 text-[#01411c]" /> },
         { name: "FERPA/FISMA", path: "/services/ferpa-fisma", description: "Educational and federal information security compliance", icon: <GraduationCap className="h-5 w-5 text-[#01411c]" /> }
       ]
     },

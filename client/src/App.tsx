@@ -10,6 +10,7 @@ import Services from "@/pages/services";
 import Industries from "@/pages/industries";
 import BecomeClient from "@/pages/become-client";
 import Contact from "@/pages/contact";
+import Resources from "@/pages/resources";
 import ITAudit from "@/pages/services/it-audit";
 import GRCConsulting from "@/pages/services/grc-consulting";
 import CyberResilience from "@/pages/services/cyber-resilience";
@@ -25,6 +26,8 @@ import SOC2 from "@/pages/services/soc-2";
 // IT Audit Services
 import SAPAudit from "@/pages/services/sap-audit";
 import PeoplesoftAudit from "@/pages/services/peoplesoft-audit";
+import PeoplesoftHCMSecurity from "@/pages/services/peoplesoft-hcm-security";
+import PeoplesoftFinancialSecurity from "@/pages/services/peoplesoft-financial-security";
 import DatabaseSecurityAudit from "@/pages/services/database-security-audit";
 import OSAudit from "@/pages/services/os-audit";
 import NetworkSecurity from "@/pages/services/network-security";
@@ -47,6 +50,7 @@ function Router() {
       <Route path="/industries" component={Industries} />
       <Route path="/become-client" component={BecomeClient} />
       <Route path="/contact" component={Contact} />
+      <Route path="/resources" component={Resources} />
       <Route path="/services/it-audit" component={ITAudit} />
       <Route path="/services/grc-consulting" component={GRCConsulting} />
       <Route path="/services/cyber-resilience" component={CyberResilience} />
@@ -62,6 +66,8 @@ function Router() {
       {/* IT Audit Services */}
       <Route path="/services/sap-audit" component={SAPAudit} />
       <Route path="/services/peoplesoft-audit" component={PeoplesoftAudit} />
+      <Route path="/services/peoplesoft-hcm-security" component={PeoplesoftHCMSecurity} />
+      <Route path="/services/peoplesoft-financial-security" component={PeoplesoftFinancialSecurity} />
       <Route path="/services/database-security-audit" component={DatabaseSecurityAudit} />
       <Route path="/services/os-audit" component={OSAudit} />
       <Route path="/services/network-security" component={NetworkSecurity} />
