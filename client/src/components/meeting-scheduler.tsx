@@ -134,18 +134,18 @@ export default function MeetingScheduler() {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <button className="group flex items-center text-green-100 p-3 rounded-lg hover:bg-green-800/30 transition-all duration-300 w-full text-left transform hover:scale-105">
-          <Calendar className="h-5 w-5 mr-3 text-[#21965f] group-hover:text-white transition-all duration-300 animate-pulse" />
+          <Calendar className="h-5 w-5 mr-3 text-[#21965f] group-hover:text-white transition-all duration-500 meeting-glow" />
           <span className="font-medium group-hover:text-white transition-colors duration-300">Schedule A Meeting</span>
         </button>
       </DialogTrigger>
-      <DialogContent className="w-[95vw] max-w-[500px] sm:max-w-[600px] max-h-[90vh] overflow-y-auto m-4 p-4 sm:p-6">
-        <DialogHeader>
-          <DialogTitle className="flex items-center text-xl font-bold text-[#01411c]">
-            <Calendar className="h-6 w-6 mr-2" />
-            Schedule a Cybersecurity Consultation
+      <DialogContent className="w-[90vw] max-w-[420px] sm:max-w-[600px] max-h-[85vh] overflow-y-auto m-2 p-3 sm:p-6">
+        <DialogHeader className="pb-4">
+          <DialogTitle className="flex items-center text-lg sm:text-xl font-bold text-[#01411c]">
+            <Calendar className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+            Schedule a Consultation
           </DialogTitle>
-          <DialogDescription>
-            Book a meeting with our cybersecurity experts to discuss your security needs and compliance requirements.
+          <DialogDescription className="text-sm sm:text-base">
+            Book a meeting with our cybersecurity experts.
           </DialogDescription>
         </DialogHeader>
 

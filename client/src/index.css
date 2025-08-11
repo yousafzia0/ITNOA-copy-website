@@ -419,6 +419,22 @@
   filter: brightness(1.2);
 }
 
+/* Meeting button slow glow effect */
+.meeting-glow {
+  animation: slowGlow 4s ease-in-out infinite;
+}
+
+@keyframes slowGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px currentColor);
+    opacity: 1;
+  }
+  50% {
+    filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 12px rgba(33, 150, 95, 0.4));
+    opacity: 0.8;
+  }
+}
+
 /* Dialog mobile centering and animation improvements */
 @media (max-width: 768px) {
   [data-radix-dialog-content] {
@@ -428,8 +444,10 @@
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     margin: 0 !important;
-    width: 95vw !important;
-    max-width: 500px !important;
+    width: 90vw !important;
+    max-width: 420px !important;
+    max-height: 85vh !important;
+    padding: 16px !important;
   }
   
   [data-radix-dialog-overlay] {
