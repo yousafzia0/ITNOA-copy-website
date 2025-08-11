@@ -138,7 +138,7 @@ export default function MeetingScheduler() {
           <span>Schedule A Meeting</span>
         </button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-full max-w-[95vw] sm:max-w-[600px] max-h-[90vh] overflow-y-auto mx-4">
         <DialogHeader>
           <DialogTitle className="flex items-center text-xl font-bold text-[#01411c]">
             <Calendar className="h-6 w-6 mr-2" />
@@ -153,7 +153,7 @@ export default function MeetingScheduler() {
           {/* Personal Information */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-slate-900">Contact Information</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="firstName">First Name *</Label>
                 <Input
@@ -161,6 +161,7 @@ export default function MeetingScheduler() {
                   value={formData.firstName}
                   onChange={(e) => handleInputChange('firstName', e.target.value)}
                   required
+                  className="w-full"
                 />
               </div>
               <div>
@@ -170,6 +171,7 @@ export default function MeetingScheduler() {
                   value={formData.lastName}
                   onChange={(e) => handleInputChange('lastName', e.target.value)}
                   required
+                  className="w-full"
                 />
               </div>
             </div>
@@ -189,7 +191,7 @@ export default function MeetingScheduler() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="company">Company *</Label>
                 <Input
@@ -197,6 +199,7 @@ export default function MeetingScheduler() {
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
                   required
+                  className="w-full"
                 />
               </div>
               <div>
@@ -215,7 +218,7 @@ export default function MeetingScheduler() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-slate-900">Meeting Preferences</h3>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="preferredDate">Preferred Date</Label>
                 <Input
@@ -224,12 +227,13 @@ export default function MeetingScheduler() {
                   value={formData.preferredDate}
                   onChange={(e) => handleInputChange('preferredDate', e.target.value)}
                   min={new Date().toISOString().split('T')[0]}
+                  className="w-full"
                 />
               </div>
               <div>
                 <Label htmlFor="preferredTime">Preferred Time</Label>
                 <Select value={formData.preferredTime} onValueChange={(value) => handleInputChange('preferredTime', value)}>
-                  <SelectTrigger>
+                  <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select time" />
                   </SelectTrigger>
                   <SelectContent>
@@ -245,11 +249,11 @@ export default function MeetingScheduler() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="timeZone">Time Zone</Label>
                 <Select value={formData.timeZone} onValueChange={(value) => handleInputChange('timeZone', value)}>
-                  <SelectTrigger>
+                  <SelectTrigger className="w-full">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -263,7 +267,7 @@ export default function MeetingScheduler() {
               <div>
                 <Label htmlFor="meetingType">Meeting Type</Label>
                 <Select value={formData.meetingType} onValueChange={(value) => handleInputChange('meetingType', value)}>
-                  <SelectTrigger>
+                  <SelectTrigger className="w-full">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>

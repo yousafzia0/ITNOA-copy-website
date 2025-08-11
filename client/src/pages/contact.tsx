@@ -9,6 +9,7 @@ import { Phone, Mail, Clock, MapPin, Linkedin, Github, MessageCircle, Youtube } 
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -302,6 +303,7 @@ export default function Contact() {
       </section>
 
       <Footer />
+      <ScrollIndicator />
     </div>
   );
 }
