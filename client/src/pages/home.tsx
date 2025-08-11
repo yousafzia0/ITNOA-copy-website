@@ -5,7 +5,6 @@ import { Search, Shield, RotateCcw, University, Heart, Landmark, Cpu, Factory, G
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Chatbot from "@/components/chatbot";
-import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function Home() {
   const serviceHighlights = [
@@ -266,7 +265,6 @@ export default function Home() {
 
       <Footer />
       <Chatbot />
-      <ScrollIndicator />
     </div>
   );
 }

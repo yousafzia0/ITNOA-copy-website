@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function Industries() {
   const industries = [
@@ -250,7 +249,6 @@ export default function Industries() {
       </section>
 
       <Footer />
-      <ScrollIndicator />
     </div>
   );
 }

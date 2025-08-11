@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function Resources() {
   const videos = [
@@ -207,7 +206,6 @@ export default function Resources() {
       </section>
 
       <Footer />
-      <ScrollIndicator />
     </div>
   );
 }
