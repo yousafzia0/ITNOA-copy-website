@@ -37,22 +37,36 @@ export default function BecomeClient() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Implement actual form submission logic
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      toast({
-        title: "Request Submitted Successfully!",
-        description:
-          "We'll contact you within 24 hours to discuss your cybersecurity needs.",
+      const response = await fetch('/api/become-client', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      setFormData({
-        name: "",
-        email: "",
-        organization: "",
-        industry: "",
-        message: "",
-      });
+      const data = await response.json();
+      
+      if (data.success) {
+        toast({
+          title: "Application Submitted Successfully!",
+          description: data.message,
+        });
+        
+        setFormData({
+          name: "",
+          email: "",
+          organization: "",
+          industry: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Submission Failed",
+          description: data.message,
+          variant: "destructive",
+        });
+      }
     } catch (error) {
       toast({
         title: "Submission Failed",

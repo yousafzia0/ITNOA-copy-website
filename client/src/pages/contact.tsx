@@ -30,21 +30,36 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Implement actual form submission logic
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
       
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
+      if (data.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: data.message,
+        });
+        
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        toast({
+          title: "Failed to Send Message",
+          description: data.message,
+          variant: "destructive",
+        });
+      }
     } catch (error) {
       toast({
         title: "Failed to Send Message",
