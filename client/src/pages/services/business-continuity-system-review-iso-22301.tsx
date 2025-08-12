@@ -3,31 +3,29 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function BusinessContinuitySystemReviewISO22301() {
   const whatWeDo = [
-    "Comprehensive business continuity management system (BCMS) assessment",
-    "ISO 22301 compliance gap analysis and requirements evaluation",
-    "Business continuity policy and procedure review and optimization",
-    "Management commitment and governance structure assessment",
-    "Risk assessment and business impact analysis validation",
-    "Business continuity strategy and solution effectiveness review",
-    "Plan testing, maintenance, and continuous improvement evaluation",
-    "Documentation review and compliance reporting aligned with ISO 22301"
+    "Gap Analysis & Compliance Review – Assess existing policies, procedures, and controls against ISO 22301 requirements to identify gaps.",
+    "Risk & Impact Assessments – Evaluate business risks and conduct Business Impact Analysis (BIA) to prioritize critical processes and resources.",
+    "RTO/RPO Identification – Define and validate Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) for both internal operations and third-party provided services and systems critical to your organization.",
+    "BCMS Maturity Evaluation – Measure current BCMS maturity and provide recommendations to strengthen resilience.",
+    "Testing & Validation – Review and validate continuity and recovery plans through scenario-based exercises and drills.",
+    "Continual Improvement Support – Establish monitoring, measurement, and corrective action processes to ensure long-term resilience.",
+    "By aligning with ISO 22301, we help ensure operational resilience, regulatory compliance, and stakeholder confidence in your ability to maintain essential services — even when third-party dependencies are impacted."
   ];
 
-  const whyItMatters = `
-    A comprehensive Business Continuity Management System review against ISO 22301 standards is essential 
-    for maintaining organizational resilience and regulatory compliance. Regular reviews ensure that your 
-    BCMS remains effective, current, and aligned with evolving business needs and threat landscapes. 
-    Without proper system reviews, organizations risk having outdated or ineffective continuity measures 
-    that may fail during critical incidents. Our ISO 22301 system review services help organizations 
-    evaluate the effectiveness of their entire business continuity framework, identify areas for 
-    improvement, and ensure ongoing compliance with international standards, ultimately strengthening 
-    their ability to respond to and recover from disruptions while maintaining stakeholder confidence.
-  `;
+  const whyItMatters = [
+    "Establishes a structured, internationally recognized framework for building and improving your Business Continuity Management System (BCMS).",
+    "Ensures your Business Continuity Plan (BCP) is based on real business risks, priorities, and impact analysis, not assumptions.",
+    "Identifies gaps in preparedness, including dependencies on third-party services and their Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs).",
+    "Aligns continuity capabilities with strategic business goals, customer expectations, and regulatory requirements.",
+    "Improves resilience by integrating continuity planning into daily operations rather than treating it as a one-time exercise.",
+    "Strengthens crisis response and recovery by providing clear, tested procedures and achievable recovery objectives.",
+    "Drives continual improvement through regular assessments, exercises, and updates to plans and processes."
+  ];
 
   return (
     <ServiceDetailTemplate
       title="Business Continuity System Review (ISO22301)"
-      description="Complete business continuity management system review and compliance assessment against ISO 22301 international standard requirements to ensure effective organizational resilience."
+      description="We perform comprehensive ISO 22301 assessments to evaluate and enhance your organization’s Business Continuity Management System (BCMS). Our approach ensures you can prevent, prepare for, respond to, and recover from disruptive incidents while meeting international best practices."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<CheckCircle className="h-10 w-10 text-[#01411c]" />}

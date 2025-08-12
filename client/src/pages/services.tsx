@@ -91,7 +91,7 @@ export default function Services() {
       mainPage: "/services/cyber-resilience",
       services: [
         { name: "Business Continuity Planning", path: "/services/business-continuity-planning", description: "Comprehensive business continuity strategy development", icon: <RefreshCw className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Business Impact Analysis (ISO 22301)", path: "/services/business-impact-analysis-iso-22301", description: "ISO 22301 compliant business impact analysis and risk assessment", icon: <BarChart3 className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Business Impact Analysis (ISO 22317)", path: "/services/business-impact-analysis-iso-22301", description: "ISO 22317 compliant business impact analysis and risk assessment", icon: <BarChart3 className="h-5 w-5 text-[#01411c]" /> },
         { name: "Business Continuity System Review (ISO 22301)", path: "/services/business-continuity-system-review-iso-22301", description: "ISO 22301 business continuity management system evaluation", icon: <FileCheck className="h-5 w-5 text-[#01411c]" /> }
       ]
     }

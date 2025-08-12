@@ -3,31 +3,33 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function BusinessImpactAnalysisISO22301() {
   const whatWeDo = [
-    "ISO 22301 compliant business impact analysis methodology implementation",
-    "Critical business function identification and dependency mapping",
-    "Recovery time objectives (RTO) and recovery point objectives (RPO) determination",
-    "Impact assessment for various disruption scenarios and threat types",
-    "Resource requirement analysis for critical business processes",
-    "Stakeholder impact evaluation and communication requirements assessment",
-    "Financial impact quantification and cost-benefit analysis",
-    "BIA documentation and reporting aligned with ISO 22301 standards"
+    "Assessment Scope & Objectives – Defining the boundaries, purpose, and expected outcomes of the BIA.",
+    "Activity Identification – Documenting all business activities, functions, and services relevant to continuity planning.",
+    "Critical Activity Analysis – Determining which activities are time-sensitive and essential for delivering products, services, and obligations.",
+    "Impact Categories & Criteria – Defining and applying impact measures (financial, reputational, legal/regulatory, operational, contractual).",
+    "Impact Over Time Assessment – Evaluating how impacts escalate over specific timeframes during a disruption.",
+    "Dependency Mapping – Identifying required people, facilities, technology, suppliers, and other resources for each critical activity.",
+    "RTO/RPO Determination – Establishing Recovery Time Objectives and Recovery Point Objectives, including for third-party provided services and systems.",
+    "Prioritization of Activities – Ranking activities based on urgency and impact to guide recovery strategies.",
+    "Linkage to Risk Assessment – Ensuring BIA outputs feed directly into the organization’s risk assessment and continuity strategy.",
+    "Review & Validation – Confirming findings with stakeholders and aligning results with BCMS objectives.",
   ];
 
-  const whyItMatters = `
-    Business Impact Analysis (BIA) per ISO 22301 is the foundation of any effective business continuity 
-    management system. It provides the critical understanding needed to prioritize resources, establish 
-    appropriate recovery strategies, and ensure compliance with international standards. Without a proper 
-    BIA aligned with ISO 22301 requirements, organizations risk inadequate preparation for disruptions, 
-    inefficient resource allocation, and potential non-compliance with regulatory expectations. Our 
-    ISO 22301 compliant BIA services help organizations systematically identify and analyze the potential 
-    impacts of disruptions on their operations, enabling them to develop targeted and effective business 
-    continuity strategies that meet international best practices and regulatory requirements.
-  `;
+  const whyItMatters = [
+    "Provides a factual, evidence-based foundation for your Business Continuity Management System (BCMS) and Business Continuity Plan (BCP).",
+    "Ensures recovery strategies are built around actual business priorities, not assumptions.",
+    "Identifies critical activities and the true impacts of their disruption over time, enabling informed decision-making.",
+    "Highlights dependencies on people, facilities, technology, suppliers, and third-party services — including their Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs).",
+    "Aligns continuity planning with strategic objectives, regulatory requirements, and customer expectations.",
+    "Supports effective allocation of resources to where they are needed most during a crisis.",
+    "Improves resilience by making recovery timelines realistic, achievable, and clearly communicated across the organization.",
+    "Drives continuous improvement by providing measurable benchmarks for future assessments and plan updates."
+  ];
 
   return (
     <ServiceDetailTemplate
-      title="Business Impact Analysis Per ISO 22301"
-      description="Comprehensive business impact analysis following ISO 22301 standards to identify critical business functions, dependencies, and recovery requirements for effective business continuity planning."
+      title="Business Impact Analysis Per ISO 22317"
+      description="Our ISO 22317 assessments provide a structured, evidence-based review of your Business Impact Analysis process, ensuring it supports the development of an effective Business Continuity Management System (BCMS) in line with ISO 22301."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<FileText className="h-10 w-10 text-[#01411c]" />}

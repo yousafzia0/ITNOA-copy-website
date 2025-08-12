@@ -29,8 +29,8 @@ export default function CyberResilience() {
   const comprehensiveServices = [
     {
       icon: <FileText className="h-6 w-6 text-[#01411c] icon-bounce" />,
-      title: "Business Impact Analysis Per ISO 22301",
-      description: "Comprehensive business impact analysis following ISO 22301 standards to identify critical business functions, dependencies, and recovery requirements.",
+      title: "Business Impact Analysis Per ISO 22317",
+      description: "Comprehensive business impact analysis following ISO 22317 standards to identify critical business functions, dependencies, and recovery requirements.",
       href: "/services/business-impact-analysis-iso-22301"
     },
     {
