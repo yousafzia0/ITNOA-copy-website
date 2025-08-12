@@ -1,5 +1,6 @@
 import { Router } from "express";
 import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 
 const router = Router();
 
@@ -9,19 +10,40 @@ const EMAIL_CONFIG = {
   testEmail: "premiumlogos.824@gmail.com",
   businessEmail: "info@itnoa.com",
   companyName: "ITNOA Cybersecurity",
-  companyPhone: "248 795 0202"
+  companyPhone: "248 795 0202",
+  // Gmail SMTP settings for fallback
+  smtpHost: "smtp.gmail.com",
+  smtpPort: 587
 };
 
 // Initialize email service
 let emailService: any = null;
+let transporter: any = null;
 
 if (process.env.SENDGRID_API_KEY) {
   // Use SendGrid if available
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   emailService = "sendgrid";
+  console.log("Email service: SendGrid configured");
 } else {
-  // Fallback to custom email system
-  emailService = "custom";
+  // Use SMTP as fallback (works with Gmail, Outlook, etc.)
+  emailService = "smtp";
+  
+  // Create SMTP transporter
+  transporter = nodemailer.createTransport({
+    host: EMAIL_CONFIG.smtpHost,
+    port: EMAIL_CONFIG.smtpPort,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: EMAIL_CONFIG.testEmail, // Your Gmail address
+      pass: process.env.GMAIL_APP_PASSWORD || "fallback-password" // App password
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
+  
+  console.log("Email service: SMTP configured with Gmail");
 }
 
 interface MeetingFormData {
@@ -143,20 +165,51 @@ async function sendMeetingEmails(meetingDetails: any): Promise<{success: boolean
     
     if (emailService === "sendgrid") {
       // Use SendGrid for production
+      console.log("Sending emails via SendGrid...");
       await sgMail.send(clientEmail);
       await sgMail.send(businessEmail);
       emailsSent = 2;
-    } else {
-      // Use custom email system (for development/testing)
-      console.log("=== EMAIL SYSTEM SIMULATION ===");
-      console.log("CLIENT EMAIL:", JSON.stringify(clientEmail, null, 2));
-      console.log("BUSINESS EMAIL:", JSON.stringify(businessEmail, null, 2));
-      console.log("=== END EMAIL SIMULATION ===");
+      console.log("✅ SendGrid emails sent successfully");
+    } else if (emailService === "smtp") {
+      // Use SMTP for real email sending
+      console.log("Sending emails via SMTP...");
+      
+      // Convert SendGrid format to Nodemailer format
+      const clientEmailSMTP = {
+        from: `"${EMAIL_CONFIG.companyName}" <${EMAIL_CONFIG.testEmail}>`,
+        to: clientEmail.to,
+        subject: clientEmail.subject,
+        html: clientEmail.html
+      };
+      
+      const businessEmailSMTP = {
+        from: `"${EMAIL_CONFIG.companyName}" <${EMAIL_CONFIG.testEmail}>`,
+        to: businessEmail.to,
+        subject: businessEmail.subject,
+        html: businessEmail.html
+      };
+      
+      // Send both emails
+      await transporter.sendMail(clientEmailSMTP);
+      console.log(`✅ Client confirmation sent to: ${clientEmail.to}`);
+      
+      await transporter.sendMail(businessEmailSMTP);
+      console.log(`✅ Business notification sent to: ${businessEmail.to}`);
+      
       emailsSent = 2;
+    } else {
+      // Fallback: Log emails for debugging
+      console.log("=== EMAIL SYSTEM FALLBACK (NO REAL EMAILS) ===");
+      console.log("⚠️ No email service configured - emails not sent");
+      console.log("CLIENT EMAIL TO:", clientEmail.to);
+      console.log("BUSINESS EMAIL TO:", businessEmail.to);
+      console.log("=== END EMAIL FALLBACK ===");
+      emailsSent = 0;
     }
     
     return { success: true, emailsSent };
   } catch (error) {
+    console.error("❌ Email sending error:", error);
     return { success: false, emailsSent: 0, error: error instanceof Error ? error.message : "Unknown error" };
   }
 }
