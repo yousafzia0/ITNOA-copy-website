@@ -3,30 +3,26 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function PeoplesoftHCMSecurity() {
   const whatWeDo = [
-    "Employee Data Access Controls – Review user permissions for sensitive HR data including salary, performance reviews, disciplinary actions, and personal information to ensure proper segregation of duties.",
-    "Payroll Security Assessment – Evaluate access controls for payroll processing, salary adjustments, tax information, and direct deposit configurations to prevent unauthorized modifications.",
-    "Time & Labor Security Review – Assess security controls for time entry, overtime approvals, and labor distribution to ensure accurate labor cost reporting and prevent time fraud.",
-    "Benefits Administration Security – Review access to health insurance, retirement plans, and other benefit information to protect employee privacy and prevent unauthorized changes.",
-    "Performance Management Controls – Evaluate security for performance reviews, goal setting, and compensation planning modules to maintain confidentiality and data integrity.",
-    "Talent Acquisition Security – Assess security controls for recruiting, applicant tracking, and onboarding processes to protect candidate and new hire information.",
-    "HRIS Integration Security – Review data flows between PeopleSoft HCM and external systems including background check providers, benefits carriers, and payroll services.",
-    "Audit Trail & Monitoring – Evaluate logging capabilities for HR transactions, data changes, and system access to support compliance and forensic investigations.",
-    "Data Privacy Compliance – Assess controls for handling personally identifiable information (PII) in compliance with GDPR, CCPA, and other privacy regulations."
+    "Role-Based Security Review – Assess user roles, permissions, and segregation of duties within Infor CloudSuite and on-prem modules.",
+    "Application Configuration Audit – Evaluate configuration settings for financials, supply chain, and HR modules to ensure compliance and security.",
+    "Data & Database Security – Review database encryption, access controls, and data segregation mechanisms.",
+    "Change & Release Management – Assess processes for system updates, custom development, and integrations, ensuring proper testing and approvals.",
+    "Integration & Interface Security – Review connections between Infor and external systems for secure authentication and data handling.",
+    "Regulatory Compliance Alignment – Verify adherence to SOX, HIPAA (for healthcare), and industry-specific security requirements."
   ];
 
   const whyItMatters = [
-    "Human Resources systems contain some of the most sensitive data in any organization, including personal identifiers, salary information, health records, and performance evaluations. Protecting this data is not just a compliance requirement but essential for maintaining employee trust and organizational reputation.",
-    "Regulatory Compliance – HR systems must comply with numerous regulations including GDPR for privacy, SOX for financial reporting accuracy, EEOC for employment practices, and industry-specific requirements like HIPAA for healthcare organizations.",
-    "Data Privacy Protection – With increasing privacy regulations worldwide, organizations must demonstrate proper controls over employee personal data, including consent management, data retention policies, and breach notification procedures.",
-    "Payroll Accuracy & Fraud Prevention – Weak security controls in payroll systems can lead to overpayments, ghost employees, unauthorized salary adjustments, and tax compliance issues that result in significant financial losses and regulatory penalties.",
-    "Insider Threat Mitigation – HR systems are particularly vulnerable to insider threats due to the sensitive nature of the data and the need for broad access by HR personnel. Proper access controls and monitoring are essential.",
-    "Audit Readiness – External auditors increasingly focus on HR system controls during SOX audits, particularly around compensation reporting and management override capabilities that could affect financial statements.",
-    "Our specialized experience in HR system security ensures that your PeopleSoft HCM implementation maintains the highest standards of data protection while enabling efficient HR operations and compliance with all applicable regulations."
+    "Effective ERP security and control testing—whether in PeopleSoft, Infor, or Workday—is essential for safeguarding financial data integrity, meeting regulatory requirements, and ensuring accurate financial reporting.",
+    "SOX Compliance – Under the Sarbanes-Oxley Act, organizations must demonstrate that their financial reporting systems have strong internal controls. Our audits test user access, segregation of duties, change management, and system configuration to verify that only authorized individuals can initiate, approve, or post transactions that impact the general ledger.",
+    "Accuracy of Financial Statements – Weak ERP controls can result in misstated revenues, expenses, or assets. By reviewing end-to-end workflows—from transaction entry to reporting—we ensure data accuracy, completeness, and integrity, minimizing the risk of errors or fraudulent adjustments in the financial statements.",
+    "Banking & Financial Services Expertise – In banking, where transaction volumes are high and regulatory scrutiny is intense, we understand the need for precise access controls, reconciliations, and audit trails to support both internal and external audits.",
+    "Healthcare Industry Experience – In healthcare, ERP systems often integrate with patient billing, supply chain, and payroll. We bring experience navigating HIPAA, revenue cycle compliance, and cost reporting controls to ensure financial data is accurate, secure, and auditable.",
+    "Our proven track record in banking and healthcare ERP audits means we know how to design control testing that not only meets compliance requirements but also supports operational efficiency and business confidence."
   ];
 
   return (
     <ServiceDetailTemplate
-      title="PeopleSoft HCM Security Assessment"
+      title="PeopleSoft InFro Security Assessment"
       description="Comprehensive security review of PeopleSoft Human Capital Management systems focusing on employee data protection, payroll security, and HR compliance requirements."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}

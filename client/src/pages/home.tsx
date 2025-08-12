@@ -43,10 +43,10 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Mary Grey",
-      role: "IT Director",
-      content: "ITNOA's Cyber Essentials services were exactly what we needed to improve our cybersecurity measures. The team walked us through the entire process and ensured full compliance.",
-      initials: "MG"
+      name: "Shah G",
+      role: "Manager",
+      content: "Deep experience with IT Audits and Peoplesoft made procurement and audits straightforward.",
+      initials: "SG"
     },
     {
       name: "Kusick",
@@ -56,8 +56,8 @@ export default function Home() {
     },
     {
       name: "Oliver Simson",
-      role: "Security Manager",
-      content: "We've worked with ITNOA for over a year. Their penetration testing expertise has significantly improved our security protocols. Highly skilled and trustworthy.",
+      role: "Senior IT Manager",
+      content: "A trusted partner for IT assurance and business continuity planning.",
       initials: "OS"
     }
   ];

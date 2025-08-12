@@ -55,8 +55,8 @@ export default function Services() {
       services: [
         { name: "SAP Audit", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews", icon: <Settings className="h-5 w-5 text-[#01411c]" /> },
         { name: "Peoplesoft Audit", path: "/services/peoplesoft-audit", description: "Oracle Peoplesoft security evaluations and risk assessments", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
-        { name: "PeopleSoft HCM Security", path: "/services/peoplesoft-hcm-security", description: "Human Capital Management security assessments and payroll protection", icon: <User className="h-5 w-5 text-[#01411c]" /> },
-        { name: "PeopleSoft Financial Security", path: "/services/peoplesoft-financial-security", description: "Financial module security audits and SOX compliance", icon: <DollarSign className="h-5 w-5 text-[#01411c]" /> },
+        { name: "PeopleSoft InFro Security", path: "/services/peoplesoft-hcm-security", description: "Human Capital Management security assessments and payroll protection", icon: <User className="h-5 w-5 text-[#01411c]" /> },
+        { name: "PeopleSoft Workday Security", path: "/services/peoplesoft-financial-security", description: "Workday module security audits and SOX compliance", icon: <DollarSign className="h-5 w-5 text-[#01411c]" /> },
         { name: "Database Security Audit", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, and PostgreSQL security audits", icon: <Database className="h-5 w-5 text-[#01411c]" /> },
         { name: "Operating System Audit", path: "/services/os-audit", description: "Linux and Windows OS security configuration reviews", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
         { name: "Network Security", path: "/services/network-security", description: "Network infrastructure and firewall security assessments", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
