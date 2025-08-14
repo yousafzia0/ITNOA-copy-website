@@ -31,7 +31,12 @@ import {
   DollarSign,
   HardDrive,
   MessageSquare,
-  AlertTriangle
+  AlertTriangle,
+  Zap,
+  Code,
+  TrendingUp,
+  Activity,
+  Brain
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -88,9 +93,17 @@ export default function Services() {
         { name: "PCI DSS Assessments", path: "/services/pci-dss-assessments", description: "Payment Card Industry Data Security Standard compliance", icon: <CreditCard className="h-5 w-5 text-[#01411c]" /> },
         { name: "SOC 2 Compliance", path: "/services/soc-2", description: "Service Organization Control 2 audits and compliance", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> },
         { name: "Cloud Security Assessments", path: "/services/cloud-security-assessments", description: "AWS, Azure, and Google Cloud security evaluations", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Penetration Testing", path: "/services/penetration-testing", description: "Comprehensive security testing and vulnerability assessments", icon: <Bug className="h-5 w-5 text-[#01411c]" /> },
-        { name: "NIST 171 Security Assessment", path: "/services/nist-171-security-assessment", description: "NIST SP 800-171 compliance for controlled unclassified information", icon: <FileText className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Cyber Essentials", path: "/services/cyber-essentials", description: "UK government cybersecurity certification scheme", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> }
+        { name: "Penetration Testing (Program Oversight)", path: "/services/penetration-testing", description: "Comprehensive security testing and vulnerability assessments", icon: <Bug className="h-5 w-5 text-[#01411c]" /> },
+        { name: "NIST 800‑171 Readiness", path: "/services/nist-171-security-assessment", description: "NIST SP 800-171 compliance for controlled unclassified information", icon: <FileText className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Cyber Essentials (UK)", path: "/services/cyber-essentials", description: "UK government cybersecurity certification scheme", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> },
+        { name: "AI Governance & Risk", path: "/services/ai-governance-risk", description: "AI governance frameworks and risk management assessments", icon: <Brain className="h-5 w-5 text-[#01411c]" /> },
+        { name: "DevSecOps & Secure SDLC", path: "/services/devsecops-secure-sdlc", description: "DevSecOps implementation and secure development lifecycle", icon: <Code className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Third‑Party / Vendor Risk", path: "/services/third-party-vendor-risk", description: "Third-party security assessments and vendor risk management", icon: <Users className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Incident Response Program", path: "/services/incident-response-program", description: "Incident response program development and capability assessment", icon: <Zap className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Data Privacy & Protection", path: "/services/data-protection-privacy", description: "Data protection compliance and privacy control assessments", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Risk Management Frameworks", path: "/services/risk-management-frameworks", description: "Enterprise risk management framework development and implementation", icon: <TrendingUp className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Cybersecurity Maturity Assessments", path: "/services/cybersecurity-maturity-assessments", description: "Cybersecurity program maturity evaluation and improvement planning", icon: <Activity className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Cloud Security Posture Mgmt (CSPM)", path: "/services/cloud-security-posture-management", description: "Cloud security posture management and continuous monitoring", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> }
       ]
     },
     {

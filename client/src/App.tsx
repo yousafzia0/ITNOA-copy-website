@@ -53,6 +53,13 @@ import CrisisCommunicationIncidentResponse from "@/pages/services/crisis-communi
 import SupplierThirdPartyContinuity from "@/pages/services/supplier-third-party-continuity";
 import RansomwareReadinessRecovery from "@/pages/services/ransomware-readiness-recovery";
 import BusinessContinuitySystemReviewISO22301 from "@/pages/services/business-continuity-system-review-iso-22301";
+// GRC Consulting Services
+import AIGovernanceRisk from "@/pages/services/ai-governance-risk";
+import DevSecOpsSecureSDLC from "@/pages/services/devsecops-secure-sdlc";
+import IncidentResponseProgram from "@/pages/services/incident-response-program";
+import RiskManagementFrameworks from "@/pages/services/risk-management-frameworks";
+import CybersecurityMaturityAssessments from "@/pages/services/cybersecurity-maturity-assessments";
+import CloudSecurityPostureManagement from "@/pages/services/cloud-security-posture-management";
 
 function Router() {
   return (
@@ -105,6 +112,13 @@ function Router() {
       <Route path="/services/supplier-third-party-continuity" component={SupplierThirdPartyContinuity} />
       <Route path="/services/ransomware-readiness-recovery" component={RansomwareReadinessRecovery} />
       <Route path="/services/business-continuity-system-review-iso-22301" component={BusinessContinuitySystemReviewISO22301} />
+      {/* GRC Consulting Services */}
+      <Route path="/services/ai-governance-risk" component={AIGovernanceRisk} />
+      <Route path="/services/devsecops-secure-sdlc" component={DevSecOpsSecureSDLC} />
+      <Route path="/services/incident-response-program" component={IncidentResponseProgram} />
+      <Route path="/services/risk-management-frameworks" component={RiskManagementFrameworks} />
+      <Route path="/services/cybersecurity-maturity-assessments" component={CybersecurityMaturityAssessments} />
+      <Route path="/services/cloud-security-posture-management" component={CloudSecurityPostureManagement} />
       <Route component={NotFound} />
     </Switch>
   );

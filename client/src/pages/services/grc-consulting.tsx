@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shield, Tag, Settings, CreditCard, Bug, Cloud, CheckCircle, ArrowRight } from "lucide-react";
+import { Shield, Tag, Settings, CreditCard, Bug, Cloud, CheckCircle, ArrowRight, FileText, Brain, Code, Users, Zap, TrendingUp, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
@@ -21,38 +21,98 @@ export default function GRCConsulting() {
     {
       icon: <Tag className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "ISO 27001 Implementation",
-      description: "Achieve robust information security management with ISO 27001 certification. Safeguard business data and build stakeholder trust.",
+      description: "Information Security Management System implementation and certification support.",
       href: "/services/iso-27001-implementation"
     },
     {
       icon: <Settings className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "NIST CSF Implementation",
-      description: "Strengthen cybersecurity posture with NIST Cybersecurity Framework. Enhance risk management and improve security resilience.",
+      description: "NIST Cybersecurity Framework adoption and implementation guidance.",
       href: "/services/nist-csf-implementation"
     },
     {
       icon: <CreditCard className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "PCI DSS Assessments",
-      description: "Ensure payment data security and PCI DSS compliance. Protect sensitive cardholder information and mitigate financial risks.",
+      description: "Payment Card Industry Data Security Standard compliance assessments.",
       href: "/services/pci-dss-assessments"
     },
     {
-      icon: <Bug className="h-6 w-6 text-[#01411c] icon-pulse" />,
-      title: "Penetration Testing",
-      description: "Identify system vulnerabilities with expert penetration testing. Ensure robust security and protect critical business data.",
-      href: "/services/penetration-testing"
+      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-pulse" />,
+      title: "SOC 2 Compliance",
+      description: "Service Organization Control 2 audits and compliance support.",
+      href: "/services/soc-2"
     },
     {
       icon: <Cloud className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Cloud Security Assessments",
-      description: "Comprehensive cloud security evaluations to identify vulnerabilities and ensure best practices in cloud infrastructure protection.",
+      description: "AWS, Azure, and Google Cloud security evaluations and assessments.",
       href: "/services/cloud-security-assessments"
     },
     {
-      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-glow" />,
-      title: "SOC 2 Compliance",
-      description: "Achieve SOC 2 compliance with expert guidance. Meet the highest standards for security, availability, and confidentiality.",
-      href: "/services/soc-2"
+      icon: <Bug className="h-6 w-6 text-[#01411c] icon-glow" />,
+      title: "Penetration Testing (Program Oversight)",
+      description: "Comprehensive security testing and penetration testing program oversight.",
+      href: "/services/penetration-testing"
+    },
+    {
+      icon: <FileText className="h-6 w-6 text-[#01411c] icon-scale" />,
+      title: "NIST 800‑171 Readiness",
+      description: "NIST SP 800-171 compliance for controlled unclassified information.",
+      href: "/services/nist-171-security-assessment"
+    },
+    {
+      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-bounce" />,
+      title: "Cyber Essentials (UK)",
+      description: "UK government cybersecurity certification scheme compliance.",
+      href: "/services/cyber-essentials"
+    },
+    {
+      icon: <Brain className="h-6 w-6 text-[#01411c] icon-settings" />,
+      title: "AI Governance & Risk",
+      description: "AI governance frameworks and risk management assessments.",
+      href: "/services/ai-governance-risk"
+    },
+    {
+      icon: <Code className="h-6 w-6 text-[#01411c] icon-shake" />,
+      title: "DevSecOps & Secure SDLC",
+      description: "DevSecOps implementation and secure development lifecycle.",
+      href: "/services/devsecops-secure-sdlc"
+    },
+    {
+      icon: <Users className="h-6 w-6 text-[#01411c] icon-pulse" />,
+      title: "Third‑Party / Vendor Risk",
+      description: "Third-party security assessments and vendor risk management.",
+      href: "/services/third-party-vendor-risk"
+    },
+    {
+      icon: <Zap className="h-6 w-6 text-[#01411c] icon-glow" />,
+      title: "Incident Response Program",
+      description: "Incident response program development and capability assessment.",
+      href: "/services/incident-response-program"
+    },
+    {
+      icon: <Shield className="h-6 w-6 text-[#01411c] icon-float" />,
+      title: "Data Privacy & Protection",
+      description: "Data protection compliance and privacy control assessments.",
+      href: "/services/data-protection-privacy"
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6 text-[#01411c] icon-scale" />,
+      title: "Risk Management Frameworks",
+      description: "Enterprise risk management framework development and implementation.",
+      href: "/services/risk-management-frameworks"
+    },
+    {
+      icon: <Activity className="h-6 w-6 text-[#01411c] icon-bounce" />,
+      title: "Cybersecurity Maturity Assessments",
+      description: "Cybersecurity program maturity evaluation and improvement planning.",
+      href: "/services/cybersecurity-maturity-assessments"
+    },
+    {
+      icon: <Cloud className="h-6 w-6 text-[#01411c] icon-settings" />,
+      title: "Cloud Security Posture Mgmt (CSPM)",
+      description: "Cloud security posture management and continuous monitoring.",
+      href: "/services/cloud-security-posture-management"
     }
   ];
 
