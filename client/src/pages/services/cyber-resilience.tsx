@@ -101,9 +101,8 @@ export default function CyberResilience() {
                 </Link>
               </div>
             </div>
-            <div className="animate-slide-in-right space-y-6">
+            <div className="animate-slide-in-right">
               <ProfessionalBCPDiagram />
-              <EnterpriseMetrics />
             </div>
           </div>
         </div>

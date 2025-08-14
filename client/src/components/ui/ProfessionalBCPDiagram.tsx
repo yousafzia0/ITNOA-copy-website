@@ -1,270 +1,281 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, Clock, TrendingUp, ArrowRight, Play, Pause, RotateCcw } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 const ProfessionalBCPDiagram: React.FC = () => {
-  const [currentPhase, setCurrentPhase] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [animationStep, setAnimationStep] = useState(0);
 
   useEffect(() => {
-    if (!isPlaying) return;
-    
     const timer = setInterval(() => {
-      setCurrentPhase(prev => (prev + 1) % 5);
-    }, 3000);
-
+      setAnimationStep(prev => (prev + 1) % 8);
+    }, 2000);
     return () => clearInterval(timer);
-  }, [isPlaying]);
+  }, []);
 
   return (
-    <div className="w-full bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
-      {/* Header Section */}
-      <div className="px-4 md:px-8 pt-6 pb-4 bg-gradient-to-r from-slate-50 to-blue-50">
+    <div className="w-full bg-white rounded-lg shadow-lg border border-slate-200">
+      <div className="p-6">
+        {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center mb-8"
         >
-          <h2 className="text-lg md:text-2xl font-bold text-slate-800 mb-3">
+          <h3 className="text-xl font-bold text-blue-600 mb-2">
             Time Is Precious When An Event Occurs
-          </h2>
-          <div className="inline-block bg-green-100 px-4 py-2 rounded-lg">
-            <span className="text-green-800 font-semibold text-sm">ISO 22301</span>
+          </h3>
+          <div className="text-sm font-semibold text-green-700 bg-green-50 px-3 py-1 rounded inline-block">
+            ISO 22301
           </div>
         </motion.div>
-      </div>
 
-      {/* Controls */}
-      <div className="absolute top-4 right-4 z-30 flex gap-2">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsPlaying(!isPlaying)}
-          className={`p-2 rounded-lg text-white text-xs font-medium ${
-            isPlaying ? 'bg-red-500' : 'bg-green-500'
-          }`}
-        >
-          {isPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setCurrentPhase(0)}
-          className="p-2 bg-blue-500 text-white rounded-lg text-xs"
-        >
-          <RotateCcw className="h-3 w-3" />
-        </motion.button>
-      </div>
-
-      {/* Main Diagram */}
-      <div className="p-4 md:p-8 relative">
-        <div className="relative h-[400px] md:h-[500px]">
+        {/* Main Chart Container */}
+        <div className="relative h-96 mx-2">
           
-          {/* Y-axis Labels */}
-          <div className="absolute left-0 top-1/4 -rotate-90 origin-center">
-            <div className="text-xs md:text-sm font-medium text-slate-600 whitespace-nowrap text-center">
+          {/* Y-Axis Labels */}
+          <div className="absolute left-2 top-12 -rotate-90 origin-center">
+            <span className="text-xs font-medium text-slate-700 whitespace-nowrap">
               Capacity of operations
-            </div>
+            </span>
           </div>
           
-          <div className="absolute left-0 bottom-20 -rotate-90 origin-center">
-            <div className="text-xs md:text-sm font-bold text-blue-600 whitespace-nowrap text-center">
-              Event Time Progression
+          <div className="absolute left-2 bottom-16 -rotate-90 origin-center">
+            <div className="text-xs font-bold text-blue-600 whitespace-nowrap">
+              <div>Event Time</div>
+              <div>Progression</div>
             </div>
           </div>
 
           {/* Chart Area */}
-          <div className="ml-8 md:ml-12 mr-4 h-full relative">
-            
-            {/* Grid Lines */}
-            <svg className="absolute inset-0 w-full h-full opacity-20">
-              <defs>
-                <pattern id="chartGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#cbd5e1" strokeWidth="0.5"/>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#chartGrid)" />
-            </svg>
-
-            {/* Capacity Line */}
+          <div className="ml-12 mr-4 h-full relative">
+          
+            {/* Main Timeline - Horizontal line */}
             <motion.div 
-              className="absolute w-full h-px bg-slate-400 top-1/2"
+              className="absolute w-full h-0.5 bg-slate-400 top-20"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 0.5 }}
             />
 
-            {/* Timeline Events */}
+            {/* Vertical Timeline Markers */}
             {[
-              { label: "Warning", position: 15, color: "#F59E0B", icon: AlertTriangle },
-              { label: "Incident", position: 28, color: "#DC2626", icon: AlertTriangle },
-              { label: "Recovery time objective", position: 48, color: "#F59E0B", icon: Clock },
-              { label: "Shortened disruption", position: 68, color: "#10B981", icon: TrendingUp }
+              { label: "Warning", position: 15, color: "#F59E0B" },
+              { label: "Incident", position: 25, color: "#DC2626" },
+              { label: "Recovery time objective", position: 48, color: "#F59E0B" },
+              { label: "Shortened disruption", position: 68, color: "#10B981" }
             ].map((event, index) => (
               <motion.div
                 key={event.label}
                 className="absolute"
-                style={{ left: `${event.position}%`, top: '50%' }}
-                initial={{ opacity: 0, scale: 0 }}
+                style={{ left: `${event.position}%`, top: '5rem' }}
+                initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ 
-                  opacity: currentPhase >= index ? 1 : 0.3,
-                  scale: currentPhase >= index ? 1 : 0.8,
-                  y: currentPhase === index ? -5 : 0
+                  opacity: animationStep >= index ? 1 : 0.3,
+                  scaleY: animationStep >= index ? 1 : 0.5
                 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.4 + 1 }}
               >
-                {/* Vertical line */}
+                {/* Vertical marker line */}
                 <div 
-                  className="w-0.5 md:w-1 h-20 -translate-y-10 mx-auto"
+                  className="w-0.5 h-12 -translate-y-6 mx-auto"
                   style={{ backgroundColor: event.color }}
                 />
                 
-                {/* Event dot */}
+                {/* Label box */}
                 <motion.div
-                  className="w-3 h-3 md:w-4 md:h-4 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
-                  style={{ backgroundColor: event.color }}
-                  whileHover={{ scale: 1.2 }}
+                  className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded text-xs font-medium text-white shadow-sm text-center"
+                  style={{ 
+                    backgroundColor: event.color,
+                    minWidth: event.label.length > 15 ? '80px' : '60px'
+                  }}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: animationStep >= index ? 1 : 0 }}
+                  transition={{ delay: index * 0.4 + 1.2 }}
                 >
-                  <event.icon className="h-1.5 w-1.5 md:h-2 md:w-2 text-white" />
-                </motion.div>
-                
-                {/* Label */}
-                <motion.div
-                  className="absolute top-4 -translate-x-1/2 text-center min-w-max"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div 
-                    className="text-xs font-medium px-2 py-1 rounded text-white shadow-md max-w-[80px] md:max-w-none"
-                    style={{ backgroundColor: event.color }}
-                  >
-                    {event.label}
-                  </div>
+                  {event.label}
                 </motion.div>
               </motion.div>
             ))}
 
-            {/* Recovery Curves */}
+            {/* Recovery Curves using SVG */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
-              {/* WITH business continuity curve */}
+              {/* WITH business continuity curve - Green solid */}
               <motion.path
-                d="M 15% 50% Q 35% 65% 68% 45% T 85% 35%"
+                d="M 15% 20% L 25% 30% Q 48% 35% 68% 25% L 85% 18%"
                 stroke="#10B981"
-                strokeWidth="2"
+                strokeWidth="3"
                 fill="none"
-                strokeDasharray="0"
                 initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 2, delay: 1 }}
+                animate={{ pathLength: animationStep >= 4 ? 1 : 0 }}
+                transition={{ duration: 2, delay: 3 }}
               />
               
-              {/* WITHOUT business continuity curve */}
+              {/* WITHOUT business continuity curve - Red dashed */}
               <motion.path
-                d="M 15% 50% Q 40% 85% 75% 75% T 90% 70%"
+                d="M 15% 20% L 25% 45% Q 48% 60% 75% 50% L 90% 45%"
                 stroke="#DC2626"
-                strokeWidth="2"
+                strokeWidth="3"
+                strokeDasharray="6,6"
                 fill="none"
-                strokeDasharray="4,4"
                 initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 2, delay: 1.5 }}
+                animate={{ pathLength: animationStep >= 5 ? 1 : 0 }}
+                transition={{ duration: 2, delay: 4 }}
               />
             </svg>
 
-            {/* Key Phases Boxes */}
+            {/* Key Information Boxes */}
             <motion.div
-              className="absolute bg-yellow-100 border-l-4 border-yellow-500 p-2 rounded shadow-md max-w-[100px] md:max-w-none"
-              style={{ left: '18%', top: '30%' }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: currentPhase >= 1 ? 1 : 0, scale: 1 }}
-              transition={{ delay: 1 }}
+              className="absolute bg-green-50 border border-green-200 p-2 rounded-lg text-xs font-medium text-green-800 shadow-sm"
+              style={{ left: '2%', top: '5%' }}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: animationStep >= 6 ? 1 : 0, x: 0 }}
+              transition={{ delay: 4.5 }}
             >
-              <div className="text-xs font-semibold text-yellow-800">
-                Controlled response
-              </div>
+              <div>Resumption of activities at</div>
+              <div>acceptable capacity within</div>
+              <div>acceptable timeframe</div>
             </motion.div>
 
             <motion.div
-              className="absolute bg-slate-100 border-l-4 border-slate-600 p-2 rounded shadow-md max-w-[120px] md:max-w-none"
-              style={{ left: '35%', top: '65%' }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: currentPhase >= 2 ? 1 : 0, scale: 1 }}
-              transition={{ delay: 1.5 }}
+              className="absolute bg-green-100 border border-green-300 p-2 rounded-lg text-xs font-medium text-green-700 shadow-sm"
+              style={{ left: '58%', top: '5%' }}
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: animationStep >= 6 ? 1 : 0, x: 0 }}
+              transition={{ delay: 5 }}
             >
-              <div className="text-xs font-semibold text-slate-800">
-                <div>Mitigating,</div>
-                <div>responding to</div>
-                <div>and managing</div>
-                <div>impacts</div>
-              </div>
+              <div>Work recovery time</div>
+              <div>to normal operations</div>
             </motion.div>
 
             <motion.div
-              className="absolute bg-red-100 border-l-4 border-red-500 p-2 rounded shadow-md max-w-[100px] md:max-w-none"
-              style={{ left: '75%', top: '75%' }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: currentPhase >= 3 ? 1 : 0, scale: 1 }}
-              transition={{ delay: 2 }}
+              className="absolute bg-yellow-100 border-l-4 border-yellow-500 p-2 rounded text-xs font-semibold text-yellow-800 shadow-sm"
+              style={{ left: '18%', top: '35%' }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ 
+                opacity: animationStep >= 7 ? 1 : 0, 
+                scale: animationStep >= 7 ? 1 : 0.5 
+              }}
+              transition={{ delay: 5.5 }}
             >
-              <div className="text-xs font-semibold text-red-800">
-                <div>Minimum</div>
-                <div>acceptable</div>
-                <div>capacity</div>
-              </div>
+              Controlled response
             </motion.div>
 
-            {/* Green Arrows */}
             <motion.div
-              className="absolute"
-              style={{ left: '58%', top: '20%' }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 2.5 }}
+              className="absolute bg-slate-100 border-l-4 border-slate-600 p-2 rounded text-xs font-semibold text-slate-800 shadow-sm"
+              style={{ left: '32%', top: '50%', maxWidth: '120px' }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ 
+                opacity: animationStep >= 7 ? 1 : 0, 
+                scale: animationStep >= 7 ? 1 : 0.5 
+              }}
+              transition={{ delay: 6 }}
             >
-              <div className="bg-green-200 p-2 rounded shadow-md">
-                <div className="text-xs font-medium text-green-800 text-center mb-1">
-                  <div>Work recovery time</div>
-                  <div>to normal operations</div>
-                </div>
-                <div className="text-green-600 text-center">
-                  <TrendingUp className="h-4 w-4 mx-auto" />
-                </div>
-              </div>
+              <div>Mitigating,</div>
+              <div>responding to</div>
+              <div>and managing</div>
+              <div>impacts</div>
             </motion.div>
 
-            {/* Legend */}
             <motion.div
-              className="absolute bottom-4 right-4 space-y-2"
+              className="absolute bg-red-100 border-l-4 border-red-500 p-2 rounded text-xs font-semibold text-red-800 shadow-sm"
+              style={{ left: '70%', top: '60%' }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ 
+                opacity: animationStep >= 7 ? 1 : 0, 
+                scale: animationStep >= 7 ? 1 : 0.5 
+              }}
+              transition={{ delay: 6.5 }}
+            >
+              <div>Minimum</div>
+              <div>acceptable</div>
+              <div>capacity</div>
+            </motion.div>
+
+            <motion.div
+              className="absolute bg-red-50 border border-red-300 p-2 rounded text-xs font-medium text-red-700 shadow-sm"
+              style={{ left: '72%', top: '70%', maxWidth: '100px' }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ 
+                opacity: animationStep >= 7 ? 1 : 0, 
+                scale: animationStep >= 7 ? 1 : 0.5 
+              }}
+              transition={{ delay: 7 }}
+            >
+              <div>Time at</div>
+              <div>which impacts</div>
+              <div>become</div>
+              <div>unacceptable</div>
+            </motion.div>
+
+            {/* Legend Boxes */}
+            <motion.div
+              className="absolute bottom-6 right-4 space-y-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 3 }}
+              transition={{ delay: 7.5 }}
             >
-              <div className="flex items-center space-x-2 bg-white/90 px-3 py-1 rounded shadow">
-                <div className="w-4 h-0.5 bg-green-500"></div>
-                <span className="text-xs font-medium text-green-800">WITH business continuity</span>
+              <div className="flex items-center space-x-3 bg-green-100 px-3 py-2 rounded-lg text-xs font-medium border border-green-300 shadow-sm">
+                <div className="w-6 h-1 bg-green-500 rounded"></div>
+                <span className="text-green-800">WITH business continuity</span>
               </div>
-              <div className="flex items-center space-x-2 bg-white/90 px-3 py-1 rounded shadow">
-                <div className="w-4 h-0.5 bg-red-500 border-dashed border-t border-red-500"></div>
-                <span className="text-xs font-medium text-red-800">WITHOUT business continuity</span>
+              <div className="flex items-center space-x-3 bg-red-100 px-3 py-2 rounded-lg text-xs font-medium border border-red-300 shadow-sm">
+                <div className="w-6 h-1 bg-red-500 rounded" style={{ 
+                  backgroundImage: 'repeating-linear-gradient(to right, #DC2626 0, #DC2626 3px, transparent 3px, transparent 6px)' 
+                }}></div>
+                <span className="text-red-800">WITHOUT business continuity</span>
               </div>
             </motion.div>
 
-            {/* Time Axis */}
-            <div className="absolute bottom-2 right-8 flex items-center">
-              <span className="text-xs font-medium text-slate-600 mr-1">Time</span>
-              <ArrowRight className="h-3 w-3 text-slate-600" />
-            </div>
+            {/* Arrows */}
+            <motion.div
+              className="absolute"
+              style={{ left: '60%', top: '16%' }}
+              initial={{ opacity: 0, scale: 0, rotate: -45 }}
+              animate={{ 
+                opacity: animationStep >= 6 ? 1 : 0, 
+                scale: 1, 
+                rotate: 45 
+              }}
+              transition={{ delay: 5.5 }}
+            >
+              <div className="w-0 h-0 border-l-4 border-r-4 border-b-6 border-l-transparent border-r-transparent border-b-green-500"></div>
+            </motion.div>
+
+            <motion.div
+              className="absolute"
+              style={{ left: '75%', top: '40%' }}
+              initial={{ opacity: 0, scale: 0, rotate: -45 }}
+              animate={{ 
+                opacity: animationStep >= 6 ? 1 : 0, 
+                scale: 1, 
+                rotate: 45 
+              }}
+              transition={{ delay: 6 }}
+            >
+              <div className="w-0 h-0 border-l-4 border-r-4 border-b-6 border-l-transparent border-r-transparent border-b-red-500"></div>
+            </motion.div>
+
+            {/* Time axis */}
+            <motion.div 
+              className="absolute bottom-4 right-8 flex items-center text-slate-600"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 8 }}
+            >
+              <span className="text-sm font-medium mr-2">Time</span>
+              <ArrowRight className="h-4 w-4" />
+            </motion.div>
           </div>
         </div>
 
-        {/* Bottom Description */}
+        {/* Footer */}
         <motion.div
-          className="text-center mt-6 space-y-1"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.5 }}
+          className="text-center mt-8 space-y-2 pb-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 8.5 }}
         >
-          <p className="text-sm font-medium text-slate-700">
+          <p className="text-sm font-semibold text-slate-700">
             Illustration Of Business Continuity Being Effective For Gradual Disruption
           </p>
           <p className="text-xs text-slate-500">(e.g. datacenter disaster)</p>
