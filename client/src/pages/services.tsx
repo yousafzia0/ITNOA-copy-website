@@ -28,7 +28,10 @@ import {
   BarChart3,
   User,
   Users,
-  DollarSign
+  DollarSign,
+  HardDrive,
+  MessageSquare,
+  AlertTriangle
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -97,9 +100,12 @@ export default function Services() {
       description: "Development and validation of business continuity, disaster recovery, and cyber resilience capabilities that protect critical services and meet stakeholder expectations. Work is aligned to ISO 22301/22317 and ISO/IEC 27031, with traceability to risk assessments and executive-approved recovery objectives.",
       mainPage: "/services/cyber-resilience",
       services: [
-        { name: "Business Continuity Planning", path: "/services/business-continuity-planning", description: "Comprehensive business continuity strategy development", icon: <RefreshCw className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Business Impact Analysis (ISO 22317)", path: "/services/business-impact-analysis-iso-22301", description: "ISO 22317 compliant business impact analysis and risk assessment", icon: <BarChart3 className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Business Continuity System Review (ISO 22301)", path: "/services/business-continuity-system-review-iso-22301", description: "ISO 22301 business continuity management system evaluation", icon: <FileCheck className="h-5 w-5 text-[#01411c]" /> }
+        { name: "ISO 22301 BCMS Assessment", path: "/services/iso-22301-bcms-assessment", description: "Business Continuity Management System assessment and compliance evaluation", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> },
+        { name: "ISO 22317 Business Impact Analysis", path: "/services/business-impact-analysis-iso-22301", description: "ISO 22317 compliant business impact analysis and risk assessment", icon: <BarChart3 className="h-5 w-5 text-[#01411c]" /> },
+        { name: "ISO/IEC 27031 ICT Readiness & Disaster Recovery", path: "/services/iso-27031-ict-readiness-disaster-recovery", description: "ICT readiness for business continuity and disaster recovery planning", icon: <HardDrive className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Crisis Communication & Incident Response (NIST CSF RS/RC)", path: "/services/crisis-communication-incident-response", description: "Crisis communication planning and NIST CSF incident response capabilities", icon: <MessageSquare className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Supplier & Third‑Party Continuity", path: "/services/supplier-third-party-continuity", description: "Third-party supplier continuity planning and risk management", icon: <Users className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Ransomware Readiness & Recovery", path: "/services/ransomware-readiness-recovery", description: "Ransomware prevention, readiness assessment, and recovery planning", icon: <AlertTriangle className="h-5 w-5 text-[#01411c]" /> }
       ]
     }
   ];

@@ -1,4 +1,4 @@
-import { RotateCcw, FileText, CheckCircle } from "lucide-react";
+import { RotateCcw, FileText, CheckCircle, BarChart3, HardDrive, MessageSquare, Users, AlertTriangle } from "lucide-react";
 import Navigation from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -28,16 +28,40 @@ export default function CyberResilience() {
 
   const comprehensiveServices = [
     {
-      icon: <FileText className="h-6 w-6 text-[#01411c] icon-bounce" />,
-      title: "Business Impact Analysis Per ISO 22317",
-      description: "Comprehensive business impact analysis following ISO 22317 standards to identify critical business functions, dependencies, and recovery requirements.",
+      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-bounce" />,
+      title: "ISO 22301 BCMS Assessment",
+      description: "Business Continuity Management System assessment and compliance evaluation against ISO 22301 standards.",
+      href: "/services/iso-22301-bcms-assessment"
+    },
+    {
+      icon: <BarChart3 className="h-6 w-6 text-[#01411c] icon-settings" />,
+      title: "ISO 22317 Business Impact Analysis",
+      description: "ISO 22317 compliant business impact analysis and risk assessment to identify critical functions and dependencies.",
       href: "/services/business-impact-analysis-iso-22301"
     },
     {
-      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-settings" />,
-      title: "Business Continuity System Review (ISO22301)",
-      description: "Complete business continuity management system review and compliance assessment against ISO 22301 international standard requirements.",
-      href: "/services/business-continuity-system-review-iso-22301"
+      icon: <HardDrive className="h-6 w-6 text-[#01411c] icon-shake" />,
+      title: "ISO/IEC 27031 ICT Readiness & Disaster Recovery",
+      description: "ICT readiness for business continuity and disaster recovery planning aligned with ISO/IEC 27031 standards.",
+      href: "/services/iso-27031-ict-readiness-disaster-recovery"
+    },
+    {
+      icon: <MessageSquare className="h-6 w-6 text-[#01411c] icon-pulse" />,
+      title: "Crisis Communication & Incident Response (NIST CSF RS/RC)",
+      description: "Crisis communication planning and NIST Cybersecurity Framework incident response capabilities.",
+      href: "/services/crisis-communication-incident-response"
+    },
+    {
+      icon: <Users className="h-6 w-6 text-[#01411c] icon-glow" />,
+      title: "Supplier & Third‑Party Continuity",
+      description: "Third-party supplier continuity planning and risk management to ensure business resilience.",
+      href: "/services/supplier-third-party-continuity"
+    },
+    {
+      icon: <AlertTriangle className="h-6 w-6 text-[#01411c] icon-float" />,
+      title: "Ransomware Readiness & Recovery",
+      description: "Ransomware prevention, readiness assessment, and recovery planning to protect against cyber threats.",
+      href: "/services/ransomware-readiness-recovery"
     }
   ];
 

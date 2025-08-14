@@ -46,7 +46,12 @@ import FERPAFISMAudit from "@/pages/services/ferpa-fisma";
 import SOXCyberSecurityRequirements from "@/pages/services/sox-cyber-security-requirements";
 import SOXITGeneralControls from "@/pages/services/sox-it-general-controls";
 // Business Continuity Services
+import ISO22301BCMSAssessment from "@/pages/services/iso-22301-bcms-assessment";
 import BusinessImpactAnalysisISO22301 from "@/pages/services/business-impact-analysis-iso-22301";
+import ISO27031ICTReadinessDisasterRecovery from "@/pages/services/iso-27031-ict-readiness-disaster-recovery";
+import CrisisCommunicationIncidentResponse from "@/pages/services/crisis-communication-incident-response";
+import SupplierThirdPartyContinuity from "@/pages/services/supplier-third-party-continuity";
+import RansomwareReadinessRecovery from "@/pages/services/ransomware-readiness-recovery";
 import BusinessContinuitySystemReviewISO22301 from "@/pages/services/business-continuity-system-review-iso-22301";
 
 function Router() {
@@ -93,7 +98,12 @@ function Router() {
       <Route path="/services/sox-cyber-security-requirements" component={SOXCyberSecurityRequirements} />
       <Route path="/services/sox-it-general-controls" component={SOXITGeneralControls} />
       {/* Business Continuity Services */}
+      <Route path="/services/iso-22301-bcms-assessment" component={ISO22301BCMSAssessment} />
       <Route path="/services/business-impact-analysis-iso-22301" component={BusinessImpactAnalysisISO22301} />
+      <Route path="/services/iso-27031-ict-readiness-disaster-recovery" component={ISO27031ICTReadinessDisasterRecovery} />
+      <Route path="/services/crisis-communication-incident-response" component={CrisisCommunicationIncidentResponse} />
+      <Route path="/services/supplier-third-party-continuity" component={SupplierThirdPartyContinuity} />
+      <Route path="/services/ransomware-readiness-recovery" component={RansomwareReadinessRecovery} />
       <Route path="/services/business-continuity-system-review-iso-22301" component={BusinessContinuitySystemReviewISO22301} />
       <Route component={NotFound} />
     </Switch>
