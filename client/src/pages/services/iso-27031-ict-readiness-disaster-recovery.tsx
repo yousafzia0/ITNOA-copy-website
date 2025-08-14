@@ -27,7 +27,7 @@ export default function ISO27031ICTReadinessDisasterRecovery() {
 
   return (
     <ServiceDetailTemplate
-      title="ISO/IEC 27031 ICT Readiness & Disaster Recovery"
+      title="ISO 27031 ICT Readiness & Disaster Recovery"
       description="ICT readiness for business continuity and disaster recovery planning aligned with ISO/IEC 27031 standards to ensure technology infrastructure supports organizational resilience."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}

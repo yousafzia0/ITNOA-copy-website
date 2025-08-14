@@ -38,7 +38,7 @@ export default function ITAudit() {
     },
     {
       icon: <User className="h-6 w-6 text-[#01411c] icon-bounce" />,
-      title: "Workday /HCM Security",
+      title: "Workday Security",
       description: "Workday module security reviews and SOX-relevant control testing.",
       href: "/services/workday-hcm-security"
     },

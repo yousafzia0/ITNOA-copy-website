@@ -78,7 +78,7 @@ export default function Home() {
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 Expert solutions in cybersecurity, data protection, and risk management. 
-                Protect your business with customized consultancy services that ensure compliance and resilience.
+                Protect your business with customized consultancy services that ensure appropriate governance, continuous risk mitigation and compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">

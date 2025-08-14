@@ -41,7 +41,7 @@ export default function CyberResilience() {
     },
     {
       icon: <HardDrive className="h-6 w-6 text-[#01411c] icon-shake" />,
-      title: "ISO/IEC 27031 ICT Readiness & Disaster Recovery",
+      title: "ISO 27031 ICT Readiness & Disaster Recovery",
       description: "ICT risk & threat assessment, DR strategy validation (alt sites/cloud failover), governance & documentation review, and progressive testing.",
       href: "/services/iso-27031-ict-readiness-disaster-recovery"
     },

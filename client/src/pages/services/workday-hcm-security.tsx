@@ -3,14 +3,14 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function WorkdayHCMSecurity() {
   const whatWeDo = [
-    "Workday HCM security configuration assessment – Review role-based access controls, business process security, and integration security within Workday Human Capital Management.",
+    "Workday  security configuration assessment – Review role-based access controls, business process security, and integration security within Workday Human Capital Management.",
     "User access management and privilege review – Evaluate user provisioning, de-provisioning, and access certification processes to ensure proper segregation of duties.",
     "Payroll and compensation data protection – Assess security controls protecting sensitive payroll information, salary data, and compensation plans.",
     "Employee data privacy compliance – Review controls for protecting personal employee information in compliance with GDPR, CCPA, and other privacy regulations.",
     "Integration security testing – Evaluate security of integrations between Workday and other HR systems, payroll processors, and third-party applications.",
     "Business process security review – Assess security controls within HR business processes including hiring, termination, transfers, and performance management.",
     "Report and analytics security – Review access controls and data security for Workday reports, dashboards, and analytics containing sensitive HR data.",
-    "Compliance verification for SOX and industry standards – Ensure Workday HCM configurations meet regulatory requirements and industry best practices."
+    "Compliance verification for SOX and industry standards – Ensure Workday  configurations meet regulatory requirements and industry best practices."
   ];
 
   const whyItMatters = [
@@ -23,8 +23,8 @@ export default function WorkdayHCMSecurity() {
 
   return (
     <ServiceDetailTemplate
-      title="Workday /HCM Security"
-      description="Comprehensive Workday Human Capital Management security assessments focusing on protecting employee data, ensuring proper access controls, and maintaining compliance with privacy regulations and industry standards."
+      title="Workday Security"
+      description="Comprehensive Workday  security assessments focusing on protecting employee data, ensuring proper access controls, and maintaining compliance with privacy regulations and industry standards."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<User className="h-10 w-10 text-[#01411c]" />}
