@@ -70,7 +70,7 @@ export default function Chatbot() {
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.response,
+        content: data.reply || data.response || "Sorry, I couldn't generate a response.",
         sender: "bot",
         timestamp: data.timestamp || new Date().toISOString()
       };
@@ -98,6 +98,9 @@ export default function Chatbot() {
 
   const formatMessage = (content: string) => {
     // Convert markdown-style links [text](/path) to actual Link components
+    if (!content || typeof content !== 'string') {
+      return <span>Message could not be displayed</span>;
+    }
     const parts = content.split(/(\[([^\]]+)\]\(([^)]+)\))/g);
     
     return parts.map((part, index) => {
