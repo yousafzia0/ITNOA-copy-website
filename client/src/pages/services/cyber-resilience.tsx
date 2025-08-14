@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import AnimatedBCPDiagram from "@/components/ui/AnimatedBCPDiagram";
+import ProfessionalBCPDiagram from "@/components/ui/ProfessionalBCPDiagram";
 import EnterpriseMetrics from "@/components/ui/EnterpriseMetrics";
 
 export default function CyberResilience() {
@@ -102,7 +102,7 @@ export default function CyberResilience() {
               </div>
             </div>
             <div className="animate-slide-in-right space-y-6">
-              <AnimatedBCPDiagram />
+              <ProfessionalBCPDiagram />
               <EnterpriseMetrics />
             </div>
           </div>

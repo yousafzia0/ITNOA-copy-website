@@ -1,119 +1,144 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, Activity, Shield, Clock, ArrowRight, ArrowDown, CheckCircle, XCircle, TrendingUp, Play, Pause, RotateCcw } from 'lucide-react';
+import { AlertTriangle, Activity, Shield, Clock, ArrowRight, TrendingUp, Play, Pause } from 'lucide-react';
 
 const AnimatedBCPDiagram: React.FC = () => {
-  const [animationStep, setAnimationStep] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [animationPhase, setAnimationPhase] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [hoveredElement, setHoveredElement] = useState<string | null>(null);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isPlaying) {
       timer = setInterval(() => {
-        setAnimationStep((prev) => (prev + 1) % 8);
-      }, 2500);
+        setAnimationPhase((prev) => (prev + 1) % 6);
+      }, 3000);
     }
-
     return () => {
       if (timer) clearInterval(timer);
     };
   }, [isPlaying]);
 
-  const timelinePoints = [
-    { label: "Warning", color: "#FFA500", icon: AlertTriangle, x: 15 },
-    { label: "Incident", color: "#DC2626", icon: XCircle, x: 25 },
-    { label: "Recovery time objective", color: "#F59E0B", icon: Clock, x: 45 },
-    { label: "Shortened disruption", color: "#10B981", icon: TrendingUp, x: 55 },
-    { label: "Work recovery time", color: "#059669", icon: CheckCircle, x: 80 }
+  // Exact timeline points from the image
+  const timelineEvents = [
+    { 
+      id: "warning", 
+      label: "Warning", 
+      position: 15, 
+      color: "#F59E0B",
+      icon: AlertTriangle 
+    },
+    { 
+      id: "incident", 
+      label: "Incident", 
+      position: 25, 
+      color: "#DC2626",
+      icon: AlertTriangle 
+    },
+    { 
+      id: "recovery", 
+      label: "Recovery time objective", 
+      position: 45, 
+      color: "#F59E0B",
+      icon: Clock 
+    },
+    { 
+      id: "shortened", 
+      label: "Shortened disruption", 
+      position: 65, 
+      color: "#10B981",
+      icon: TrendingUp 
+    }
   ];
 
-  const phases = [
-    { 
-      name: "Controlled response", 
-      color: "#FFA500", 
-      y: 60, 
-      width: 15,
-      description: "Immediate response actions"
+  // Key phases with exact positioning
+  const keyPhases = [
+    {
+      id: "controlled",
+      text: "Controlled response",
+      position: { x: 20, y: 45 },
+      color: "#F59E0B"
     },
-    { 
-      name: "Mitigating, responding to and managing impacts", 
-      color: "#DC2626", 
-      y: 45, 
-      width: 25,
-      description: "Active incident management"
+    {
+      id: "mitigating", 
+      text: "Mitigating, responding to and managing impacts",
+      position: { x: 40, y: 60 },
+      color: "#1F2937",
+      multiline: ["Mitigating,", "responding to", "and managing", "impacts"]
     },
-    { 
-      name: "Minimum acceptable capacity", 
-      color: "#EF4444", 
-      y: 75, 
-      width: 35,
-      description: "Essential operations maintained"
+    {
+      id: "minimum",
+      text: "Minimum acceptable capacity", 
+      position: { x: 75, y: 75 },
+      color: "#EF4444",
+      multiline: ["Minimum", "acceptable", "capacity"]
     }
   ];
 
   return (
-    <div 
-      className="relative w-full h-[600px] bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl shadow-2xl overflow-hidden border border-slate-200"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Background Grid */}
-      <svg className="absolute inset-0 w-full h-full opacity-20">
-        <defs>
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" strokeWidth="1"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </svg>
+    <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
+      <div className="relative w-full h-[500px] md:h-[600px] p-4 md:p-8">
+        {/* Clean background with subtle grid */}
+        <svg className="absolute inset-0 w-full h-full opacity-10">
+          <defs>
+            <pattern id="professionalGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#cbd5e1" strokeWidth="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#professionalGrid)" />
+        </svg>
 
-      {/* Title and ISO Reference */}
-      <motion.div 
-        className="absolute top-6 left-6 right-6 text-center z-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-2xl font-bold text-slate-800 mb-2">
-          Time Is Precious When An Event Occurs
-        </h2>
-        <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-lg">
-          <Shield className="h-5 w-5 text-green-600 mr-2" />
-          <span className="text-green-800 font-semibold">ISO 22301</span>
-        </div>
-      </motion.div>
-
-      {/* Main Timeline Container */}
-      <div className="absolute top-24 left-8 right-8 bottom-16">
-        
-        {/* Capacity Line */}
-        <motion.div
-          className="absolute left-0 top-20 w-full h-px bg-slate-400"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-        />
-        
-        {/* Y-Axis Labels */}
-        <div className="absolute left-0 top-0 h-full flex flex-col justify-between py-4">
+        {/* Header Section */}
+        <div className="relative z-20 mb-8">
           <motion.div 
-            className="text-sm font-medium text-slate-600 -rotate-90 origin-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
+            className="text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            Capacity of operations
-          </motion.div>
-          <motion.div 
-            className="text-sm font-medium text-slate-600 -rotate-90 origin-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-          >
-            Event Time Progression
+            <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-3">
+              Time Is Precious When An Event Occurs
+            </h2>
+            <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-lg">
+              <Shield className="h-4 w-4 text-green-600 mr-2" />
+              <span className="text-green-800 font-semibold text-sm">ISO 22301</span>
+            </div>
           </motion.div>
         </div>
+
+        {/* Main Chart Container */}
+        <div className="relative h-[350px] md:h-[400px] mx-4 md:mx-8">
+          
+          {/* Y-Axis Labels */}
+          <div className="absolute -left-2 md:left-0 top-0 h-full flex flex-col justify-center">
+            <motion.div 
+              className="text-xs md:text-sm font-medium text-slate-700 -rotate-90 origin-center whitespace-nowrap"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              style={{ transformOrigin: 'center center' }}
+            >
+              <div className="text-center">
+                <div>Capacity of</div>
+                <div>operations</div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom Y-Axis Label */}
+          <div className="absolute -left-2 md:left-0 bottom-8 flex flex-col">
+            <motion.div 
+              className="text-xs md:text-sm font-medium text-blue-600 -rotate-90 origin-center whitespace-nowrap"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+            >
+              <div className="text-center">
+                <div className="text-blue-600 font-bold">Event Time</div>
+                <div className="text-blue-600 font-bold">Progression</div>
+              </div>
+            </motion.div>
+          </div>
 
         {/* Main Chart Area */}
         <div className="ml-16 mr-8 h-full relative">
