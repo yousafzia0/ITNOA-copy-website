@@ -50,7 +50,7 @@ export default function Services() {
       id: "it-audit",
       title: "IT Audit",
       icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
-      description: "Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations.",
+      description: "ITNOA designs and operates an integrated internal audit function that conforms to the Institute of Internal Auditors (IIA) Standards and Code of Ethics and provides the Audit Committee with independent, objective assurance. Our work establishes a three-year, top-down, risk-based plan; delivers audits on schedule; prioritizes critical risk mitigation; and supports operations within the enterprise’s approved risk appetite and tolerance.",
       mainPage: "/services/it-audit",
       services: [
         { name: "SAP Audit", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews", icon: <Settings className="h-5 w-5 text-[#01411c]" /> },
@@ -68,9 +68,9 @@ export default function Services() {
     },
     {
       id: "information-security",
-      title: "Information Security (ISC) Consulting",
+      title: "Information Security (GRC) Consulting",
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
-      description: "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
+      description: "Advisory and implementation support to establish governance, risk, and compliance capabilities that meet regulatory expectations and align security controls with business objectives. Services are anchored to recognized frameworks and emphasize defensible documentation and operational practicality.",
       mainPage: "/services/grc-consulting",
       services: [
         { name: "ISO 27001 Implementation", path: "/services/iso-27001-implementation", description: "Information Security Management System implementation", icon: <Tag className="h-5 w-5 text-[#01411c]" /> },
@@ -87,7 +87,7 @@ export default function Services() {
       id: "business-continuity",
       title: "Business Continuity / Cyber Resilience",
       icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
-      description: "Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions.",
+      description: "Development and validation of business continuity, disaster recovery, and cyber resilience capabilities that protect critical services and meet stakeholder expectations. Work is aligned to ISO 22301/22317 and ISO/IEC 27031, with traceability to risk assessments and executive-approved recovery objectives.",
       mainPage: "/services/cyber-resilience",
       services: [
         { name: "Business Continuity Planning", path: "/services/business-continuity-planning", description: "Comprehensive business continuity strategy development", icon: <RefreshCw className="h-5 w-5 text-[#01411c]" /> },
@@ -106,10 +106,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Our Cybersecurity Services
+              Our Cybersecurity Services Categories
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions to protect your business and ensure compliance across all industries
+              ITNOA delivers independent, standards-aligned services that provide the Audit Committee, senior management, and stakeholders with reliable assurance and practical recommendations. Select a category to view scope, approach, and deliverables.
             </p>
           </div>
         </div>

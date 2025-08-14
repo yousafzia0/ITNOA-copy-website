@@ -99,8 +99,7 @@ export default function ITAudit() {
                 </h1>
               </div>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture 
-                with actionable recommendations and expert guidance.
+                Independent IT audits designed to provide the Audit Committee with assurance that governance, risk management, and control frameworks are operating effectively. We evaluate compliance, mitigate critical risks, and confirm alignment with the organization’s risk appetite, tolerance, and strategic objectives.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/become-client">
