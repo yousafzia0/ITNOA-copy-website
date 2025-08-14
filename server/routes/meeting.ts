@@ -603,10 +603,20 @@ async function sendClientEmails(clientDetails: any): Promise<{success: boolean, 
 // API Routes
 router.post("/schedule-meeting", async (req, res) => {
   try {
-    const { firstName, lastName, email, company, jobTitle, preferredDate, preferredTime, timeZone, meetingType, agenda } = req.body;
+    const { firstName, lastName, fullName, email, company, jobTitle, preferredDate, preferredTime, timeZone, meetingType, agenda } = req.body;
+    
+    // Handle both fullName and firstName/lastName formats
+    let finalFirstName = firstName;
+    let finalLastName = lastName;
+    
+    if (!firstName && !lastName && fullName) {
+      const nameParts = fullName.split(' ');
+      finalFirstName = nameParts[0] || '';
+      finalLastName = nameParts.slice(1).join(' ') || '';
+    }
     
     // Validate required fields
-    if (!firstName || !lastName || !email || !company || !preferredDate || !preferredTime || !timeZone || !meetingType || !agenda) {
+    if (!finalFirstName || !email || !company || !preferredDate || !preferredTime || !timeZone || !meetingType || !agenda) {
       return res.status(400).json({
         success: false,
         message: "All fields are required"
@@ -624,9 +634,9 @@ router.post("/schedule-meeting", async (req, res) => {
     
     // Prepare meeting details
     const meetingDetails = {
-      fullName: `${firstName} ${lastName}`,
-      firstName,
-      lastName,
+      fullName: `${finalFirstName} ${finalLastName}`.trim(),
+      firstName: finalFirstName,
+      lastName: finalLastName,
       email,
       company,
       jobTitle,
@@ -637,7 +647,7 @@ router.post("/schedule-meeting", async (req, res) => {
       agenda
     };
     
-    console.log(`Processing meeting request for ${firstName} ${lastName}`);
+    console.log(`Processing meeting request for ${finalFirstName} ${finalLastName}`);
     
     // Send emails
     const emailResult = await sendMeetingEmails(meetingDetails);
