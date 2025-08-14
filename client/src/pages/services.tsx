@@ -53,17 +53,24 @@ export default function Services() {
       description: "ITNOA designs and operates an integrated internal audit function that conforms to the Institute of Internal Auditors (IIA) Standards and Code of Ethics and provides the Audit Committee with independent, objective assurance. Our work establishes a three-year, top-down, risk-based plan; delivers audits on schedule; prioritizes critical risk mitigation; and supports operations within the enterprise’s approved risk appetite and tolerance.",
       mainPage: "/services/it-audit",
       services: [
-        { name: "SAP Audit", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews", icon: <Settings className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Peoplesoft Audit", path: "/services/peoplesoft-audit", description: "Oracle Peoplesoft security evaluations and risk assessments", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
-        { name: "PeopleSoft InFro Security", path: "/services/peoplesoft-hcm-security", description: "Human Capital Management security assessments and payroll protection", icon: <User className="h-5 w-5 text-[#01411c]" /> },
-        { name: "PeopleSoft Workday Security", path: "/services/peoplesoft-financial-security", description: "Workday module security audits and SOX compliance", icon: <DollarSign className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Database Security Audit", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, and PostgreSQL security audits", icon: <Database className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Operating System Audit", path: "/services/os-audit", description: "Linux and Windows OS security configuration reviews", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
+        { name: "SAP Audits", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews", icon: <Settings className="h-5 w-5 text-[#01411c]" /> },
+        { name: "PeopleSoft Audits", path: "/services/peoplesoft-audit", description: "Oracle PeopleSoft security evaluations and risk assessments", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Workday /HCM Security", path: "/services/workday-hcm-security", description: "Workday Human Capital Management security assessments", icon: <User className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Database Security Audits", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, and PostgreSQL security audits", icon: <Database className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Operating System Audits", path: "/services/os-audit", description: "Linux and Windows OS security configuration reviews", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
         { name: "Network Security", path: "/services/network-security", description: "Network infrastructure and firewall security assessments", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Cloud Security (AWS / Azure / GCP)", path: "/services/cloud-security-audits", description: "Multi-cloud security assessments and compliance validation", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Application Security & SDLC", path: "/services/application-security-sdlc", description: "Application security testing and secure development lifecycle", icon: <Bug className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Identity & Access Management (IAM)", path: "/services/identity-access-management", description: "IAM security assessments and access control reviews", icon: <User className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Vulnerability & Patch Management", path: "/services/vulnerability-patch-management", description: "Vulnerability assessment and patch management reviews", icon: <Bug className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Incident Response & Resilience", path: "/services/incident-response-resilience", description: "Incident response capability and cyber resilience testing", icon: <RefreshCw className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Third-Party / Vendor Risk", path: "/services/third-party-vendor-risk", description: "Third-party security assessments and vendor risk management", icon: <Users className="h-5 w-5 text-[#01411c]" /> },
         { name: "SOX Auditing", path: "/services/sox-auditing", description: "Sarbanes-Oxley compliance auditing and controls testing", icon: <FileCheck className="h-5 w-5 text-[#01411c]" /> },
-        { name: "FFIEC Audits", path: "/services/ffiec-audits", description: "Federal Financial Institution Examination Council compliance", icon: <Building2 className="h-5 w-5 text-[#01411c]" /> },
         { name: "HIPAA IT Security Audits", path: "/services/hipaa-security-audits", description: "Healthcare data protection and HIPAA compliance assessments", icon: <Heart className="h-5 w-5 text-[#01411c]" /> },
-        { name: "FERPA/FISMA", path: "/services/ferpa-fisma", description: "Educational and federal information security compliance", icon: <GraduationCap className="h-5 w-5 text-[#01411c]" /> }
+        { name: "Data Protection & Privacy", path: "/services/data-protection-privacy", description: "Data protection compliance and privacy control assessments", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
+        { name: "IT Governance (COBIT)", path: "/services/it-governance-cobit", description: "IT governance framework implementation and COBIT assessments", icon: <BarChart3 className="h-5 w-5 text-[#01411c]" /> },
+        { name: "FFIEC Audits", path: "/services/ffiec-audits", description: "Federal Financial Institution Examination Council compliance", icon: <Building2 className="h-5 w-5 text-[#01411c]" /> },
+        { name: "FERPA / FISMA", path: "/services/ferpa-fisma", description: "Educational and federal information security compliance", icon: <GraduationCap className="h-5 w-5 text-[#01411c]" /> }
       ]
     },
     {

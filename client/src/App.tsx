@@ -26,14 +26,21 @@ import SOC2 from "@/pages/services/soc-2";
 // IT Audit Services
 import SAPAudit from "@/pages/services/sap-audit";
 import PeoplesoftAudit from "@/pages/services/peoplesoft-audit";
-import PeoplesoftHCMSecurity from "@/pages/services/peoplesoft-hcm-security";
-import PeoplesoftFinancialSecurity from "@/pages/services/peoplesoft-financial-security";
+import WorkdayHCMSecurity from "@/pages/services/workday-hcm-security";
 import DatabaseSecurityAudit from "@/pages/services/database-security-audit";
 import OSAudit from "@/pages/services/os-audit";
 import NetworkSecurity from "@/pages/services/network-security";
+import CloudSecurityAudits from "@/pages/services/cloud-security-audits";
+import ApplicationSecuritySDLC from "@/pages/services/application-security-sdlc";
+import IdentityAccessManagement from "@/pages/services/identity-access-management";
+import VulnerabilityPatchManagement from "@/pages/services/vulnerability-patch-management";
+import IncidentResponseResilience from "@/pages/services/incident-response-resilience";
+import ThirdPartyVendorRisk from "@/pages/services/third-party-vendor-risk";
 import SOXAuditing from "@/pages/services/sox-auditing";
-import FFIECAudits from "@/pages/services/ffiec-audits";
 import HIPAASecurityAudits from "@/pages/services/hipaa-security-audits";
+import DataProtectionPrivacy from "@/pages/services/data-protection-privacy";
+import ITGovernanceCOBIT from "@/pages/services/it-governance-cobit";
+import FFIECAudits from "@/pages/services/ffiec-audits";
 import FERPAFISMAudit from "@/pages/services/ferpa-fisma";
 // SOX Auditing Services
 import SOXCyberSecurityRequirements from "@/pages/services/sox-cyber-security-requirements";
@@ -66,14 +73,21 @@ function Router() {
       {/* IT Audit Services */}
       <Route path="/services/sap-audit" component={SAPAudit} />
       <Route path="/services/peoplesoft-audit" component={PeoplesoftAudit} />
-      <Route path="/services/peoplesoft-hcm-security" component={PeoplesoftHCMSecurity} />
-      <Route path="/services/peoplesoft-financial-security" component={PeoplesoftFinancialSecurity} />
+      <Route path="/services/workday-hcm-security" component={WorkdayHCMSecurity} />
       <Route path="/services/database-security-audit" component={DatabaseSecurityAudit} />
       <Route path="/services/os-audit" component={OSAudit} />
       <Route path="/services/network-security" component={NetworkSecurity} />
+      <Route path="/services/cloud-security-audits" component={CloudSecurityAudits} />
+      <Route path="/services/application-security-sdlc" component={ApplicationSecuritySDLC} />
+      <Route path="/services/identity-access-management" component={IdentityAccessManagement} />
+      <Route path="/services/vulnerability-patch-management" component={VulnerabilityPatchManagement} />
+      <Route path="/services/incident-response-resilience" component={IncidentResponseResilience} />
+      <Route path="/services/third-party-vendor-risk" component={ThirdPartyVendorRisk} />
       <Route path="/services/sox-auditing" component={SOXAuditing} />
-      <Route path="/services/ffiec-audits" component={FFIECAudits} />
       <Route path="/services/hipaa-security-audits" component={HIPAASecurityAudits} />
+      <Route path="/services/data-protection-privacy" component={DataProtectionPrivacy} />
+      <Route path="/services/it-governance-cobit" component={ITGovernanceCOBIT} />
+      <Route path="/services/ffiec-audits" component={FFIECAudits} />
       <Route path="/services/ferpa-fisma" component={FERPAFISMAudit} />
       {/* SOX Auditing Services */}
       <Route path="/services/sox-cyber-security-requirements" component={SOXCyberSecurityRequirements} />
