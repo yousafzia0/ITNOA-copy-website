@@ -373,6 +373,50 @@
   animation: slideInRight 0.7s ease-out;
 }
 
+/* Enhanced BCP Diagram Animations */
+@keyframes enterprise-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.2);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    transform: translateX(-100%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(100%) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes metric-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.enterprise-animation {
+  animation: enterprise-glow 3s ease-in-out infinite;
+}
+
+.metric-hover:hover {
+  animation: metric-pulse 1s ease-in-out;
+}
+
 /* Service card stagger animations */
 @keyframes expandCollapse {
   0% {
