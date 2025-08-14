@@ -21,97 +21,97 @@ export default function GRCConsulting() {
     {
       icon: <Tag className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "ISO 27001 Implementation",
-      description: "Information Security Management System implementation and certification support.",
+      description: "ISMS design, control baselines, SoA, risk treatment, and audit readiness.",
       href: "/services/iso-27001-implementation"
     },
     {
       icon: <Settings className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "NIST CSF Implementation",
-      description: "NIST Cybersecurity Framework adoption and implementation guidance.",
+      description: "Profile creation, target state, gap remediation, and metrics/KRIs.",
       href: "/services/nist-csf-implementation"
     },
     {
       icon: <CreditCard className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "PCI DSS Assessments",
-      description: "Payment Card Industry Data Security Standard compliance assessments.",
+      description: "Scope reduction, control design, evidence packages, and assessor support.",
       href: "/services/pci-dss-assessments"
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "SOC 2 Compliance",
-      description: "Service Organization Control 2 audits and compliance support.",
+      description: "Trust Services Criteria mapping, readiness, control testing, and monitoring.",
       href: "/services/soc-2"
     },
     {
       icon: <Cloud className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Cloud Security Assessments",
-      description: "AWS, Azure, and Google Cloud security evaluations and assessments.",
+      description: "Azure, AWS, and GCP governance, identity, logging, and configuration baselines.",
       href: "/services/cloud-security-assessments"
     },
     {
       icon: <Bug className="h-6 w-6 text-[#01411c] icon-glow" />,
       title: "Penetration Testing (Program Oversight)",
-      description: "Comprehensive security testing and penetration testing program oversight.",
+      description: "Methodology, scope governance, remediation tracking, and retest coordination.",
       href: "/services/penetration-testing"
     },
     {
       icon: <FileText className="h-6 w-6 text-[#01411c] icon-scale" />,
       title: "NIST 800‑171 Readiness",
-      description: "NIST SP 800-171 compliance for controlled unclassified information.",
+      description: "CUI scoping, SSP/POA&M development, and assessment preparation.",
       href: "/services/nist-171-security-assessment"
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "Cyber Essentials (UK)",
-      description: "UK government cybersecurity certification scheme compliance.",
+      description: "Baseline control implementation and certification support.",
       href: "/services/cyber-essentials"
     },
     {
       icon: <Brain className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "AI Governance & Risk",
-      description: "AI governance frameworks and risk management assessments.",
+      description: "ISO/IEC 42001 & NIST AI RMF governance, model risk, and responsible AI controls.",
       href: "/services/ai-governance-risk"
     },
     {
       icon: <Code className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "DevSecOps & Secure SDLC",
-      description: "DevSecOps implementation and secure development lifecycle.",
+      description: "CI/CD hardening, SAST/DAST, threat modeling, and pipeline control design.",
       href: "/services/devsecops-secure-sdlc"
     },
     {
       icon: <Users className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "Third‑Party / Vendor Risk",
-      description: "Third-party security assessments and vendor risk management.",
+      description: "Due diligence, contract security requirements, and SOC report evaluation.",
       href: "/services/third-party-vendor-risk"
     },
     {
       icon: <Zap className="h-6 w-6 text-[#01411c] icon-glow" />,
       title: "Incident Response Program",
-      description: "Incident response program development and capability assessment.",
+      description: "NIST 800‑61 alignment, playbooks, tabletop exercises, and forensic readiness.",
       href: "/services/incident-response-program"
     },
     {
       icon: <Shield className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Data Privacy & Protection",
-      description: "Data protection compliance and privacy control assessments.",
+      description: "GDPR/CCPA/HIPAA privacy programs, data mapping, and sensitive data controls.",
       href: "/services/data-protection-privacy"
     },
     {
       icon: <TrendingUp className="h-6 w-6 text-[#01411c] icon-scale" />,
       title: "Risk Management Frameworks",
-      description: "Enterprise risk management framework development and implementation.",
+      description: "NIST RMF & ISO 31000 integration, governance, KRIs/KPIs, and risk reporting.",
       href: "/services/risk-management-frameworks"
     },
     {
       icon: <Activity className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "Cybersecurity Maturity Assessments",
-      description: "Cybersecurity program maturity evaluation and improvement planning.",
+      description: "NIST CSF scoring, capability maturity, and roadmap development.",
       href: "/services/cybersecurity-maturity-assessments"
     },
     {
       icon: <Cloud className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "Cloud Security Posture Mgmt (CSPM)",
-      description: "Cloud security posture management and continuous monitoring.",
+      description: "Continuous configuration monitoring and automated compliance at scale.",
       href: "/services/cloud-security-posture-management"
     }
   ];
@@ -131,12 +131,11 @@ export default function GRCConsulting() {
                   <Shield className="h-10 w-10 text-[#01411c]" />
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900">
-                  Information Security <span className="text-[#01411c]">(ISC)</span> Consulting
+                  Information Security <span className="text-[#01411c]">(GRC)</span> Consulting
                 </h1>
               </div>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Comprehensive Governance, Risk, and Compliance consulting to establish robust security frameworks, 
-                meet regulatory requirements, and drive business value through effective risk management.
+                Governance, Risk, and Compliance services aligned to NIST CSF, ISO/IEC 27001, and related standards. We establish defensible policies, controls, and operating models that satisfy regulatory expectations and align with business objectives.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/become-client">

@@ -27,109 +27,109 @@ export default function ITAudit() {
     {
       icon: <Settings className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "SAP Audits",
-      description: "Comprehensive SAP security assessments and compliance reviews to ensure data integrity and access controls.",
+      description: "Comprehensive SAP security assessments and compliance reviews.",
       href: "/services/sap-audit"
     },
     {
       icon: <Server className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "PeopleSoft Audits",
-      description: "Oracle PeopleSoft security evaluations and risk assessments for enterprise applications.",
+      description: "Oracle PeopleSoft security evaluations and risk assessments.",
       href: "/services/peoplesoft-audit"
     },
     {
       icon: <User className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "Workday /HCM Security",
-      description: "Workday Human Capital Management security assessments and access control reviews.",
+      description: "Workday module security reviews and SOX-relevant control testing.",
       href: "/services/workday-hcm-security"
     },
     {
       icon: <Database className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "Database Security Audits",
-      description: "SQL Server, Oracle, MySQL, and PostgreSQL security audits and vulnerability assessments.",
+      description: "SQL Server, Oracle, MySQL, PostgreSQL configuration and access controls.",
       href: "/services/database-security-audit"
     },
     {
       icon: <Server className="h-6 w-6 text-[#01411c] icon-glow" />,
       title: "Operating System Audits",
-      description: "Linux and Windows OS security configuration reviews and hardening assessments.",
+      description: "Linux and Windows configuration, hardening, and logging/monitoring.",
       href: "/services/os-audit"
     },
     {
       icon: <Network className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Network Security",
-      description: "Network infrastructure and firewall security assessments with penetration testing.",
+      description: "Network design, firewall rules, segmentation, and secure remote access.",
       href: "/services/network-security"
     },
     {
       icon: <Cloud className="h-6 w-6 text-[#01411c] icon-scale" />,
       title: "Cloud Security (AWS / Azure / GCP)",
-      description: "Multi-cloud security assessments and compliance validation across cloud platforms.",
+      description: "Identity, configuration baselines, logging, and CIS benchmark alignment.",
       href: "/services/cloud-security-audits"
     },
     {
       icon: <Bug className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "Application Security & SDLC",
-      description: "Application security testing and secure development lifecycle assessments.",
+      description: "Secure design, code review processes, CI/CD, SAST/DAST, and change control.",
       href: "/services/application-security-sdlc"
     },
     {
       icon: <User className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "Identity & Access Management (IAM)",
-      description: "IAM security assessments and access control framework reviews.",
+      description: "Joiner–Mover–Leaver, privileged access, RBAC/ABAC, and access reviews.",
       href: "/services/identity-access-management"
     },
     {
       icon: <Bug className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "Vulnerability & Patch Management",
-      description: "Vulnerability assessment and patch management process reviews.",
+      description: "Scanning coverage, SLAs, risk-based remediation, and exception governance.",
       href: "/services/vulnerability-patch-management"
     },
     {
       icon: <RefreshCw className="h-6 w-6 text-[#01411c] icon-rotate" />,
       title: "Incident Response & Resilience",
-      description: "Incident response capability testing and cyber resilience assessments.",
+      description: "NIST 800-61 alignment, playbooks, exercises, and ransomware readiness.",
       href: "/services/incident-response-resilience"
     },
     {
       icon: <Users className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "Third-Party / Vendor Risk",
-      description: "Third-party security assessments and vendor risk management reviews.",
+      description: "Due diligence, SOC report review, contract controls, and monitoring.",
       href: "/services/third-party-vendor-risk"
     },
     {
       icon: <FileText className="h-6 w-6 text-[#01411c] icon-glow" />,
       title: "SOX Auditing",
-      description: "Sarbanes-Oxley compliance auditing and IT general controls testing.",
+      description: "ITGC/ITACs, reporting controls, and dependency mapping.",
       href: "/services/sox-auditing"
     },
     {
       icon: <Heart className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "HIPAA IT Security Audits",
-      description: "Healthcare data protection and HIPAA compliance security assessments.",
+      description: "Safeguards for PHI, risk analysis, and corrective action governance.",
       href: "/services/hipaa-security-audits"
     },
     {
       icon: <Shield className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Data Protection & Privacy",
-      description: "Data protection compliance and privacy control assessments.",
+      description: "GDPR/CCPA readiness, data mapping, and sensitive data safeguarding.",
       href: "/services/data-protection-privacy"
     },
     {
       icon: <BarChart3 className="h-6 w-6 text-[#01411c] icon-scale" />,
       title: "IT Governance (COBIT)",
-      description: "IT governance framework implementation and COBIT assessments.",
+      description: "Policy framework, roles, KPIs/KRIs, and risk & control alignment.",
       href: "/services/it-governance-cobit"
     },
     {
       icon: <Building className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "FFIEC Audits",
-      description: "Federal Financial Institution Examination Council compliance assessments.",
+      description: "Coverage for financial institutions per FFIEC handbooks.",
       href: "/services/ffiec-audits"
     },
     {
       icon: <GraduationCap className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "FERPA / FISMA",
-      description: "Educational and federal information security compliance assessments.",
+      description: "Education and federal information security compliance support.",
       href: "/services/ferpa-fisma"
     }
   ];

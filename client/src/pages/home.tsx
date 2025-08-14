@@ -11,19 +11,19 @@ export default function Home() {
     {
       icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
       title: "IT Audit",
-      description: "Comprehensive IT audits to identify vulnerabilities, assess compliance, and strengthen your security posture with actionable recommendations.",
+      description: "Independent IT audits designed to provide the Audit Committee with assurance that governance, risk management, and control frameworks are operating effectively. We evaluate compliance, mitigate critical risks, and confirm alignment with the organization’s risk appetite, tolerance, and strategic objectives.",
       href: "/services/it-audit"
     },
     {
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
-      title: "Information Security (ISC)",
-      description: "Governance, Risk, and Compliance consulting to establish robust security frameworks and meet regulatory requirements effectively.",
+      title: "Information Security (GRC) Consulting",
+      description: "Governance, Risk, and Compliance services aligned to NIST CSF, ISO/IEC 27001, and related standards. We establish defensible policies, controls, and operating models that satisfy regulatory expectations and align with business objectives.",
       href: "/services/grc-consulting"
     },
     {
       icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
-      title: "Business Continuity",
-      description: "Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions.",
+      title: "Business Continuity & Cyber Resilience",
+      description: "Independent continuity and resilience assessments aligned with ISO 22301, ISO 22317, and ISO/IEC 27031, with response and recovery practices mapped to the NIST Cybersecurity Framework (Respond/Recover). We provide management and the Audit Committee with confidence that continuity capabilities are risk-based, measurable, and aligned to strategic objectives, customer expectations, and regulatory requirements.",
       href: "/services/cyber-resilience"
     }
   ];

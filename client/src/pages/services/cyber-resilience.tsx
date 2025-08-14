@@ -30,37 +30,37 @@ export default function CyberResilience() {
     {
       icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "ISO 22301 BCMS Assessment",
-      description: "Business Continuity Management System assessment and compliance evaluation against ISO 22301 standards.",
+      description: "Gap analysis, risk assessment, BCMS maturity, RTO/RPO validation (incl. third parties), exercises, and a continual improvement plan.",
       href: "/services/iso-22301-bcms-assessment"
     },
     {
       icon: <BarChart3 className="h-6 w-6 text-[#01411c] icon-settings" />,
       title: "ISO 22317 Business Impact Analysis",
-      description: "ISO 22317 compliant business impact analysis and risk assessment to identify critical functions and dependencies.",
+      description: "Critical activity identification, impact-over-time modeling, dependency mapping, and defensible RTO/RPO targets for recovery planning.",
       href: "/services/business-impact-analysis-iso-22301"
     },
     {
       icon: <HardDrive className="h-6 w-6 text-[#01411c] icon-shake" />,
       title: "ISO/IEC 27031 ICT Readiness & Disaster Recovery",
-      description: "ICT readiness for business continuity and disaster recovery planning aligned with ISO/IEC 27031 standards.",
+      description: "ICT risk & threat assessment, DR strategy validation (alt sites/cloud failover), governance & documentation review, and progressive testing.",
       href: "/services/iso-27031-ict-readiness-disaster-recovery"
     },
     {
       icon: <MessageSquare className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "Crisis Communication & Incident Response (NIST CSF RS/RC)",
-      description: "Crisis communication planning and NIST Cybersecurity Framework incident response capabilities.",
+      description: "Response governance, stakeholder matrices, internal/external comms plans, regulator/customer notifications, playbooks, tabletop exercises, and after‑action improvements.",
       href: "/services/crisis-communication-incident-response"
     },
     {
       icon: <Users className="h-6 w-6 text-[#01411c] icon-glow" />,
       title: "Supplier & Third‑Party Continuity",
-      description: "Third-party supplier continuity planning and risk management to ensure business resilience.",
+      description: "Continuity requirements in contracts, dependency inventories, attestation review, and coordinated testing with critical providers.",
       href: "/services/supplier-third-party-continuity"
     },
     {
       icon: <AlertTriangle className="h-6 w-6 text-[#01411c] icon-float" />,
       title: "Ransomware Readiness & Recovery",
-      description: "Ransomware prevention, readiness assessment, and recovery planning to protect against cyber threats.",
+      description: "Data protection, backup/restore validation, isolation/containment procedures, and recovery time verification for high‑value services.",
       href: "/services/ransomware-readiness-recovery"
     }
   ];
@@ -84,8 +84,7 @@ export default function CyberResilience() {
                 </h1>
               </div>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Develop comprehensive business continuity and cyber resilience plans to ensure operational stability during disruptions, 
-                minimize downtime, and protect your organization's critical assets.
+                Independent continuity and resilience assessments aligned with ISO 22301, ISO 22317, and ISO/IEC 27031, with response and recovery practices mapped to the NIST Cybersecurity Framework (Respond/Recover). We provide management and the Audit Committee with confidence that continuity capabilities are risk-based, measurable, and aligned to strategic objectives, customer expectations, and regulatory requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/become-client">
