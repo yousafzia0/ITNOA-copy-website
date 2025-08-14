@@ -7,7 +7,7 @@ const router = Router();
 // Email configuration - supporting multiple providers
 const EMAIL_CONFIG = {
   // For testing and development
-  testEmail: "premiumlogos.824@gmail.com",
+  testEmail: "saziz01B@gmail.com",
   businessEmail: "info@itnoa.com",
   companyName: "ITNOA Cybersecurity",
   companyPhone: "248 795 0202",
