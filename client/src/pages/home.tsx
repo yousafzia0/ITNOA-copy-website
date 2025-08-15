@@ -71,12 +71,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Strengthening Organizational 
-                <span className="text-[#01411c]"> Assurance & Risk Management</span>
+                 Resilience Rooted  In
+                <span className="text-[#01411c]"> Accountability</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Independent IT audit and assurance services designed for Chief Audit Executives and Board oversight. 
-                We provide objective assurance over IT governance, risk management, and internal control frameworks, delivering actionable insights that align with your organization's established risk appetite and strategic objectives.
+                Building cybersecurity, governance, and compliance strategies with the highest standards — where trust is earned, risks are mitigated, and integrity is non-negotiable.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">
@@ -93,8 +92,8 @@ export default function Home() {
             </div>
             <div className="animate-slide-in-right">
               <img 
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800" 
-                alt="IT audit professionals conducting governance and risk management assessment"
+                src="@assets/IMG-20250815-WA0002[1]_1755262268035.jpg" 
+                alt="Cybersecurity Framework - ISO 27001 Domains, NIST CSF Review, PCI DSS Compliance, and BCMS Maturity Model for comprehensive IT audit and compliance assessment"
                 className="rounded-2xl shadow-2xl w-full h-auto" 
               />
             </div>
