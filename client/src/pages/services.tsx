@@ -132,10 +132,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Our Cybersecurity Services Categories
+              IT Audit & Assurance Service Portfolio
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
-              ITNOA delivers independent, standards-aligned services that provide the Audit Committee, senior management, and stakeholders with reliable assurance and practical recommendations. Select a category to view scope, approach, and deliverables.
+              ITNOA delivers independent IT audit and assurance services designed to provide Chief Audit Executives, Audit Committees, and Board oversight with objective assessments of governance, risk management, and internal control effectiveness. Select a category to explore comprehensive audit methodologies and deliverables.
             </p>
           </div>
         </div>
@@ -146,10 +146,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Service Categories
+              Audit Service Categories
             </h2>
             <p className="text-xl text-slate-600">
-              Click on any category to explore our specialized services
+              Click on any category to explore our specialized audit and assurance services designed for Board oversight
             </p>
           </div>
 

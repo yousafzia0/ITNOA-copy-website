@@ -11,13 +11,13 @@ export default function Home() {
     {
       icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
       title: "IT Audit & Assurance Services",
-      description: "Independent IT audit engagements conducted in accordance with IIA International Standards, designed to provide the Audit Committee and Board with objective assurance that IT governance, risk management, and internal control frameworks operate effectively within the organization's established risk appetite and tolerance.",
+      description: "Independent IT audit engagements designed to provide the Audit Committee and Board with objective assurance that IT governance, risk management, and internal control frameworks operate effectively. Our risk-based methodology delivers actionable recommendations within your organization's established risk appetite and tolerance.",
       href: "/services/it-audit"
     },
     {
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
       title: "Governance, Risk & Compliance (GRC) Advisory",
-      description: "Enterprise GRC program development and implementation services aligned with IIA's Three Lines of Defense Model and international standards including NIST CSF and ISO/IEC 27001. We establish defensible governance frameworks, risk management processes, and compliance monitoring that satisfy Board oversight and regulatory expectations.",
+      description: "Enterprise GRC program development and implementation services aligned with the Three Lines of Defense Model and international standards including NIST CSF and ISO/IEC 27001. We establish defensible governance frameworks, risk management processes, and compliance monitoring that satisfy Board oversight and regulatory expectations.",
       href: "/services/grc-consulting"
     },
     {
@@ -75,8 +75,8 @@ export default function Home() {
                 <span className="text-[#01411c]"> Assurance & Risk Management</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Independent IT audit services conducted in accordance with IIA International Standards, designed for Chief Audit Executives and Board oversight. 
-                We provide objective assurance over IT governance, risk management, and internal control frameworks within your organization's established risk appetite.
+                Independent IT audit and assurance services designed for Chief Audit Executives and Board oversight. 
+                We provide objective assurance over IT governance, risk management, and internal control frameworks, delivering actionable insights that align with your organization's established risk appetite and strategic objectives.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">
@@ -111,7 +111,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Comprehensive audit services designed for Chief Audit Executives, Audit Committees, and Board oversight. 
-              All engagements are conducted in accordance with IIA International Standards for Professional Practice.
+              All engagements are conducted using internationally recognized audit standards and risk-based methodologies.
             </p>
           </div>
 
@@ -170,10 +170,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-                IIA Standards-Based Audit Excellence
+                Professional Audit Excellence & Board Assurance
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                ITNOA delivers independent IT audit and assurance services that align with the Institute of Internal Auditors (IIA) International Standards for the Professional Practice of Internal Auditing. Our methodology is designed to provide Chief Audit Executives and Board members with objective, risk-based assessments of IT governance, risk management, and internal control effectiveness.
+                ITNOA delivers independent IT audit and assurance services that align with internationally recognized auditing standards and best practices. Our methodology is designed to provide Chief Audit Executives and Board members with objective, risk-based assessments of IT governance, risk management, and internal control effectiveness.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 We specialize in Three Lines of Defense model implementation, enterprise risk management framework development, and Board-ready reporting that demonstrates the value of internal audit function in organizational governance and strategic risk management.
@@ -199,7 +199,7 @@ export default function Home() {
               </div>
               <div className="text-center p-6 bg-slate-50 rounded-xl">
                 <div className="text-3xl font-bold text-[#01411c] mb-2">100%</div>
-                <div className="text-slate-600">IIA Standards Compliance</div>
+                <div className="text-slate-600">Professional Standards Compliance</div>
               </div>
             </div>
           </div>

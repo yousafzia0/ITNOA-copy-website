@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 
 export default function GRCConsulting() {
   const whatWeDo = [
-    "Enterprise governance framework development aligned with IIA's Three Lines of Defense Model and Board oversight requirements",
+    "Enterprise governance framework development aligned with the Three Lines of Defense Model and Board oversight requirements",
     "Risk-based enterprise risk management program design incorporating risk appetite setting, tolerance levels, and key risk indicator (KRI) development",
     "Comprehensive regulatory compliance mapping and gap analysis covering multiple frameworks with Board-ready risk assessment reporting",
     "Policy and procedure development with clear roles, responsibilities, and accountability frameworks supporting the Three Lines of Defense",
