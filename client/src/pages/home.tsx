@@ -207,23 +207,28 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-[#01411c] relative overflow-hidden">
-        <div className="geometric-pattern absolute inset-0 opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Chief Audit Executive Testimonials
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              What Our Clients Say
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Trusted by Chief Audit Executives, CISOs, and Board members for independent IT audit and assurance services.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Trusted by organizations worldwide for exceptional cybersecurity consulting
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Card key={index} className="bg-white border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
+                  <div className="flex mt-4 mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-slate-700 leading-relaxed mb-6">{testimonial.content}</p>
+                  <div className="flex items-center">
                     <div className="w-12 h-12 bg-[#01411c] rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.initials}
                     </div>
@@ -231,12 +236,6 @@ export default function Home() {
                       <div className="font-semibold text-slate-900">{testimonial.name}</div>
                       <div className="text-slate-600 text-sm">{testimonial.role}</div>
                     </div>
-                  </div>
-                  <p className="text-slate-700 leading-relaxed">{testimonial.content}</p>
-                  <div className="flex mt-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
                   </div>
                 </CardContent>
               </Card>
