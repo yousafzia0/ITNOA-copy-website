@@ -5,6 +5,7 @@ import { Search, Shield, RotateCcw, University, Heart, Landmark, Cpu, Factory, G
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Chatbot from "@/components/chatbot";
+import frameworkDiagram from "@assets/IMG-20250815-WA0002[1]_1755262268035.jpg";
 
 export default function Home() {
   const serviceHighlights = [
@@ -92,7 +93,7 @@ export default function Home() {
             </div>
             <div className="animate-slide-in-right">
               <img 
-                src="@assets/IMG-20250815-WA0002[1]_1755262268035.jpg" 
+                src={frameworkDiagram} 
                 alt="Cybersecurity Framework - ISO 27001 Domains, NIST CSF Review, PCI DSS Compliance, and BCMS Maturity Model for comprehensive IT audit and compliance assessment"
                 className="rounded-2xl shadow-2xl w-full h-auto" 
               />
