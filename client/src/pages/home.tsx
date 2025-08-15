@@ -117,7 +117,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {serviceHighlights.map((service, index) => (
-              <Card key={index} className="h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-[#01411c]/20">
+              <Card key={index} className="group h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-[#01411c]/20">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     {service.icon}
@@ -150,7 +150,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card key={index} className="group text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
                     {industry.icon}

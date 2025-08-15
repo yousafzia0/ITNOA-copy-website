@@ -107,7 +107,7 @@ export default function CyberResilience() {
                   <img
                     src="/bcp-diagram.png"
                     alt="Business Continuity Planning Diagram - Time Is Precious When An Event Occurs"
-                    className="w-full h-auto object-contain rounded-xl transform hover:scale-[1.01] transition-all duration-300"
+                    className="w-full h-auto object-contain rounded-xl transform hover:scale-[1.02] transition-all duration-500 shadow-lg hover:shadow-2xl"
                     style={{
                       filter: 'brightness(1.03) contrast(1.08) saturate(1.05)',
                       backgroundColor: 'white',

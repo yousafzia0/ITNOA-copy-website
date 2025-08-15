@@ -28,6 +28,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
+            <Shield className="h-8 w-8 text-[#01411c] icon-shield" />
             <span className="text-2xl sm:text-3xl font-bold text-[#01411c] glow-text">
               ITNOA
             </span>

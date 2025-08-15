@@ -199,7 +199,7 @@ export default function ITAudit() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {comprehensiveServices.map((service, index) => (
               <Link key={index} href={service.href}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer border-2 hover:border-[#01411c]/30">
+                <Card className="group h-full hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer border-2 hover:border-[#01411c]/30">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       {service.icon}
