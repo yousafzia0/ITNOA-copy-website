@@ -103,27 +103,17 @@ export default function CyberResilience() {
             </div>
             <div className="animate-slide-in-right">
               <div className="w-full max-w-5xl mx-auto">
-                <div className="relative bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 rounded-2xl shadow-2xl border border-slate-200/50 p-8 md:p-12 backdrop-blur-sm">
-                  {/* Professional overlay frame */}
-                  <div className="absolute inset-4 bg-gradient-to-br from-emerald-50/30 via-transparent to-blue-50/30 rounded-xl pointer-events-none"></div>
-                  
-                  {/* Main image container */}
-                  <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-inner border border-white/60">
-                    <img
-                      src="/bcp-diagram.png"
-                      alt="Business Continuity Planning Diagram - Time Is Precious When An Event Occurs"
-                      className="w-full h-auto rounded-lg shadow-xl transform hover:scale-[1.02] transition-all duration-500"
-                      style={{
-                        filter: 'drop-shadow(0 8px 32px rgba(0, 0, 0, 0.12)) brightness(1.02) contrast(1.05)',
-                        backgroundColor: 'white',
-                        mixBlendMode: 'multiply'
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Professional corner accent */}
-                  <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-blue-600/20 rounded-full blur-xl"></div>
-                  <div className="absolute bottom-6 left-6 w-12 h-12 bg-gradient-to-br from-blue-600/15 to-emerald-600/15 rounded-full blur-lg"></div>
+                <div className="relative bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 rounded-2xl shadow-2xl border border-slate-200/50 overflow-hidden">
+                  <img
+                    src="/bcp-diagram.png"
+                    alt="Business Continuity Planning Diagram - Time Is Precious When An Event Occurs"
+                    className="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-all duration-500"
+                    style={{
+                      filter: 'brightness(1.02) contrast(1.05)',
+                      minHeight: '400px',
+                      maxHeight: '600px'
+                    }}
+                  />
                 </div>
               </div>
             </div>
