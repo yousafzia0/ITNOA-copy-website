@@ -15,7 +15,7 @@ const ProfessionalBCPDiagram: React.FC = () => {
         {/* Main BCP Image */}
         <div className="relative p-6 md:p-8">
           <motion.img
-            src="./attached_assets/BCP_1755252446625.PNG"
+            src="/attached_assets/BCP_1755253039715.PNG"
             alt="Business Continuity Planning - Time Is Precious When An Event Occurs (ISO 22301)"
             className="w-full h-auto rounded-lg shadow-lg"
             style={{
