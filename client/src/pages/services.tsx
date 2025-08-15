@@ -132,10 +132,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              IT Audit & Assurance Service Portfolio
+              IT Audit & Assurance Services
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
-              ITNOA delivers independent IT audit and assurance services designed to provide Chief Audit Executives, Audit Committees, and Board oversight with objective assessments of governance, risk management, and internal control effectiveness. Select a category to explore comprehensive audit methodologies and deliverables.
+              ITNOA provides independent, risk-based IT audit and assurance services that deliver objective evaluations of governance, risk management, and internal control environments. Our service portfolio supports Chief Audit Executives, Audit Committees, and Boards in fulfilling their oversight responsibilities by applying internationally recognized IIA standards and proven methodologies. Explore each service category to review our comprehensive audit approaches, scope, and high-value deliverables.
             </p>
           </div>
         </div>
