@@ -7,14 +7,14 @@ import Footer from "@/components/footer";
 
 export default function GRCConsulting() {
   const whatWeDo = [
-    "Governance framework development and implementation across all organizational levels",
-    "Risk assessment and management program design tailored to your business objectives",
-    "Compliance mapping and gap analysis for multiple regulatory requirements",
-    "Policy and procedure development with clear implementation guidelines",
-    "Security control selection and implementation based on risk profiles",
-    "Third-party risk management and vendor security assessment programs",
-    "Incident response planning and business continuity integration",
-    "Ongoing monitoring and reporting mechanisms for continuous improvement"
+    "Enterprise governance framework development aligned with IIA's Three Lines of Defense Model and Board oversight requirements",
+    "Risk-based enterprise risk management program design incorporating risk appetite setting, tolerance levels, and key risk indicator (KRI) development",
+    "Comprehensive regulatory compliance mapping and gap analysis covering multiple frameworks with Board-ready risk assessment reporting",
+    "Policy and procedure development with clear roles, responsibilities, and accountability frameworks supporting the Three Lines of Defense",
+    "Risk-based security control selection and implementation aligned with organizational risk appetite and regulatory requirements",
+    "Third-party risk management and vendor security assessment programs with ongoing monitoring and Board reporting capabilities",
+    "Incident response program development with business continuity integration and crisis management protocols for executive leadership",
+    "Continuous monitoring frameworks with automated reporting, KRI tracking, and executive dashboard capabilities for Board oversight"
   ];
 
   const comprehensiveServices = [

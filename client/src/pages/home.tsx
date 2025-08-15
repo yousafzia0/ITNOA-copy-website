@@ -10,54 +10,52 @@ export default function Home() {
   const serviceHighlights = [
     {
       icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
-      title: "IT Audit",
-      description: "Independent IT audits designed to provide the Audit Committee with assurance that governance, risk management, and control frameworks are operating effectively. We evaluate compliance, mitigate critical risks, and confirm alignment with the organization’s risk appetite, tolerance, and strategic objectives.",
+      title: "IT Audit & Assurance Services",
+      description: "Independent IT audit engagements conducted in accordance with IIA International Standards, designed to provide the Audit Committee and Board with objective assurance that IT governance, risk management, and internal control frameworks operate effectively within the organization's established risk appetite and tolerance.",
       href: "/services/it-audit"
     },
     {
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
-      title: "Information Security (GRC) Consulting",
-      description: "Governance, Risk, and Compliance services aligned to NIST CSF, ISO/IEC 27001, and related standards. We establish defensible policies, controls, and operating models that satisfy regulatory expectations and align with business objectives.",
+      title: "Governance, Risk & Compliance (GRC) Advisory",
+      description: "Enterprise GRC program development and implementation services aligned with IIA's Three Lines of Defense Model and international standards including NIST CSF and ISO/IEC 27001. We establish defensible governance frameworks, risk management processes, and compliance monitoring that satisfy Board oversight and regulatory expectations.",
       href: "/services/grc-consulting"
     },
     {
       icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
-      title: "Business Continuity & Cyber Resilience",
-      description: "Independent continuity and resilience assessments aligned with ISO 22301, ISO 22317, and ISO/IEC 27031, with response and recovery practices mapped to the NIST Cybersecurity Framework (Respond/Recover). We provide management and the Audit Committee with confidence that continuity capabilities are risk-based, measurable, and aligned to strategic objectives, customer expectations, and regulatory requirements.",
+      title: "Business Continuity & Cyber Resilience Assurance",
+      description: "Independent business continuity and cyber resilience assessments aligned with ISO 22301, ISO 22317, and ISO/IEC 27031 standards. Response and recovery practices are mapped to the NIST Cybersecurity Framework (Respond/Recover). We provide management and the Audit Committee with objective assurance that continuity capabilities are risk-based, measurable, and aligned to strategic objectives and regulatory requirements.",
       href: "/services/cyber-resilience"
     }
   ];
 
-
-
   const industries = [
-    { icon: <University className="h-8 w-8 text-[#01411c] icon-bounce" />, name: "Financial Services", desc: "Comprehensive security solutions for banks, credit unions, and financial institutions." },
-    { icon: <Heart className="h-8 w-8 text-[#01411c] icon-pulse" />, name: "Healthcare", desc: "HIPAA compliance and security solutions for healthcare providers and medical facilities." },
-    { icon: <Landmark className="h-8 w-8 text-[#01411c] icon-glow" />, name: "Government", desc: "Federal, state, and local government cybersecurity and compliance services." },
-    { icon: <Cpu className="h-8 w-8 text-[#01411c] icon-settings" />, name: "Technology", desc: "Advanced security solutions for tech companies, startups, and software developers." },
-    { icon: <Factory className="h-8 w-8 text-[#01411c] icon-shake" />, name: "Manufacturing", desc: "Industrial cybersecurity and operational technology protection solutions." },
-    { icon: <GraduationCap className="h-8 w-8 text-[#01411c] icon-float" />, name: "Education", desc: "Cybersecurity solutions for schools, universities, and educational institutions." },
-    { icon: <ShoppingCart className="h-8 w-8 text-[#01411c] icon-scale" />, name: "Retail", desc: "PCI DSS compliance and customer data protection for retail businesses." },
-    { icon: <Zap className="h-8 w-8 text-[#01411c] icon-pulse" />, name: "Energy", desc: "Critical infrastructure protection for energy and utility companies." }
+    { icon: <University className="h-8 w-8 text-[#01411c] icon-bounce" />, name: "Financial Services", desc: "Specialized audit services for banks, credit unions, and financial institutions including Fed/OCC examination readiness and FFIEC compliance assessments." },
+    { icon: <Heart className="h-8 w-8 text-[#01411c] icon-pulse" />, name: "Healthcare", desc: "HIPAA Security Rule compliance audits and Protected Health Information (PHI) safeguard assessments for healthcare providers and covered entities." },
+    { icon: <Landmark className="h-8 w-8 text-[#01411c] icon-glow" />, name: "Government", desc: "FISMA compliance assessments, FedRAMP readiness evaluations, and cybersecurity framework implementations for federal, state, and local government entities." },
+    { icon: <Cpu className="h-8 w-8 text-[#01411c] icon-settings" />, name: "Technology", desc: "SOC 2 compliance assessments, software development lifecycle (SDLC) security reviews, and cloud security governance for technology companies." },
+    { icon: <Factory className="h-8 w-8 text-[#01411c] icon-shake" />, name: "Manufacturing", desc: "Industrial control systems (ICS) security assessments, operational technology (OT) risk evaluations, and supply chain security audits." },
+    { icon: <GraduationCap className="h-8 w-8 text-[#01411c] icon-float" />, name: "Education", desc: "FERPA compliance assessments, student data protection reviews, and cybersecurity program evaluations for educational institutions." },
+    { icon: <ShoppingCart className="h-8 w-8 text-[#01411c] icon-scale" />, name: "Retail", desc: "PCI DSS compliance assessments, payment card data security evaluations, and customer data protection audits for retail organizations." },
+    { icon: <Zap className="h-8 w-8 text-[#01411c] icon-pulse" />, name: "Energy", desc: "Critical infrastructure protection assessments, NERC CIP compliance evaluations, and operational technology security reviews for energy and utility companies." }
   ];
 
   const testimonials = [
     {
       name: "Shah G",
-      role: "Manager",
-      content: "Deep experience with IT Audits and Peoplesoft made procurement and audits straightforward.",
+      role: "Chief Audit Executive",
+      content: "ITNOA's deep expertise in IT audit methodology and PeopleSoft controls made our audit engagement highly effective. Their alignment with IIA Standards provided the Board with confidence in our IT governance framework.",
       initials: "SG"
     },
     {
       name: "Kusick",
-      role: "CISO",
-      content: "The team helped us navigate data protection complexities. Their comprehensive consulting approach made all the difference in maintaining secure operations.",
+      role: "Chief Information Security Officer",
+      content: "The team's comprehensive approach to GRC consulting and their understanding of the Three Lines of Defense model significantly strengthened our risk management program and regulatory compliance posture.",
       initials: "SF"
     },
     {
       name: "Oliver Simson",
-      role: "Senior IT Manager",
-      content: "A trusted partner for IT assurance and business continuity planning.",
+      role: "Senior IT Audit Manager",
+      content: "A trusted partner for independent IT assurance and business continuity assessments. Their board-ready reporting and management action plan development exceeded our expectations.",
       initials: "OS"
     }
   ];
@@ -77,18 +75,18 @@ export default function Home() {
                 <span className="text-[#01411c]"> Assurance & Risk Management</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Expert solutions in cybersecurity, data protection, and risk management. 
-                Protect your business with customized consultancy services that ensure appropriate governance, continuous risk mitigation and compliance.
+                Independent IT audit services conducted in accordance with IIA International Standards, designed for Chief Audit Executives and Board oversight. 
+                We provide objective assurance over IT governance, risk management, and internal control frameworks within your organization's established risk appetite.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">
                   <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
-                    Discover Our Services
+                    Explore IT Audit Services
                   </Button>
                 </Link>
                 <Link href="/contact">
                   <Button size="lg" variant="outline" className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-8 py-4">
-                    Talk To A Cybersecurity Expert
+                    Consult With An IT Audit Expert
                   </Button>
                 </Link>
               </div>
@@ -96,7 +94,7 @@ export default function Home() {
             <div className="animate-slide-in-right">
               <img 
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800" 
-                alt="Cybersecurity professionals working in modern office environment"
+                alt="IT audit professionals conducting governance and risk management assessment"
                 className="rounded-2xl shadow-2xl w-full h-auto" 
               />
             </div>
@@ -109,26 +107,26 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Expert IT Security Solutions
+              Independent IT Audit & Assurance Services
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive cybersecurity services tailored to protect your business 
-              from evolving threats and ensure regulatory compliance.
+              Comprehensive audit services designed for Chief Audit Executives, Audit Committees, and Board oversight. 
+              All engagements are conducted in accordance with IIA International Standards for Professional Practice.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {serviceHighlights.map((service, index) => (
-              <Card key={index} className="group border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-[#01411c]/20">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-[#01411c]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#01411c]/20 transition-colors duration-300">
+                  <div className="flex items-center mb-6">
                     {service.icon}
+                    <h3 className="text-xl font-semibold ml-4 text-slate-900">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                  <p className="text-slate-600 mb-6">{service.description}</p>
+                  <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
                   <Link href={service.href}>
-                    <Button variant="ghost" className="text-[#01411c] hover:text-[#012d13] p-0 h-auto font-semibold">
-                      Learn More →
+                    <Button variant="outline" className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white">
+                      Learn More
                     </Button>
                   </Link>
                 </CardContent>
@@ -138,123 +136,106 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* Industries Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Industries We Serve
+              Industry-Specific Audit Expertise
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Specialized cybersecurity solutions across diverse industries, 
-              tailored to meet unique regulatory and operational requirements.
+              Specialized audit methodologies and regulatory compliance assessments tailored to industry-specific risk profiles and compliance requirements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <div key={index} className="group text-center p-6 rounded-xl hover:bg-slate-50 transition-all duration-300">
-                <div className="w-16 h-16 bg-[#01411c]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#01411c]/20 transition-colors duration-300">
-                  {industry.icon}
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{industry.name}</h3>
-                <p className="text-slate-600 text-sm">{industry.desc}</p>
-              </div>
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <CardContent className="p-6">
+                  <div className="flex justify-center mb-4">
+                    {industry.icon}
+                  </div>
+                  <h3 className="font-semibold text-lg text-slate-900 mb-3">{industry.name}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{industry.desc}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-                Consultancy That Empowers You
+                IIA Standards-Based Audit Excellence
               </h2>
-              <p className="text-lg text-slate-600 mb-6">
-                At ITNOA Consulting Services, we are committed to delivering innovative, 
-                high-quality, and cost-effective solutions in information security, 
-                cybersecurity, data protection, business continuity, and risk management.
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                ITNOA delivers independent IT audit and assurance services that align with the Institute of Internal Auditors (IIA) International Standards for the Professional Practice of Internal Auditing. Our methodology is designed to provide Chief Audit Executives and Board members with objective, risk-based assessments of IT governance, risk management, and internal control effectiveness.
               </p>
-              <p className="text-lg text-slate-600 mb-8">
-                Our team of experienced professionals is dedicated to helping businesses 
-                of all sizes strengthen their digital infrastructure, safeguard sensitive data, 
-                and ensure long-term resilience in an increasingly complex digital landscape.
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                We specialize in Three Lines of Defense model implementation, enterprise risk management framework development, and Board-ready reporting that demonstrates the value of internal audit function in organizational governance and strategic risk management.
               </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#01411c] mb-2">25+</div>
-                  <div className="text-slate-600">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#01411c] mb-2">500+</div>
-                  <div className="text-slate-600">Clients Served</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#01411c] mb-2">1000+</div>
-                  <div className="text-slate-600">Assessments</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#01411c] mb-2">99%</div>
-                  <div className="text-slate-600">Satisfaction</div>
-                </div>
-              </div>
-
-              <Link href="/become-client">
-                <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
-                  Learn More About Us
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white">
+                  Schedule An Audit Consultation
                 </Button>
               </Link>
             </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800" 
-                alt="Professional cybersecurity team collaborating in modern office"
-                className="rounded-2xl shadow-2xl w-full h-auto" 
-              />
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <div className="text-3xl font-bold text-[#01411c] mb-2">15+</div>
+                <div className="text-slate-600">Years of IT Audit Excellence</div>
+              </div>
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <div className="text-3xl font-bold text-[#01411c] mb-2">500+</div>
+                <div className="text-slate-600">Successful Audit Engagements</div>
+              </div>
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <div className="text-3xl font-bold text-[#01411c] mb-2">50+</div>
+                <div className="text-slate-600">Specialized IT Audit Services</div>
+              </div>
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <div className="text-3xl font-bold text-[#01411c] mb-2">100%</div>
+                <div className="text-slate-600">IIA Standards Compliance</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              What Our Clients Say
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Chief Audit Executive Testimonials
             </h2>
-            <p className="text-xl text-slate-600">
-              Trusted by organizations worldwide for exceptional cybersecurity consulting
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Trusted by Chief Audit Executives, CISOs, and Board members for independent IT audit and assurance services.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-slate-50">
+              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm">
                 <CardContent className="p-8">
-                  <div className="flex items-center mb-4">
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-slate-600 mb-6">"{testimonial.content}"</p>
-                  <div className="flex items-center">
+                  <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-[#01411c] rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.initials}
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-900">{testimonial.name}</div>
-                      <div className="text-sm text-slate-600">{testimonial.role}</div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-slate-300 text-sm">{testimonial.role}</div>
                     </div>
+                  </div>
+                  <p className="text-slate-200 leading-relaxed">{testimonial.content}</p>
+                  <div className="flex mt-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                    ))}
                   </div>
                 </CardContent>
               </Card>
