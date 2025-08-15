@@ -220,18 +220,18 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/15 transition-all duration-300">
+              <Card key={index} className="bg-white border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    <div className="w-12 h-12 bg-[#01411c] rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.initials}
                     </div>
                     <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-white/80 text-sm">{testimonial.role}</div>
+                      <div className="font-semibold text-slate-900">{testimonial.name}</div>
+                      <div className="text-slate-600 text-sm">{testimonial.role}</div>
                     </div>
                   </div>
-                  <p className="text-white/90 leading-relaxed">{testimonial.content}</p>
+                  <p className="text-slate-700 leading-relaxed">{testimonial.content}</p>
                   <div className="flex mt-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
