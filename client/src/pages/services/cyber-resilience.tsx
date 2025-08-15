@@ -102,16 +102,16 @@ export default function CyberResilience() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <div className="w-full max-w-5xl mx-auto">
-                <div className="relative bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 rounded-2xl shadow-2xl border border-slate-200/50 overflow-hidden">
+              <div className="w-full max-w-6xl mx-auto">
+                <div className="relative bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 rounded-2xl shadow-2xl border border-slate-200/50 p-4 md:p-6">
                   <img
                     src="/bcp-diagram.png"
                     alt="Business Continuity Planning Diagram - Time Is Precious When An Event Occurs"
-                    className="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-all duration-500"
+                    className="w-full h-auto object-contain rounded-xl transform hover:scale-[1.01] transition-all duration-300"
                     style={{
-                      filter: 'brightness(1.02) contrast(1.05)',
-                      minHeight: '400px',
-                      maxHeight: '600px'
+                      filter: 'brightness(1.03) contrast(1.08) saturate(1.05)',
+                      backgroundColor: 'white',
+                      maxHeight: '80vh'
                     }}
                   />
                 </div>
