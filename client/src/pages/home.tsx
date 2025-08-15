@@ -207,31 +207,31 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-[#01411c]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Chief Audit Executive Testimonials
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Trusted by Chief Audit Executives, CISOs, and Board members for independent IT audit and assurance services.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm">
+              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/15 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-[#01411c] rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.initials}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-slate-300 text-sm">{testimonial.role}</div>
+                      <div className="text-white/80 text-sm">{testimonial.role}</div>
                     </div>
                   </div>
-                  <p className="text-slate-200 leading-relaxed">{testimonial.content}</p>
+                  <p className="text-white/90 leading-relaxed">{testimonial.content}</p>
                   <div className="flex mt-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
