@@ -521,3 +521,42 @@
     transform: translateY(0) scale(1);
   }
 }
+
+/* Lenis smooth scrolling optimizations */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Enhance scroll performance */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #01411c;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #012d13;
+  opacity: 1;
+}
