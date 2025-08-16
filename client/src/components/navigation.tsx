@@ -2,11 +2,12 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Shield } from "lucide-react";
+import { Menu, Shield, Star } from "lucide-react";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isKalimahOpen, setIsKalimahOpen] = useState(false);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -52,8 +53,50 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button and Islamic Button */}
+          <div className="hidden md:flex items-center space-x-3">
+            {/* Islamic Button - Only on home page */}
+            {location === "/" && (
+              <div className="relative">
+                <Button
+                  onClick={() => setIsKalimahOpen(!isKalimahOpen)}
+                  variant="outline"
+                  className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-4 py-2"
+                >
+                  <Star className="h-4 w-4 mr-2" />
+                  ☪
+                </Button>
+                
+                {/* Dropdown */}
+                {isKalimahOpen && (
+                  <div 
+                    className="absolute right-0 top-full mt-2 w-96 bg-white rounded-lg shadow-xl border border-slate-200 p-6 z-50 animate-in fade-in slide-in-from-top-2 duration-300"
+                    style={{ animation: 'slideDown 0.3s ease-out' }}
+                  >
+                    <div className="text-center">
+                      <img
+                        src="/kalimah.png"
+                        alt="Kalimah Tawheed"
+                        className="w-full h-auto mb-4 rounded-lg"
+                        style={{ filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1))' }}
+                      />
+                      <p className="text-sm text-slate-700 leading-relaxed italic">
+                        "There is none worthy of worship except Allah. He is alone and has no partner. To Him belongs the Kingdom and for Him is all praise. He gives life and causes death. In His hand is all good and He has power over everything."
+                      </p>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Backdrop to close dropdown */}
+                {isKalimahOpen && (
+                  <div 
+                    className="fixed inset-0 z-40" 
+                    onClick={() => setIsKalimahOpen(false)}
+                  />
+                )}
+              </div>
+            )}
+            
             <Link href="/become-client">
               <Button className="bg-[#01411c] hover:bg-[#012d13] text-white px-6 py-2">
                 How Can We Help
