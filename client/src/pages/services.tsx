@@ -128,11 +128,12 @@ export default function Services() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#01411c] to-[#012d13] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Our Cybersecurity Services Categories
+      <section className="hero-gradient relative overflow-hidden py-20">
+        <div className="geometric-pattern absolute inset-0"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-fade-in-up">
+            <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6">
+              Service <span className="text-[#01411c]">Categories</span>
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
               ITNOA delivers independent, standards-aligned services that provide the Audit Committee, senior management, and stakeholders with reliable assurance and practical recommendations. Select a category to view scope, approach, and deliverables.
