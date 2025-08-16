@@ -135,7 +135,7 @@ export default function Services() {
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6">
               Service <span className="text-[#01411c]">Categories</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               ITNOA delivers independent, standards-aligned services that provide the Audit Committee, senior management, and stakeholders with reliable assurance and practical recommendations. Select a category to view scope, approach, and deliverables.
             </p>
           </div>
