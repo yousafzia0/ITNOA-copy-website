@@ -7,14 +7,14 @@ import { ArrowRight } from "lucide-react";
 
 export default function SOXAuditing() {
   const whatWeDo = [
-    "Comprehensive Sarbanes-Oxley Section 302 and 404 compliance assessments aligned with PCAOB Auditing Standard 2201 requirements",
-    "IT General Controls (ITGC) effectiveness evaluations covering entity-level controls, application controls, and IT-dependent manual controls",
-    "Financial reporting systems security and data integrity assessments with focus on material weakness identification and remediation",
-    "Access controls and segregation of duties evaluations including privileged access management and automated application controls testing",
-    "Change management and version control procedure assessments covering emergency change protocols and change success rate monitoring",
-    "Data backup, recovery, and business continuity procedure testing with disaster recovery plan validation and testing protocols",
-    "Application security controls assessment for financial reporting systems including interface controls and data validation procedures",
-    "Comprehensive SOX compliance documentation and evidence collection supporting management assertions and external auditor reliance"
+    "Sarbanes-Oxley Act Section 302 and 404 compliance assessment",
+    "IT general controls (ITGC) effectiveness evaluation",
+    "Financial reporting systems security and integrity review",
+    "Access controls and segregation of duties assessment",
+    "Change management and version control procedures evaluation",
+    "Data backup and recovery procedures testing",
+    "Application security controls for financial systems",
+    "Documentation and evidence collection for SOX compliance"
   ];
 
   const whyItMatters = `

@@ -61,24 +61,24 @@ export default function Services() {
       description: "Independent IT audits designed to provide the Audit Committee with assurance that governance, risk management, and control frameworks are operating effectively. We evaluate compliance, mitigate critical risks, and confirm alignment with the organization’s risk appetite, tolerance, and strategic objectives.",
       mainPage: "/services/it-audit",
       services: [
-        { name: "SAP Audits", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews.", icon: <Settings className="h-5 w-5 text-[#01411c] icon-settings" /> },
-        { name: "PeopleSoft Audits", path: "/services/peoplesoft-audit", description: "Oracle PeopleSoft security evaluations and risk assessments", icon: <Server className="h-5 w-5 text-[#01411c] icon-pulse" /> },
-        { name: "Workday Security", path: "/services/workday-hcm-security", description: "Workday module security reviews and SOX-relevant control testing.", icon: <User className="h-5 w-5 text-[#01411c] icon-bounce" /> },
-        { name: "Database Security Audits", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, PostgreSQL configuration and access controls.", icon: <Database className="h-5 w-5 text-[#01411c] icon-shake" /> },
-        { name: "Operating System Audits", path: "/services/os-audit", description: "Linux and Windows configuration, hardening, and logging/monitoring.", icon: <Server className="h-5 w-5 text-[#01411c] icon-glow" /> },
-        { name: "Network Security", path: "/services/network-security", description: "Network design, firewall rules, segmentation, and secure remote access.", icon: <Network className="h-5 w-5 text-[#01411c] icon-float" /> },
-        { name: "Cloud Security (AWS / Azure / GCP)", path: "/services/cloud-security-audits", description: "Identity, configuration baselines, logging, and CIS benchmark alignment.", icon: <Cloud className="h-5 w-5 text-[#01411c] icon-scale" /> },
-        { name: "Application Security & SDLC", path: "/services/application-security-sdlc", description: "Secure design, code review processes, CI/CD, SAST/DAST, and change control.", icon: <Bug className="h-5 w-5 text-[#01411c] icon-bounce" /> },
-        { name: "Identity & Access Management (IAM)", path: "/services/identity-access-management", description: "Joiner–Mover–Leaver, privileged access, RBAC/ABAC, and access reviews.", icon: <User className="h-5 w-5 text-[#01411c] icon-pulse" /> },
-        { name: "Vulnerability & Patch Management", path: "/services/vulnerability-patch-management", description: "Scanning coverage, SLAs, risk-based remediation, and exception governance.", icon: <Bug className="h-5 w-5 text-[#01411c] icon-shake" /> },
-        { name: "Incident Response & Resilience", path: "/services/incident-response-resilience", description: "NIST 800-61 alignment, playbooks, exercises, and ransomware readiness.", icon: <RefreshCw className="h-5 w-5 text-[#01411c] icon-rotate" /> },
-        { name: "Third-Party / Vendor Risk", path: "/services/third-party-vendor-risk", description: "Due diligence, SOC report review, contract controls, and monitoring.", icon: <Users className="h-5 w-5 text-[#01411c] icon-float" /> },
-        { name: "SOX Auditing", path: "/services/sox-auditing", description: "ITGC/ITACs, reporting controls, and dependency mapping.", icon: <FileCheck className="h-5 w-5 text-[#01411c] icon-glow" /> },
-        { name: "HIPAA IT Security Audits", path: "/services/hipaa-security-audits", description: "Safeguards for PHI, risk analysis, and corrective action governance.", icon: <Heart className="h-5 w-5 text-[#01411c] icon-pulse" /> },
-        { name: "Data Protection & Privacy", path: "/services/data-protection-privacy", description: "GDPR/CCPA readiness, data mapping, and sensitive data safeguarding.", icon: <Shield className="h-5 w-5 text-[#01411c] icon-shield" /> },
-        { name: "IT Governance (COBIT)", path: "/services/it-governance-cobit", description: "Policy framework, roles, KPIs/KRIs, and risk & control alignment.", icon: <BarChart3 className="h-5 w-5 text-[#01411c] icon-scale" /> },
-        { name: "FFIEC Audits", path: "/services/ffiec-audits", description: "Coverage for financial institutions per FFIEC handbooks.", icon: <Building2 className="h-5 w-5 text-[#01411c] icon-bounce" /> },
-        { name: "FERPA / FISMA", path: "/services/ferpa-fisma", description: "Education and federal information security compliance support.", icon: <GraduationCap className="h-5 w-5 text-[#01411c] icon-float" /> }
+        { name: "SAP Audits", path: "/services/sap-audit", description: "Comprehensive SAP security assessments and compliance reviews.", icon: <Settings className="h-5 w-5 text-[#01411c]" /> },
+        { name: "PeopleSoft Audits", path: "/services/peoplesoft-audit", description: "Oracle PeopleSoft security evaluations and risk assessments", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Workday Security", path: "/services/workday-hcm-security", description: "Workday module security reviews and SOX-relevant control testing.", icon: <User className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Database Security Audits", path: "/services/database-security-audit", description: "SQL Server, Oracle, MySQL, PostgreSQL configuration and access controls.", icon: <Database className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Operating System Audits", path: "/services/os-audit", description: "Linux and Windows configuration, hardening, and logging/monitoring.", icon: <Server className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Network Security", path: "/services/network-security", description: "Network design, firewall rules, segmentation, and secure remote access.", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Cloud Security (AWS / Azure / GCP)", path: "/services/cloud-security-audits", description: "Identity, configuration baselines, logging, and CIS benchmark alignment.", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Application Security & SDLC", path: "/services/application-security-sdlc", description: "Secure design, code review processes, CI/CD, SAST/DAST, and change control.", icon: <Bug className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Identity & Access Management (IAM)", path: "/services/identity-access-management", description: "Joiner–Mover–Leaver, privileged access, RBAC/ABAC, and access reviews.", icon: <User className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Vulnerability & Patch Management", path: "/services/vulnerability-patch-management", description: "Scanning coverage, SLAs, risk-based remediation, and exception governance.", icon: <Bug className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Incident Response & Resilience", path: "/services/incident-response-resilience", description: "NIST 800-61 alignment, playbooks, exercises, and ransomware readiness.", icon: <RefreshCw className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Third-Party / Vendor Risk", path: "/services/third-party-vendor-risk", description: "Due diligence, SOC report review, contract controls, and monitoring.", icon: <Users className="h-5 w-5 text-[#01411c]" /> },
+        { name: "SOX Auditing", path: "/services/sox-auditing", description: "ITGC/ITACs, reporting controls, and dependency mapping.", icon: <FileCheck className="h-5 w-5 text-[#01411c]" /> },
+        { name: "HIPAA IT Security Audits", path: "/services/hipaa-security-audits", description: "Safeguards for PHI, risk analysis, and corrective action governance.", icon: <Heart className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Data Protection & Privacy", path: "/services/data-protection-privacy", description: "GDPR/CCPA readiness, data mapping, and sensitive data safeguarding.", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
+        { name: "IT Governance (COBIT)", path: "/services/it-governance-cobit", description: "Policy framework, roles, KPIs/KRIs, and risk & control alignment.", icon: <BarChart3 className="h-5 w-5 text-[#01411c]" /> },
+        { name: "FFIEC Audits", path: "/services/ffiec-audits", description: "Coverage for financial institutions per FFIEC handbooks.", icon: <Building2 className="h-5 w-5 text-[#01411c]" /> },
+        { name: "FERPA / FISMA", path: "/services/ferpa-fisma", description: "Education and federal information security compliance support.", icon: <GraduationCap className="h-5 w-5 text-[#01411c]" /> }
       ]
     },
     {
@@ -132,10 +132,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              IT Audit & Assurance Services
+              Our Cybersecurity Services Categories
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
-              ITNOA provides independent, risk-based IT audit and assurance services that deliver objective evaluations of governance, risk management, and internal control environments. Our service portfolio supports Chief Audit Executives, Audit Committees, and Boards in fulfilling their oversight responsibilities by applying internationally recognized IIA standards and proven methodologies. Explore each service category to review our comprehensive audit approaches, scope, and high-value deliverables.
+              ITNOA delivers independent, standards-aligned services that provide the Audit Committee, senior management, and stakeholders with reliable assurance and practical recommendations. Select a category to view scope, approach, and deliverables.
             </p>
           </div>
         </div>
@@ -146,10 +146,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-              Audit Service Categories
+              Service Categories
             </h2>
             <p className="text-xl text-slate-600">
-              Click on any category to explore our specialized audit and assurance services designed for Board oversight
+              Click on any category to explore our specialized services
             </p>
           </div>
 

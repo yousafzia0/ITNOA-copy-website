@@ -9,23 +9,23 @@ import EnterpriseMetrics from "@/components/ui/EnterpriseMetrics";
 
 export default function CyberResilience() {
   const whatWeDo = [
-    "Business impact analysis and critical asset identification using quantitative risk assessment methodologies and defensible recovery time objectives (RTO) and recovery point objectives (RPO)",
-    "Comprehensive business continuity management system development aligned with ISO 22301 standards and Board-approved risk tolerance levels",
-    "Disaster recovery planning for IT systems with testable procedures, alternate processing sites, and data integrity validation controls",
-    "Crisis management and stakeholder communication frameworks with clear escalation protocols and Board notification requirements",
-    "Tabletop exercises and business continuity testing programs with measurable success criteria and continuous improvement processes",
-    "Supply chain resilience assessment including third-party dependency mapping, contractual requirements, and vendor risk monitoring",
-    "Cyber incident response integration with business continuity processes aligned with NIST Cybersecurity Framework (Respond/Recover functions)",
-    "Ongoing plan maintenance and continuous monitoring with key resilience indicators (KRIs) and Board reporting dashboards"
+    "Business impact analysis and critical asset identification across all business functions",
+    "Comprehensive business continuity plan development with detailed recovery procedures",
+    "Disaster recovery planning for IT systems and data protection strategies",
+    "Crisis management and communication plan development for stakeholder coordination",
+    "Tabletop exercises and simulation testing to validate plan effectiveness",
+    "Supply chain resilience assessment and third-party dependency mapping",
+    "Cyber incident response integration with business continuity processes",
+    "Regular plan updates and maintenance to adapt to changing business requirements"
   ];
 
   const whyItMatters = `
-    Business continuity and cyber resilience programs provide critical assurance to the Board that the organization can maintain 
-    essential operations during significant disruptions, whether from cyberattacks, natural disasters, or other business interruptions. 
-    Our risk-based approach enables Chief Audit Executives to provide objective assurance that continuity capabilities are aligned with 
-    strategic objectives, regulatory requirements, and organizational risk appetite. With measurable recovery objectives and continuous 
-    testing protocols, these programs demonstrate to stakeholders that management has established appropriate controls to protect 
-    business value and ensure operational resilience within acceptable risk parameters.
+    Business continuity and cyber resilience are critical for maintaining operations during unexpected 
+    disruptions, whether from cyberattacks, natural disasters, or other business interruptions. Our 
+    comprehensive approach ensures your organization can quickly recover from incidents while minimizing 
+    financial losses and reputational damage. With the average cost of downtime reaching thousands of 
+    dollars per minute for many organizations, investing in robust business continuity and cyber 
+    resilience planning is essential for long-term business survival and competitive advantage.
   `;
 
   const comprehensiveServices = [
@@ -107,7 +107,7 @@ export default function CyberResilience() {
                   <img
                     src="/bcp-diagram.png"
                     alt="Business Continuity Planning Diagram - Time Is Precious When An Event Occurs"
-                    className="w-full h-auto object-contain rounded-xl transform hover:scale-[1.02] transition-all duration-500 shadow-lg hover:shadow-2xl"
+                    className="w-full h-auto object-contain rounded-xl transform hover:scale-[1.01] transition-all duration-300"
                     style={{
                       filter: 'brightness(1.03) contrast(1.08) saturate(1.05)',
                       backgroundColor: 'white',
