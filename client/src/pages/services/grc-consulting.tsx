@@ -117,19 +117,19 @@ export default function GRCConsulting() {
     {
       icon: <Shield className="h-6 w-6 text-[#01411c] icon-shield" />,
       title: "NIST 800-53 Risk Assessment",
-      description: "Comprehensive security controls assessment based on NIST SP 800-53 framework.",
+      description: "Risk identification and analysis mapped to 800-53 controls, effectiveness review, and actionable treatment plans.",
       href: "/services/nist-800-53-risk-assessment"
     },
     {
       icon: <Network className="h-6 w-6 text-[#01411c] icon-pulse" />,
       title: "Firewall Ruleset Review (PCI)",
-      description: "Specialized firewall configuration assessment ensuring PCI DSS compliance.",
+      description: "PCI DSS 4.0 Req. 1 checks: least‑privilege rules, unused/shadow entries, segmentation, logging, and change control with remediation plan.",
       href: "/services/firewall-ruleset-review-pci"
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-bounce" />,
       title: "Gap Assessments Using STIGs",
-      description: "Comprehensive security gap analysis using DISA Security Technical Implementation Guides.",
+      description: "DISA STIG baseline vs. current-state hardening for OS, DB, and network devices; prioritized POA&M, exceptions, and hardening runbooks.",
       href: "/services/gap-assessments-using-stigs"
     }
   ];
