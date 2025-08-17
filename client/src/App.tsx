@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -68,6 +68,13 @@ import GapAssessmentsUsingSTIGs from "@/pages/services/gap-assessments-using-sti
 import DataProtectionPrivacy from "@/pages/services/data-protection-privacy";
 
 function Router() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    // Scroll to top immediately on route change
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -137,8 +144,15 @@ function Router() {
 
 function App() {
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis();
+    // Initialize Lenis for smooth scrolling with optimal settings
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      normalizeWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
 
     // Animation frame loop for Lenis
     function raf(time: number) {
