@@ -102,27 +102,34 @@ export default function BecomeClient() {
   const process = [
     {
       step: "1",
-      title: "Initial Consultation",
+      title: "Initial Discussion",
       description:
-        "Free 30-minute consultation to understand your cybersecurity needs and current posture.",
+        "Introductory conversation to understand your needs, goals, environment, and areas of concern.",
     },
     {
       step: "2",
-      title: "Risk Assessment",
+      title: "Prelim Assessment (Inquiry Only)",
       description:
-        "Comprehensive evaluation of your current security stance and identification of vulnerabilities.",
+        "A high‑level assessment based solely on your input and initial inquiry to scope effort and priorities.",
     },
     {
       step: "3",
-      title: "Custom Strategy",
+      title: "Detailed Review",
       description:
-        "Development of a tailored cybersecurity roadmap aligned with your business objectives.",
+        "Deep‑dive review per discussion: analysis of policies and standards, examination of supporting evidence, and reperformance of controls as required to verify design and operating effectiveness.",
     },
     {
       step: "4",
-      title: "Implementation",
+      title: "Custom Strategy",
       description:
-        "Expert guidance through implementation with ongoing support and monitoring.",
+        "A tailored cybersecurity roadmap aligned with business objectives and relevant frameworks (e.g., NIST, ISO, PCI, HIPAA).",
+    },
+
+    {
+      step: "5",
+      title: "Management Action Plan & Implementation Support",
+      description:
+        "Hands‑on support to build the management action plan, sequence tasks, track remediation, and provide ongoing guidance and monitoring.",
     },
   ];
 

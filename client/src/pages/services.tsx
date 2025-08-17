@@ -56,7 +56,7 @@ export default function Services() {
   const serviceCategories = [
     {
       id: "it-audit",
-      title: "IT Audit",
+      title: "IT Audit & Assurance",
       icon: <Search className="h-8 w-8 text-[#01411c] icon-search" />,
       description: "Independent IT audits designed to provide the Audit Committee with assurance that governance, risk management, and control frameworks are operating effectively. We evaluate compliance, mitigate critical risks, and confirm alignment with the organization’s risk appetite, tolerance, and strategic objectives.",
       mainPage: "/services/it-audit",
@@ -83,7 +83,7 @@ export default function Services() {
     },
     {
       id: "information-security",
-      title: "Information Security (GRC) Consulting",
+      title: "Cybersecurity & GRC",
       icon: <Shield className="h-8 w-8 text-[#01411c] icon-shield" />,
       description: "Governance, Risk, and Compliance services aligned to NIST CSF, ISO/IEC 27001, and related standards. We establish defensible policies, controls, and operating models that satisfy regulatory expectations and align with business objectives.",
       mainPage: "/services/grc-consulting",
@@ -108,7 +108,7 @@ export default function Services() {
     },
     {
       id: "business-continuity",
-      title: "Business Continuity / Cyber Resilience",
+      title: "Business Continuity & Resilience",
       icon: <RotateCcw className="h-8 w-8 text-[#01411c] icon-rotate" />,
       description: "Independent continuity and resilience assessments aligned with ISO 22301, ISO 22317, and ISO/IEC 27031, with response and recovery practices mapped to the NIST Cybersecurity Framework (Respond/Recover). We provide management and the Audit Committee with confidence that continuity capabilities are risk-based, measurable, and aligned to strategic objectives, customer expectations, and regulatory requirements.",
       mainPage: "/services/cyber-resilience",
@@ -133,10 +133,10 @@ export default function Services() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Service <span className="text-[#01411c]">Categories</span>
+              Service <span className="text-[#01411c]">Portfolio</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ITNOA delivers independent, standards-aligned services that provide the Audit Committee, senior management, and stakeholders with reliable assurance and practical recommendations. Select a category to view scope, approach, and deliverables.
+              Our Service Portfolio represents a comprehensive range of solutions designed to strengthen governance, risk management, and compliance. Each service is tailored to deliver measurable value, ensuring organizations achieve resilience, regulatory alignment, and long-term success.
             </p>
           </div>
         </div>
@@ -184,7 +184,7 @@ export default function Services() {
                               className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white hidden sm:flex items-center space-x-2"
                               onClick={(e) => e.stopPropagation()}
                             >
-                              <span>View Overview</span>
+                              <span>View Deliverables</span>
                               <ArrowRight className="h-4 w-4" />
                             </Button>
                           </Link>
@@ -268,7 +268,7 @@ export default function Services() {
             </Link>
             <Link href="/become-client">
               <Button size="lg" variant="outline" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
-                Become a Client
+                What We Can Offer
               </Button>
             </Link>
           </div>

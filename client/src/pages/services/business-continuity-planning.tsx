@@ -67,7 +67,7 @@ export default function BusinessContinuityPlanning() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/become-client">
                   <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
-                    Get Started Today
+                    What We Can Offer
                   </Button>
                 </Link>
                 <Link href="/contact">
