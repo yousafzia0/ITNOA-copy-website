@@ -106,9 +106,9 @@ export default function Services() {
         { name: "Risk Management Frameworks", path: "/services/risk-management-frameworks", description: "NIST RMF & ISO 31000 integration, governance, KRIs/KPIs, and risk reporting.", icon: <TrendingUp className="h-5 w-5 text-[#01411c]" /> },
         { name: "Cybersecurity Maturity Assessments", path: "/services/cybersecurity-maturity-assessments", description: "Continuous configuration monitoring and automated compliance at scale.", icon: <Activity className="h-5 w-5 text-[#01411c]" /> },
         { name: "Cloud Security Posture Mgmt (CSPM)", path: "/services/cloud-security-posture-management", description: "Cloud security posture management and continuous monitoring", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> },
-        { name: "NIST 800-53 Risk Assessment", path: "/services/nist-800-53-risk-assessment", description: "Comprehensive security controls assessment based on NIST SP 800-53 framework", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Firewall Ruleset Review (PCI)", path: "/services/firewall-ruleset-review-pci", description: "Specialized firewall configuration assessment ensuring PCI DSS compliance", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Gap Assessments Using STIGs", path: "/services/gap-assessments-using-stigs", description: "Comprehensive security gap analysis using DISA Security Technical Implementation Guides", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> }
+        { name: "NIST 800-53 Risk Assessment", path: "/services/nist-800-53-risk-assessment", description: "Risk identification and analysis mapped to 800-53 controls, effectiveness review, and actionable treatment plans.", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Firewall Ruleset Review (PCI)", path: "/services/firewall-ruleset-review-pci", description: "PCI DSS 4.0 Req. 1 checks: least‑privilege rules, unused/shadow entries, segmentation, logging, and change control with remediation plan.", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Gap Assessments Using STIGs", path: "/services/gap-assessments-using-stigs", description: "DISA STIG baseline vs. current-state hardening for OS, DB, and network devices; prioritized POA&M, exceptions, and hardening runbooks.", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> }
       ]
     },
     {

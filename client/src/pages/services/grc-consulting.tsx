@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shield, Tag, Settings, CreditCard, Bug, Cloud, CheckCircle, ArrowRight, FileText, Brain, Code, Users, Zap, TrendingUp, Activity } from "lucide-react";
+import { Shield, Tag, Settings, CreditCard, Bug, Cloud, CheckCircle, ArrowRight, FileText, Brain, Code, Users, Zap, TrendingUp, Activity, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
@@ -113,6 +113,24 @@ export default function GRCConsulting() {
       title: "Cloud Security Posture Mgmt (CSPM)",
       description: "Continuous configuration monitoring and automated compliance at scale.",
       href: "/services/cloud-security-posture-management"
+    },
+    {
+      icon: <Shield className="h-6 w-6 text-[#01411c] icon-shield" />,
+      title: "NIST 800-53 Risk Assessment",
+      description: "Comprehensive security controls assessment based on NIST SP 800-53 framework.",
+      href: "/services/nist-800-53-risk-assessment"
+    },
+    {
+      icon: <Network className="h-6 w-6 text-[#01411c] icon-pulse" />,
+      title: "Firewall Ruleset Review (PCI)",
+      description: "Specialized firewall configuration assessment ensuring PCI DSS compliance.",
+      href: "/services/firewall-ruleset-review-pci"
+    },
+    {
+      icon: <CheckCircle className="h-6 w-6 text-[#01411c] icon-bounce" />,
+      title: "Gap Assessments Using STIGs",
+      description: "Comprehensive security gap analysis using DISA Security Technical Implementation Guides.",
+      href: "/services/gap-assessments-using-stigs"
     }
   ];
 
