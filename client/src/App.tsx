@@ -40,7 +40,6 @@ import IncidentResponseResilience from "@/pages/services/incident-response-resil
 import ThirdPartyVendorRisk from "@/pages/services/third-party-vendor-risk";
 import SOXAuditing from "@/pages/services/sox-auditing";
 import HIPAASecurityAudits from "@/pages/services/hipaa-security-audits";
-import DataProtectionPrivacy from "@/pages/services/data-protection-privacy";
 import ITGovernanceCOBIT from "@/pages/services/it-governance-cobit";
 import FFIECAudits from "@/pages/services/ffiec-audits";
 import FERPAFISMAudit from "@/pages/services/ferpa-fisma";
@@ -62,6 +61,11 @@ import IncidentResponseProgram from "@/pages/services/incident-response-program"
 import RiskManagementFrameworks from "@/pages/services/risk-management-frameworks";
 import CybersecurityMaturityAssessments from "@/pages/services/cybersecurity-maturity-assessments";
 import CloudSecurityPostureManagement from "@/pages/services/cloud-security-posture-management";
+import NIST80053RiskAssessment from "@/pages/services/nist-800-53-risk-assessment";
+import FirewallRulesetReviewPCI from "@/pages/services/firewall-ruleset-review-pci";
+import GapAssessmentsUsingSTIGs from "@/pages/services/gap-assessments-using-stigs";
+// Data Protection & Privacy Services
+import DataProtectionPrivacy from "@/pages/services/data-protection-privacy";
 
 function Router() {
   return (
@@ -121,6 +125,11 @@ function Router() {
       <Route path="/services/risk-management-frameworks" component={RiskManagementFrameworks} />
       <Route path="/services/cybersecurity-maturity-assessments" component={CybersecurityMaturityAssessments} />
       <Route path="/services/cloud-security-posture-management" component={CloudSecurityPostureManagement} />
+      <Route path="/services/nist-800-53-risk-assessment" component={NIST80053RiskAssessment} />
+      <Route path="/services/firewall-ruleset-review-pci" component={FirewallRulesetReviewPCI} />
+      <Route path="/services/gap-assessments-using-stigs" component={GapAssessmentsUsingSTIGs} />
+      {/* Data Protection & Privacy Services */}
+      <Route path="/services/data-protection-privacy" component={DataProtectionPrivacy} />
       <Route component={NotFound} />
     </Switch>
   );

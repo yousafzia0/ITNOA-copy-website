@@ -36,7 +36,9 @@ import {
   Code,
   TrendingUp,
   Activity,
-  Brain
+  Brain,
+  Lock,
+  Eye
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -103,7 +105,10 @@ export default function Services() {
         { name: "Data Privacy & Protection", path: "/services/data-protection-privacy", description: "GDPR/CCPA/HIPAA privacy programs, data mapping, and sensitive data controls.", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
         { name: "Risk Management Frameworks", path: "/services/risk-management-frameworks", description: "NIST RMF & ISO 31000 integration, governance, KRIs/KPIs, and risk reporting.", icon: <TrendingUp className="h-5 w-5 text-[#01411c]" /> },
         { name: "Cybersecurity Maturity Assessments", path: "/services/cybersecurity-maturity-assessments", description: "Continuous configuration monitoring and automated compliance at scale.", icon: <Activity className="h-5 w-5 text-[#01411c]" /> },
-        { name: "Cloud Security Posture Mgmt (CSPM)", path: "/services/cloud-security-posture-management", description: "Cloud security posture management and continuous monitoring", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> }
+        { name: "Cloud Security Posture Mgmt (CSPM)", path: "/services/cloud-security-posture-management", description: "Cloud security posture management and continuous monitoring", icon: <Cloud className="h-5 w-5 text-[#01411c]" /> },
+        { name: "NIST 800-53 Risk Assessment", path: "/services/nist-800-53-risk-assessment", description: "Comprehensive security controls assessment based on NIST SP 800-53 framework", icon: <Shield className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Firewall Ruleset Review (PCI)", path: "/services/firewall-ruleset-review-pci", description: "Specialized firewall configuration assessment ensuring PCI DSS compliance", icon: <Network className="h-5 w-5 text-[#01411c]" /> },
+        { name: "Gap Assessments Using STIGs", path: "/services/gap-assessments-using-stigs", description: "Comprehensive security gap analysis using DISA Security Technical Implementation Guides", icon: <CheckCircle className="h-5 w-5 text-[#01411c]" /> }
       ]
     },
     {
@@ -119,6 +124,17 @@ export default function Services() {
         { name: "Crisis Communication & Incident Response (NIST CSF RS/RC)", path: "/services/crisis-communication-incident-response", description: "ICT risk & threat assessment, DR strategy validation (alt sites/cloud failover), governance & documentation review, and progressive testing.", icon: <MessageSquare className="h-5 w-5 text-[#01411c]" /> },
         { name: "Supplier & Third‑Party Continuity", path: "/services/supplier-third-party-continuity", description: "Continuity requirements in contracts, dependency inventories, attestation review, and coordinated testing with critical providers.", icon: <Users className="h-5 w-5 text-[#01411c]" /> },
         { name: "Ransomware Readiness & Recovery", path: "/services/ransomware-readiness-recovery", description: "Data protection, backup/restore validation, isolation/containment procedures, and recovery time verification for high‑value services.", icon: <AlertTriangle className="h-5 w-5 text-[#01411c]" /> }
+      ]
+    },
+    {
+      id: "data-protection-privacy",
+      title: "Data Protection & Privacy",
+      icon: <Lock className="h-8 w-8 text-[#01411c] icon-lock" />,
+      description: "Comprehensive data protection and privacy services ensuring compliance with global regulations like GDPR, CCPA, and other privacy frameworks while safeguarding sensitive information throughout its lifecycle. We implement privacy-by-design principles and establish robust data governance frameworks aligned with regulatory requirements and business objectives.",
+      mainPage: "/services/data-protection-privacy",
+      services: [
+        // Additional specialized services will be added to this category
+        // Please contact us for specific privacy and data protection requirements
       ]
     }
   ];
