@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import BCPImage from "@assets/BCP.png";
 
 
 
@@ -105,7 +106,7 @@ export default function CyberResilience() {
               <div className="w-full max-w-6xl mx-auto">
                 <div className="relative bg-gradient-to-br from-white via-slate-50/50 to-blue-50/40 rounded-2xl shadow-2xl border border-slate-200/50 p-4 md:p-6">
                   <img
-                    src="BCP.png"
+                    src={BCPImage}
                     alt="Business Continuity Planning Diagram - Time Is Precious When An Event Occurs"
                     className="w-full h-auto object-contain rounded-xl transform hover:scale-[1.01] transition-all duration-300"
                     style={{
