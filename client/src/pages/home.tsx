@@ -73,12 +73,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Securing Your 
-                <span className="text-[#01411c]"> Digital Future</span>
+                 Resilience Rooted in 
+                <span className="text-[#01411c]"> Accountability</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Expert solutions in cybersecurity, data protection, and risk management. 
-                Protect your business with customized consultancy services that ensure appropriate governance, continuous risk mitigation and compliance.
+                Building cybersecurity, governance, and compliance strategies with the highest standards — where trust is earned, risks are mitigated, and integrity is non-negotiable.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">

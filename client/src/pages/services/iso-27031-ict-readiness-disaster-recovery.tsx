@@ -3,32 +3,33 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function ISO27031ICTReadinessDisasterRecovery() {
   const whatWeDo = [
-    "ICT readiness assessment aligned with ISO/IEC 27031 guidelines for ICT readiness for business continuity.",
-    "Information and communication technology continuity strategy development and validation.",
-    "ICT service continuity requirements analysis including recovery time objectives and recovery point objectives.",
-    "Technology infrastructure resilience evaluation including redundancy, failover capabilities, and backup systems.",
-    "Data backup and recovery testing to ensure critical information can be restored within required timeframes.",
-    "Communication systems continuity assessment including voice, data, and collaboration platform resilience.",
-    "Cloud services and third-party ICT provider continuity evaluation and dependency mapping.",
-    "ICT disaster recovery plan development and testing including scenario-based exercises and simulations.",
-    "Cybersecurity integration ensuring ICT continuity plans address security threats and recovery from cyber incidents.",
-    "ICT continuity governance and management processes review including roles, responsibilities, and escalation procedures."
+    "Assessment Scope & Objectives – Defining the ICT environments, systems, and services to be included in disaster recovery planning.",
+    "Governance & Leadership – Reviewing DRP roles, responsibilities, policies, and top management commitment to ICT resilience.",
+    "ICT Risk & Threat Assessment – Identifying risks, vulnerabilities, and potential failure points in ICT infrastructure.",
+    "Business Impact & Dependency Analysis – Determining critical ICT services, their dependencies, and their contribution to business-critical processes.",
+    "Recovery Objectives – Establishing and validating Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) for ICT systems, including those provided by third parties.",
+    "Disaster Recovery Strategies – Reviewing and validating chosen recovery strategies (e.g., alternate sites, cloud failover, high availability solutions).",
+    "Disaster Recovery Plan (DRP) Documentation – Assessing plan completeness, accuracy, and alignment with business priorities.",
+    "Resource Readiness – Verifying availability and adequacy of people, facilities, equipment, and technology needed to execute DR plans.",
+    "Testing & Exercising – Reviewing how DR plans are tested, frequency of exercises, and incorporation of lessons learned.",
+    "Monitoring & Continual Improvement – Ensuring DRP processes are maintained, reviewed, and improved as technology, risks, and business needs evolve."
   ];
 
   const whyItMatters = [
-    "ICT systems are critical enablers of business operations making their continuity essential for organizational resilience.",
-    "ISO/IEC 27031 provides structured approach to ICT readiness ensuring technology supports rather than hinders business continuity.",
-    "Reduces technology-related business disruption through systematic identification and mitigation of ICT continuity risks.",
-    "Ensures ICT recovery capabilities align with business requirements and stakeholder expectations for service restoration.",
-    "Supports compliance with regulatory requirements for technology resilience across industries including financial services and healthcare.",
-    "Demonstrates due diligence in ICT risk management supporting cyber insurance requirements and stakeholder confidence.",
-    "Provides framework for continuous improvement ensuring ICT continuity capabilities evolve with technological changes and business growth."
+    "Ensures your ICT disaster recovery capabilities directly support your organization’s Business Continuity Management System (BCMS) and overall resilience strategy.",
+    "Reduces downtime by aligning Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) with business priorities and customer expectations.",
+    "Identifies vulnerabilities in critical IT systems and infrastructure before they cause costly disruptions.",
+    "Strengthens confidence in your ability to recover from cyberattacks, hardware failures, natural disasters, and other ICT-related incidents.",
+    "Improves coordination between IT, business units, and third-party providers to ensure recovery strategies are achievable and aligned.",
+    "Meets ISO, regulatory, and audit expectations for ICT readiness, supporting compliance with industry standards.",
+    "Promotes continual improvement by integrating lessons learned from tests and real incidents into updated recovery plans.",
+    "Protects brand reputation, customer trust, and revenue by ensuring rapid and reliable restoration of ICT services during a crisis."
   ];
 
   return (
     <ServiceDetailTemplate
       title="ISO 27031 ICT Readiness & Disaster Recovery"
-      description="ICT readiness for business continuity and disaster recovery planning aligned with ISO/IEC 27031 standards to ensure technology infrastructure supports organizational resilience."
+      description="Our ISO 27031 assessments ensure your Information and Communication Technology (ICT) Disaster Recovery Planning fully supports your organization’s Business Continuity Management System (BCMS) and aligns with ISO 22301."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<HardDrive className="h-10 w-10 text-[#01411c]" />}

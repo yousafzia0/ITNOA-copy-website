@@ -146,7 +146,8 @@ export default function BecomeClient() {
               Become Our <span className="text-[#01411c]">Client</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We go beyond point-in-time assessments. At ITNOA, we deliver complete cybersecurity solutions. Our commitment doesn’t end with the engagement—we remain actively engaged to support remediation and support our clients. Give us a chance to show what we can do for you – test our expertise.
+              We go beyond point-in-time assessments.
+              At ITNOA, we deliver complete cybersecurity solutions. Our commitment doesn’t end with the assessment—we remain actively engaged to support remediation. We test each control not only for design but for operational effectiveness throughout the year, ensuring continuous compliance and security readiness.
             </p>
           </div>
         </div>

@@ -9,9 +9,7 @@ export default function PeoplesoftAudit() {
     "Change Management Controls – Review program development and migration processes, including Application Designer restrictions, change locking, and emergency change procedures.",
     "Database & Infrastructure Security – Evaluate database access IDs, process scheduler security, and environment configuration.",
     "Operational Monitoring – Assess use of delivered audit tools (DDDAUDIT, SYSAUDIT) and review batch/job scheduling security.",
-    "Compliance Testing – Map controls to SOX, GDPR, and other applicable regulations.",
-    "PeopleSoft HCM Security Assessment – Comprehensive review of Human Capital Management security controls, payroll access restrictions, and employee data protection measures.",
-    "PeopleSoft Financial Security Audit – In-depth analysis of financial module security, general ledger controls, and accounts payable/receivable access management."
+    "Compliance Testing – Map controls to SOX, GDPR, and other applicable regulations."
   ];
 
   const whyItMatters = [

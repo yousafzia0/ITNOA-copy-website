@@ -3,32 +3,29 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function ISO22301BCMSAssessment() {
   const whatWeDo = [
-    "Business Continuity Management System (BCMS) maturity assessment against ISO 22301 requirements and international best practices.",
-    "Gap analysis of current business continuity policies, procedures, and controls to identify areas for improvement.",
-    "Business continuity governance review including roles, responsibilities, and management oversight structures.",
-    "Risk management integration assessment to ensure BCMS aligns with organizational risk management frameworks.",
-    "Business impact analysis validation and critical process identification to prioritize continuity planning efforts.",
-    "Recovery strategy evaluation including alternative work arrangements, backup facilities, and resource requirements.",
-    "Plan testing and exercise program review to validate business continuity plan effectiveness and readiness.",
-    "Continual improvement process assessment including monitoring, measurement, and corrective action mechanisms.",
-    "Documentation review and compliance verification against ISO 22301 standard requirements.",
-    "Management review and reporting processes evaluation to ensure executive oversight and accountability."
+    "Gap Analysis & Compliance Review – Assess existing policies, procedures, and controls against ISO 22301 requirements to identify gaps.",
+    "Risk & Impact Assessments – Evaluate business risks and conduct Business Impact Analysis (BIA) to prioritize critical processes and resources.",
+    "RTO/RPO Identification – Define and validate Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) for both internal operations and third-party provided services and systems critical to your organization.",
+    "BCMS Maturity Evaluation – Measure current BCMS maturity and provide recommendations to strengthen resilience.",
+    "Testing & Validation – Review and validate continuity and recovery plans through scenario-based exercises and drills.",
+    "Continual Improvement Support – Establish monitoring, measurement, and corrective action processes to ensure long-term resilience.",
+    "By aligning with ISO 22301, we help ensure operational resilience, regulatory compliance, and stakeholder confidence in your ability to maintain essential services — even when third-party dependencies are impacted."
   ];
 
   const whyItMatters = [
-    "ISO 22301 provides internationally recognized framework for building organizational resilience and ensuring business continuity capabilities.",
-    "Structured assessment approach identifies gaps in current capabilities and provides roadmap for improvement aligned with business objectives.",
-    "Demonstrates commitment to stakeholders including customers, suppliers, and regulators regarding business continuity preparedness.",
-    "Reduces business disruption risks through systematic identification and mitigation of continuity threats and vulnerabilities.",
-    "Supports regulatory compliance requirements for business continuity planning across multiple industries and jurisdictions.",
-    "Enhances competitive advantage by demonstrating superior resilience capabilities compared to organizations without formal BCMS.",
-    "Provides framework for continuous improvement ensuring business continuity capabilities evolve with changing business requirements."
+    "Establishes a structured, internationally recognized framework for building and improving your Business Continuity Management System (BCMS).",
+    "Ensures your Business Continuity Plan (BCP) is based on real business risks, priorities, and impact analysis, not assumptions.",
+    "Identifies gaps in preparedness, including dependencies on third-party services and their Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs).",
+    "Aligns continuity capabilities with strategic business goals, customer expectations, and regulatory requirements.",
+    "Improves resilience by integrating continuity planning into daily operations rather than treating it as a one-time exercise.",
+    "Strengthens crisis response and recovery by providing clear, tested procedures and achievable recovery objectives.",
+    "Drives continual improvement through regular assessments, exercises, and updates to plans and processes."
   ];
 
   return (
     <ServiceDetailTemplate
       title="ISO 22301 BCMS Assessment"
-      description="Comprehensive Business Continuity Management System assessment and compliance evaluation against ISO 22301 standards to ensure organizational resilience and effective business continuity capabilities."
+      description="We perform comprehensive ISO 22301 assessments to evaluate and enhance your organization’s Business Continuity Management System (BCMS). Our approach ensures you can prevent, prepare for, respond to, and recover from disruptive incidents while meeting international best practices."
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<CheckCircle className="h-10 w-10 text-[#01411c]" />}

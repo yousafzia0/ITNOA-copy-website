@@ -111,8 +111,7 @@ export default function Contact() {
               Get In <span className="text-[#01411c]">Touch</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ready to discuss your cybersecurity needs? Contact our experts today 
-              for a free consultation and take the first step towards comprehensive protection.
+              We go beyond point-in-time assessments. At ITNOA, we deliver complete cybersecurity solutions. Our commitment doesn’t end with the engagement—we remain actively engaged to support remediation and support our clients. Give us a chance to show what we can do for you – test our expertise
             </p>
           </div>
         </div>

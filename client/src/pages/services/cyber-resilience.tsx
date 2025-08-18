@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-import EnterpriseMetrics from "@/components/ui/EnterpriseMetrics";
+
 
 export default function CyberResilience() {
   const whatWeDo = [

@@ -3,22 +3,21 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function WorkdayHCMSecurity() {
   const whatWeDo = [
-    "Workday  security configuration assessment – Review role-based access controls, business process security, and integration security within Workday Human Capital Management.",
-    "User access management and privilege review – Evaluate user provisioning, de-provisioning, and access certification processes to ensure proper segregation of duties.",
-    "Payroll and compensation data protection – Assess security controls protecting sensitive payroll information, salary data, and compensation plans.",
-    "Employee data privacy compliance – Review controls for protecting personal employee information in compliance with GDPR, CCPA, and other privacy regulations.",
-    "Integration security testing – Evaluate security of integrations between Workday and other HR systems, payroll processors, and third-party applications.",
-    "Business process security review – Assess security controls within HR business processes including hiring, termination, transfers, and performance management.",
-    "Report and analytics security – Review access controls and data security for Workday reports, dashboards, and analytics containing sensitive HR data.",
-    "Compliance verification for SOX and industry standards – Ensure Workday  configurations meet regulatory requirements and industry best practices."
+    "Access & Authentication Controls – Evaluate role-based permissions, SSO configuration, and MFA enforcement for HR, payroll, and finance data.",
+    "Business Process Configuration Review – Assess workflow security and approvals for sensitive transactions (e.g., payroll changes, job offers, supplier payments).",
+    "Data Protection & Privacy Controls – Validate encryption, audit logs, and data retention policies in alignment with GDPR, HIPAA, and other regulations.",
+    "Change Control & Tenant Management – Review update management, configuration migration, and sandbox controls to ensure integrity of changes.",
+    "Integration Security Review – Assess Workday Studio and API connections to third-party systems for secure authentication and least-privilege acces.",
+    "Audit & Compliance Reporting – Leverage Workday’s reporting capabilities to verify compliance with internal policies and external regulatory standards."
   ];
 
   const whyItMatters = [
-    "Protects sensitive employee data including social security numbers, salary information, and personal details from unauthorized access.",
-    "Ensures compliance with privacy regulations like GDPR, CCPA, and employment law requirements.",
-    "Prevents payroll fraud and unauthorized changes to compensation data through proper access controls.",
-    "Supports SOX compliance by maintaining proper segregation of duties in HR processes that impact financial reporting.",
-    "Reduces risk of data breaches that could result in regulatory penalties and damage to employee trust."
+    "Effective ERP security and control testing—whether in PeopleSoft, Infor, or Workday—is essential for safeguarding financial data integrity, meeting regulatory requirements, and ensuring accurate financial reporting.",
+    "SOX Compliance – Under the Sarbanes-Oxley Act, organizations must demonstrate that their financial reporting systems have strong internal controls. Our audits test user access, segregation of duties, change management, and system configuration to verify that only authorized individuals can initiate, approve, or post transactions that impact the general ledger.",
+    "Accuracy of Financial Statements – Weak ERP controls can result in misstated revenues, expenses, or assets. By reviewing end-to-end workflows—from transaction entry to reporting—we ensure data accuracy, completeness, and integrity, minimizing the risk of errors or fraudulent adjustments in the financial statements.",
+    "Banking & Financial Services Expertise – In banking, where transaction volumes are high and regulatory scrutiny is intense, we understand the need for precise access controls, reconciliations, and audit trails to support both internal and external audits.",
+    "Healthcare Industry Experience – In healthcare, ERP systems often integrate with patient billing, supply chain, and payroll. We bring experience navigating HIPAA, revenue cycle compliance, and cost reporting controls to ensure financial data is accurate, secure, and auditable.",
+    "Our proven track record in banking and healthcare ERP audits means we know how to design control testing that not only meets compliance requirements but also supports operational efficiency and business confidence."
   ];
 
   return (

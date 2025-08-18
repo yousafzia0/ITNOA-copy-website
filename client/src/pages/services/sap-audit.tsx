@@ -3,7 +3,7 @@ import ServiceDetailTemplate from "@/components/service-detail-template";
 
 export default function SAPAudit() {
   const whatWeDo = [
-    "SAP authorization concept and role-based access control (RBAC) assessment – Evaluate the design, assignment, and enforcement of SAP roles to ensure least privilege and compliance.",
+    "SAP authorization concept and role-based access control (RBAC) assessment – Evaluate the design, assignment, and enforcement of SAP roles to ensure least privilege and compliance",
     "Critical SAP transaction and function module security analysis – Identify and review high-risk transactions and function modules that could lead to fraud, misuse, or operational disruption.",
     "SAP database security configuration and encryption review – Assess database-level access, password policies, and encryption mechanisms for compliance and best practice alignment.",
     "User access management and segregation of duties (SoD) evaluation: Review user provisioning, de-provisioning, and SoD conflicts to reduce the risk of unauthorized activities.",
@@ -25,6 +25,7 @@ export default function SAPAudit() {
     <ServiceDetailTemplate
       title="SAP Audit"
       description="At ITNOA Consulting, we bring deep expertise in SAP security, governance, and compliance to ensure your systems are secure and audit-ready. Our consultants have extensive experience conducting comprehensive SAP assessments aligned with industry best practices and global standards such as ISACA, IIA, SOX, and GDPR. We combine a meticulous, risk-based approach with hands-on technical knowledge of SAP environments, ensuring that every aspect—from user access to database encryption—is reviewed precisely. Whether your organization is seeking to strengthen internal controls, meet regulatory requirements, or proactively identify vulnerabilities, we can deliver actionable insights and practical remediation strategies.
+
 "
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
