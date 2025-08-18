@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { RotateCcw, FileText, CheckCircle } from "lucide-react";
 import Navigation from "@/components/navigation";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,12 @@ import { ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
 
 export default function BusinessContinuityPlanning() {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
   const whatWeDo = [
     "Business impact analysis (BIA) to identify critical business functions and dependencies",
     "Risk assessment and threat identification specific to your operational environment",

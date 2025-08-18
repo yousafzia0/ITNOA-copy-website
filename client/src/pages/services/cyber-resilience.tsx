@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { RotateCcw, FileText, CheckCircle, BarChart3, HardDrive, MessageSquare, Users, AlertTriangle } from "lucide-react";
 import Navigation from "@/components/navigation";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,12 @@ import Footer from "@/components/footer";
 
 
 export default function CyberResilience() {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
   const whatWeDo = [
     "Business impact analysis and critical asset identification across all business functions",
     "Comprehensive business continuity plan development with detailed recovery procedures",

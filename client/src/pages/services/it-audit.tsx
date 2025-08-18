@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Search, Database, Server, Shield, Network, FileText, Building, Heart, GraduationCap, Settings, User, Cloud, Bug, RefreshCw, Users, BarChart3, DollarSign } from "lucide-react";
 import Navigation from "@/components/navigation";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,12 @@ import { ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
 
 export default function ITAudit() {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
   const whatWeDo = [
     "Our audits are meticulously and methodically created using  ISACA, IIA, and  AICPA guidelines.",
     "We make sure the scope and planning are specific, well-documented, and approved before the start of the audit.",

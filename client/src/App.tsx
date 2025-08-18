@@ -71,8 +71,24 @@ function Router() {
   const [location] = useLocation();
 
   useEffect(() => {
-    // Scroll to top immediately on route change
-    window.scrollTo(0, 0);
+    // Force immediate scroll to top on route change
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      
+      // Also use global Lenis instance if available
+      const globalLenis = (window as any).lenis;
+      if (globalLenis && globalLenis.scrollTo) {
+        globalLenis.scrollTo(0, { immediate: true });
+      }
+    };
+    
+    // Execute immediately and with slight delays to ensure it works
+    scrollToTop();
+    setTimeout(scrollToTop, 10);
+    setTimeout(scrollToTop, 50);
+    setTimeout(scrollToTop, 100);
   }, [location]);
 
   return (
@@ -149,10 +165,14 @@ function App() {
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      normalizeWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 2,
+      autoResize: true,
+      prevent: (node: any) => node.classList?.contains('no-lenis'),
     });
+
+    // Store global Lenis instance for scroll-to-top functionality
+    (window as any).lenis = lenis;
 
     // Animation frame loop for Lenis
     function raf(time: number) {

@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
 import Footer from "@/components/footer";
 
 export default function NotFound() {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
   return (
     <>
       <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
