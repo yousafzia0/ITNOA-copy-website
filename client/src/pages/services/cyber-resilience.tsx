@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import BCPImage from "@assets/BCP.png";
+import Footer from "@/components/footer";
 
 
 
@@ -200,6 +201,7 @@ export default function CyberResilience() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

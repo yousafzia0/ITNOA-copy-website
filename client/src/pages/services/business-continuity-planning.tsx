@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import Footer from "@/components/footer";
 
 export default function BusinessContinuityPlanning() {
   const whatWeDo = [
@@ -166,6 +167,7 @@ export default function BusinessContinuityPlanning() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
