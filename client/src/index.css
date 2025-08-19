@@ -540,6 +540,79 @@ html.lenis {
   scroll-behavior: smooth;
 }
 
+/* Dust Transition Effects for Resources Page */
+.dust-transition-out {
+  animation: dustOut 0.8s ease-in-out forwards;
+}
+
+.dust-transition-in {
+  animation: dustIn 0.8s ease-in-out forwards;
+}
+
+@keyframes dustOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(-50px) scale(0.95);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.8);
+    filter: blur(5px);
+  }
+}
+
+@keyframes dustIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.8);
+    filter: blur(5px);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(50px) scale(0.95);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Additional particle-like dust effect */
+.dust-transition-out::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(1, 65, 28, 0.1) 0%, transparent 50%);
+  animation: dustParticles 0.8s ease-in-out forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes dustParticles {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
 /* Better scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
