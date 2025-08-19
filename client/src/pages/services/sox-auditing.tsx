@@ -138,22 +138,22 @@ export default function SOXAuditing() {
 
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {comprehensiveServices.map((service, index) => (
-              <Card key={index} className="group bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4">
-                      {service.icon}
+              <Link key={index} href={service.href} className="block">
+                <Card className="group bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full cursor-pointer">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-[#01411c]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#01411c]/20 transition-colors duration-300">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#01411c] transition-colors duration-300">{service.title}</h3>
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900">{service.title}</h3>
-                  </div>
-                  <p className="text-slate-600 text-sm mb-4">{service.description}</p>
-                  <Link href={service.href}>
-                    <Button variant="ghost" className="text-[#01411c] hover:text-[#012d13] p-0 h-auto text-sm font-semibold">
+                    <p className="text-slate-600 text-sm mb-4">{service.description}</p>
+                    <div className="text-[#01411c] hover:text-[#012d13] text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">
                       Explore More →
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 

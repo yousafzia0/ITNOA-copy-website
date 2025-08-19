@@ -118,20 +118,20 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
-              <Card key={index} className="group border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-[#01411c]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#01411c]/20 transition-colors duration-300">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                  <p className="text-slate-600 mb-6">{service.description}</p>
-                  <Link href={service.href}>
-                    <Button variant="ghost" className="text-[#01411c] hover:text-[#012d13] p-0 h-auto font-semibold">
+              <Link key={index} href={service.href} className="block">
+                <Card className="group border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-[#01411c]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#01411c]/20 transition-colors duration-300">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#01411c] transition-colors duration-300">{service.title}</h3>
+                    <p className="text-slate-600 mb-6">{service.description}</p>
+                    <div className="text-[#01411c] hover:text-[#012d13] font-semibold group-hover:translate-x-1 transition-transform duration-300">
                       Learn More →
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
