@@ -540,51 +540,74 @@ html.lenis {
   scroll-behavior: smooth;
 }
 
-/* Dust Transition Effects for Resources Page */
+/* Enhanced Buttery Smooth Dust Transition Effects */
 .dust-transition-out {
-  animation: dustOut 0.8s ease-in-out forwards;
+  animation: smoothDustOut 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform-origin: center center;
 }
 
 .dust-transition-in {
-  animation: dustIn 0.8s ease-in-out forwards;
+  animation: smoothDustIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform-origin: center center;
 }
 
-@keyframes dustOut {
+@keyframes smoothDustOut {
   0% {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translateX(0) translateY(0) scale(1) rotateY(0deg);
+    filter: blur(0px) brightness(1);
+  }
+  25% {
+    opacity: 0.85;
+    transform: translateX(-15px) translateY(-5px) scale(0.98) rotateY(-2deg);
+    filter: blur(0.5px) brightness(0.95);
   }
   50% {
-    opacity: 0.3;
-    transform: translateX(-50px) scale(0.95);
-    filter: blur(2px);
+    opacity: 0.4;
+    transform: translateX(-60px) translateY(-10px) scale(0.92) rotateY(-5deg);
+    filter: blur(3px) brightness(0.8);
+  }
+  75% {
+    opacity: 0.15;
+    transform: translateX(-120px) translateY(-15px) scale(0.85) rotateY(-8deg);
+    filter: blur(6px) brightness(0.6);
   }
   100% {
     opacity: 0;
-    transform: translateX(-100px) scale(0.8);
-    filter: blur(5px);
+    transform: translateX(-200px) translateY(-20px) scale(0.7) rotateY(-12deg);
+    filter: blur(10px) brightness(0.4);
   }
 }
 
-@keyframes dustIn {
+@keyframes smoothDustIn {
   0% {
     opacity: 0;
-    transform: translateX(100px) scale(0.8);
-    filter: blur(5px);
+    transform: translateX(200px) translateY(20px) scale(0.7) rotateY(12deg);
+    filter: blur(10px) brightness(0.4);
+  }
+  25% {
+    opacity: 0.15;
+    transform: translateX(120px) translateY(15px) scale(0.85) rotateY(8deg);
+    filter: blur(6px) brightness(0.6);
   }
   50% {
-    opacity: 0.3;
-    transform: translateX(50px) scale(0.95);
-    filter: blur(2px);
+    opacity: 0.4;
+    transform: translateX(60px) translateY(10px) scale(0.92) rotateY(5deg);
+    filter: blur(3px) brightness(0.8);
+  }
+  75% {
+    opacity: 0.85;
+    transform: translateX(15px) translateY(5px) scale(0.98) rotateY(2deg);
+    filter: blur(0.5px) brightness(0.95);
   }
   100% {
     opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
+    transform: translateX(0) translateY(0) scale(1) rotateY(0deg);
+    filter: blur(0px) brightness(1);
   }
 }
 
-/* Additional particle-like dust effect */
+/* Enhanced particle effects with Pakistan green */
 .dust-transition-out::before {
   content: '';
   position: absolute;
@@ -592,25 +615,63 @@ html.lenis {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(1, 65, 28, 0.1) 0%, transparent 50%);
-  animation: dustParticles 0.8s ease-in-out forwards;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(1, 65, 28, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(1, 65, 28, 0.1) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(1, 65, 28, 0.08) 0%, transparent 50%);
+  animation: enhancedDustParticles 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   pointer-events: none;
   z-index: 1;
 }
 
-@keyframes dustParticles {
+@keyframes enhancedDustParticles {
   0% {
     opacity: 0;
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(1.1) rotate(5deg);
   }
   50% {
-    opacity: 0.5;
-    transform: scale(1.2);
+    opacity: 0.6;
+    transform: scale(1.3) rotate(10deg);
+  }
+  75% {
+    opacity: 0.4;
+    transform: scale(1.6) rotate(15deg);
   }
   100% {
     opacity: 0;
-    transform: scale(1.5);
+    transform: scale(2) rotate(20deg);
   }
+}
+
+/* Smooth card entrance animations for resources */
+.resource-card-enter {
+  animation: resourceCardEnter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes resourceCardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced button transitions */
+.resource-nav-button {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(0);
+}
+
+.resource-nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(1, 65, 28, 0.2);
 }
 
 /* Better scrollbar styling */
