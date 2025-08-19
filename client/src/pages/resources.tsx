@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import { Play, ExternalLink, Clock, Eye, FileText, BookOpen, FolderOpen, User, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -181,25 +182,20 @@ export default function Resources() {
     
     setIsTransitioning(true);
     
-    // Enhanced smooth scroll to top with Lenis
+    // Smooth scroll to top with Lenis
     const globalLenis = (window as any).lenis;
     if (globalLenis) {
       globalLenis.scrollTo(0, { 
-        duration: 1.2,
-        easing: (t: number) => {
-          // Smooth cubic-bezier easing for buttery transitions
-          return t < 0.5 
-            ? 4 * t * t * t 
-            : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        }
+        duration: 0.8,
+        easing: (t: number) => 1 - Math.pow(1 - t, 3)
       });
     }
     
-    // Change section after enhanced transition
+    // Change section after transition
     setTimeout(() => {
       setActiveSection(section);
       setIsTransitioning(false);
-    }, 1200);
+    }, 600);
   };
 
   const videos = [
@@ -292,16 +288,17 @@ export default function Resources() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog, index) => (
-            <Card key={blog.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-500 border-slate-200 hover:-translate-y-2"
-                  style={{ 
-                    animationDelay: `${index * 150}ms`,
-                    animationFillMode: 'both'
-                  }}>
+            <Link key={blog.id} href={`/blog/${blog.id}`} className="block">
+              <Card className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200 hover:-translate-y-1 cursor-pointer"
+                    style={{ 
+                      animationDelay: `${index * 100}ms`,
+                      animationFillMode: 'both'
+                    }}>
               <div className="relative overflow-hidden">
                 <img 
                   src={blog.image} 
                   alt={blog.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <Badge className="absolute top-3 left-3 bg-[#01411c] text-white shadow-lg">
                   {blog.category}
@@ -347,21 +344,18 @@ export default function Resources() {
                     <Clock className="h-3 w-3 mr-1" />
                     {blog.readTime}
                   </span>
-                  <Button 
-                    variant="ghost" 
-                    className="text-[#01411c] hover:text-white hover:bg-[#01411c] p-2 h-auto transition-all duration-300"
-                    onClick={() => {
-                      if (blog.id === 'nist-csf-assessments') {
-                        // Show detailed blog content - we'll implement this next
-                        console.log('Opening NIST CSF blog...');
-                      }
-                    }}
-                  >
-                    Read More <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link href={`/blog/${blog.id}`}>
+                    <Button 
+                      variant="ghost" 
+                      className="text-[#01411c] hover:text-white hover:bg-[#01411c] p-2 h-auto transition-all duration-300"
+                    >
+                      Read More <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
-            </Card>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
@@ -373,16 +367,20 @@ export default function Resources() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
-            <Card key={study.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-500 border-slate-200 hover:-translate-y-2"
+            <Card key={study.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200 hover:-translate-y-1 cursor-pointer"
                   style={{ 
-                    animationDelay: `${index * 150}ms`,
+                    animationDelay: `${index * 100}ms`,
                     animationFillMode: 'both'
+                  }}
+                  onClick={() => {
+                    // Navigate to case study detail page
+                    console.log(`Navigating to case study: ${study.id}`);
                   }}>
               <div className="relative overflow-hidden">
                 <img 
                   src={study.image} 
                   alt={study.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <Badge className="absolute top-3 left-3 bg-[#01411c] text-white shadow-lg">
                   {study.industry}
@@ -419,9 +417,9 @@ export default function Resources() {
                   ))}
                 </div>
                 
-                <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white transition-all duration-300 group">
+                <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white transition-all duration-300">
                   View Case Study
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </CardContent>
             </Card>
@@ -436,16 +434,20 @@ export default function Resources() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {templates.map((template, index) => (
-            <Card key={template.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-500 border-slate-200 hover:-translate-y-2"
+            <Card key={template.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200 hover:-translate-y-1 cursor-pointer"
                   style={{ 
-                    animationDelay: `${index * 150}ms`,
+                    animationDelay: `${index * 100}ms`,
                     animationFillMode: 'both'
+                  }}
+                  onClick={() => {
+                    // Trigger download or navigate to template page
+                    console.log(`Downloading template: ${template.id}`);
                   }}>
               <div className="relative overflow-hidden">
                 <img 
                   src={template.image} 
                   alt={template.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <Badge className="absolute top-3 left-3 bg-[#01411c] text-white shadow-lg">
                   {template.category}
@@ -479,8 +481,8 @@ export default function Resources() {
                   ))}
                 </div>
                 
-                <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white transition-all duration-300 group">
-                  <FileText className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
+                <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white transition-all duration-300">
+                  <FileText className="h-4 w-4 mr-2" />
                   Download Template
                 </Button>
               </CardContent>
@@ -510,16 +512,16 @@ export default function Resources() {
         {/* Video Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((video, index) => (
-            <Card key={video.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-500 border-slate-200 hover:-translate-y-2"
+            <Card key={video.id} className="resource-card-enter group overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200 hover:-translate-y-1"
                   style={{ 
-                    animationDelay: `${index * 150}ms`,
+                    animationDelay: `${index * 100}ms`,
                     animationFillMode: 'both'
                   }}>
               <div className="relative overflow-hidden">
                 <img 
                   src={video.thumbnail} 
                   alt={video.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="bg-[#01411c] rounded-full p-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
@@ -564,10 +566,10 @@ export default function Resources() {
                   rel="noopener noreferrer"
                   className="w-full block"
                 >
-                  <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white transition-all duration-300 group">
-                    <Play className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
+                  <Button className="w-full bg-[#01411c] hover:bg-[#012d13] text-white transition-all duration-300">
+                    <Play className="h-4 w-4 mr-2" />
                     Watch on YouTube
-                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ExternalLink className="h-4 w-4 ml-2" />
                   </Button>
                 </a>
               </CardContent>

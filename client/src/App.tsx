@@ -66,6 +66,7 @@ import FirewallRulesetReviewPCI from "@/pages/services/firewall-ruleset-review-p
 import GapAssessmentsUsingSTIGs from "@/pages/services/gap-assessments-using-stigs";
 // Data Protection & Privacy Services
 import DataProtectionPrivacy from "@/pages/services/data-protection-privacy";
+import BlogDetail from "@/pages/blog-detail";
 
 function Router() {
   const [location] = useLocation();
@@ -99,6 +100,7 @@ function Router() {
       <Route path="/become-client" component={BecomeClient} />
       <Route path="/contact" component={Contact} />
       <Route path="/resources" component={Resources} />
+      <Route path="/blog/:id" component={BlogDetail} />
       <Route path="/services/it-audit" component={ITAudit} />
       <Route path="/services/grc-consulting" component={GRCConsulting} />
       <Route path="/services/cyber-resilience" component={CyberResilience} />
