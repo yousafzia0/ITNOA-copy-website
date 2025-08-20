@@ -33,7 +33,7 @@ export default function ISO27031ICTReadinessDisasterRecovery() {
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<HardDrive className="h-10 w-10 text-[#01411c]" />}
-      heroImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
+      heroImage="https://scontent.flhe5-1.fna.fbcdn.net/v/t1.15752-9/533154052_667036982395440_6020714932223541186_n.png?stp=dst-png_s640x640&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=bKLy9K9nd_EQ7kNvwH0KgZB&_nc_oc=Adn18vWq6dMH_erBoFpPYrgWSzexRst9SRxdiCSGuEoCHSTpHQYD0DRJ6qnac78rp2EHeJw-p028tcdoXm_XVntS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&oh=03_Q7cD3AEuneNSpaJdcgl5hvnZQvK-MBRPa4M43oG-vpoLt9Pa1A&oe=68CC929A"
     />
   );
 }

@@ -28,7 +28,7 @@ export default function PeoplesoftAudit() {
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<Server className="h-10 w-10 text-[#01411c]" />}
-      heroImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
+      heroImage="https://scontent.flhe5-1.fna.fbcdn.net/v/t1.15752-9/532136926_24487405064209113_8619606472841012319_n.png?stp=dst-png_s552x414&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iHJ6Zd20VOsQ7kNvwFbPEIa&_nc_oc=Adlu9tcNpzVWADXitPmrse0rGkZ786EZqNP4hBWZPeaJsIunp7jN5hkD1QNXxThHCvjBS6PmUabbH9SHMyCyzY33&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&oh=03_Q7cD3AGyezEoEjRCOxFhyKxc8ABKY7vAtpIQllb0ZwnaHNsc-w&oe=68CCA1EA"
     />
   );
 }

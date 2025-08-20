@@ -30,7 +30,7 @@ export default function SAPAudit() {
       whatWeDo={whatWeDo}
       whyItMatters={whyItMatters}
       icon={<Database className="h-10 w-10 text-[#01411c]" />}
-      heroImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600"
+      heroImage="https://scontent.flhe5-1.fna.fbcdn.net/v/t1.15752-9/533190182_1198041465421102_8165287624210008343_n.png?stp=dst-png_s552x414&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=X7GA1PKeH74Q7kNvwHdliY6&_nc_oc=AdmZeuTXPgbyTLhjEIj9GMi2xB0bJJWNvxiTJK94VSyXxXRT71eBFvAT_sARe9fXB6mJSwjqbB6I3dXZaNKMM3-J&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&oh=03_Q7cD3AFaVRjcUFR2L1otc10VhJKUhdFZQ1gApkd18S4BMcIOpA&oe=68CC8E2A"
     />
   );
 }
