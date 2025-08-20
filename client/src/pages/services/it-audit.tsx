@@ -178,7 +178,7 @@ export default function ITAudit() {
             </div>
             <div className="animate-slide-in-right">
               <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
+                src="https://scontent.flhe5-1.fna.fbcdn.net/v/t1.15752-9/532971892_2731371863731952_4824304731030761731_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=CNMcgTyy-A0Q7kNvwE-U09i&_nc_oc=AdmlxNp3Oh0GJsNQmp_8qTsYAzecQY1RAqPrV8Wi4jI_9C1s0Tm6ApsGcpLuSPFveu2jAKcCHQcRJ7DymRbhvXeH&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&oh=03_Q7cD3AE0VwUon-J77rr5KshcRLn5K9BXERiPlqSRf68zjkOxWw&oe=68CC9C8D" 
                 alt="IT Audit Services"
                 className="rounded-2xl shadow-2xl w-full h-auto" 
               />
