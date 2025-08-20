@@ -232,7 +232,7 @@ export default function Industries() {
                 variant="secondary"
                 className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
               >
-                Get Industry-Specific Solutions
+                Schedule a Meeting
               </Button>
             </Link>
             <Link href="/contact">
@@ -241,7 +241,7 @@ export default function Industries() {
                 variant="outline"
                 className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300"
               >
-                Contact Our Experts
+                Send Us Your Questions
               </Button>
             </Link>
           </div>

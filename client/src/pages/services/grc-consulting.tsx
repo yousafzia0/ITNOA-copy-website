@@ -158,12 +158,12 @@ export default function GRCConsulting() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/become-client">
                   <Button size="lg" className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4">
-                    What We Can Offer
+                    Schedule a Meeting
                   </Button>
                 </Link>
                 <Link href="/contact">
                   <Button size="lg" variant="outline" className="border-[#01411c] text-[#01411c] hover:bg-[#01411c] hover:text-white px-8 py-4">
-                    Contact Us
+                    Send Us Your Questions
                   </Button>
                 </Link>
               </div>
@@ -277,12 +277,12 @@ export default function GRCConsulting() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/become-client">
               <Button size="lg" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
-                What We Can Offer
+                Schedule a Meeting
               </Button>
             </Link>
             <Link href="/contact">
               <Button size="lg" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
-                Contact Us
+                Send Us Your Questions
               </Button>
             </Link>
           </div>

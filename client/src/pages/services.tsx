@@ -274,12 +274,12 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" variant="secondary" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
-                Contact Us
+                Send Us Your Questions
               </Button>
             </Link>
             <Link href="/become-client">
               <Button size="lg" variant="outline" className="bg-white text-[#01411c] hover:bg-[#01411c] hover:text-white transition-all duration-300">
-                What We Can Offer
+                Schedule a Meeting
               </Button>
             </Link>
           </div>

@@ -352,7 +352,7 @@ export default function BecomeClient() {
                 size="lg"
                 className="bg-[#01411c] hover:bg-[#012d13] text-white px-8 py-4"
               >
-                Contact Us Directly
+                Send Us Your Questions
               </Button>
             </Link>
             <Link href="/services">
