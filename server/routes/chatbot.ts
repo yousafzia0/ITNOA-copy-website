@@ -2,7 +2,7 @@ import { Router } from "express";
 import OpenAI from "openai";
 import { db } from "../db";
 import { chatConversations, clientInteractions, aiLearningData } from "../../shared/schema";
-import { eq, desc, ilike } from "drizzle-orm";
+import { eq, desc, ilike, sql } from "drizzle-orm";
 
 const router = Router();
 
@@ -262,7 +262,7 @@ const intelligentFallback = async (message: string, sessionId: string) => {
 router.post("/chat", async (req, res) => {
   try {
     const { message } = req.body;
-    const sessionId = req.sessionID || `session_${Date.now()}`;
+    const sessionId = (req as any).sessionID || `session_${Date.now()}`;
 
     if (!message) {
       return res.status(400).json({ error: "Message is required" });
@@ -363,22 +363,22 @@ router.get("/analytics", async (req, res) => {
     const conversationStats = await db
       .select({
         intentDetected: chatConversations.intentDetected,
-        count: 'count(*)'
+        count: sql<number>`count(*)`
       })
       .from(chatConversations)
       .groupBy(chatConversations.intentDetected)
-      .orderBy(desc('count'))
+      .orderBy(desc(sql`count(*)`)) 
       .limit(10);
 
     const popularServices = await db
       .select({
         serviceMentioned: chatConversations.serviceMentioned,
-        count: 'count(*)'
+        count: sql<number>`count(*)`
       })
       .from(chatConversations)
-      .where(chatConversations.serviceMentioned)
+      .where(sql`${chatConversations.serviceMentioned} IS NOT NULL`)
       .groupBy(chatConversations.serviceMentioned)
-      .orderBy(desc('count'))
+      .orderBy(desc(sql`count(*)`)) 
       .limit(10);
 
     res.json({
