@@ -45,7 +45,7 @@ export default function Home() {
     {
       name: "Shah G",
       role: "Manager",
-      content: "Deep experience with IT Audits and Peoplesoft made procurement and audits straightforward.",
+      content: "Our deep experience with IT audits and PeopleSoft ensures streamlined procurement processes and comprehensive audit deliverables.",
       initials: "SG"
     },
     {
