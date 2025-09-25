@@ -6,10 +6,13 @@ import { eq, desc, ilike, sql } from "drizzle-orm";
 
 const router = Router();
 
-// Initialize OpenAI
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Initialize OpenAI only if API key is available
+let openai: OpenAI | null = null;
+if (process.env.OPENAI_API_KEY) {
+  openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+}
 
 // Comprehensive service information with all 40 services
 const servicesInfo = `
@@ -269,7 +272,11 @@ router.post("/chat", async (req, res) => {
     }
 
     try {
-      // Try OpenAI first with enhanced prompt
+      // Try OpenAI first with enhanced prompt (only if API key is available)
+      if (!openai) {
+        throw new Error("OpenAI API key not available");
+      }
+      
       const response = await openai.chat.completions.create({
         model: "gpt-4o",
         messages: [
